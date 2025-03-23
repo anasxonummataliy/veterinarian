@@ -117,23 +117,18 @@ main .main-left .buttons .contact-us {
   border: none;
   border-radius: 5px;
   font-size: 18px;
-}
-main .main-left .buttons .contact-us a {
+  cursor: pointer;
   color: white;
-  text-decoration: none;
 }
 main .main-left .buttons .our-ser {
   width: 180px;
   height: 60px;
-  border: 5px solid white;
+  border: 3px solid white;
   border-radius: 5px;
-  color: hidden;
+  color: #fff;
   background-color: #ffc400;
   font-size: 18px;
-}
-main .main-left .buttons .our-ser a {
-  color: white;
-  text-decoration: none;
+  cursor: pointer;
 }
 main .main-right {
   width: 40%;
@@ -161,6 +156,9 @@ main .main-right .dog-img {
   gap: 20px;
   padding: 0 60px;
 }
+.main2 .main-2-left h1 {
+  font-size: 40px;
+}
 .main2 .main-2-left button {
   width: 90px;
   height: 30px;
@@ -185,7 +183,8 @@ main .main-right .dog-img {
   justify-content: center;
 }
 .main2 .main-2-right .video-container img {
-  width: 60%;
+  width: 80%;
+  padding-right: 50px;
 }
 
 .main-3 {

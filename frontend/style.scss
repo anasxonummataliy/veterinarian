@@ -121,25 +121,20 @@ main {
         border: none;
         border-radius: 5px;
         font-size: 18px;
-
-        a {
-          color: white;
-          text-decoration: none;
-        }
+        cursor: pointer;
+        color: white;
       }
       .our-ser {
         width: 180px;
         height: 60px;
-        border: 5px solid white;
+        border: 3px solid white;
         border-radius: 5px;
-        color: hidden;
+        color: #fff;
         background-color: #ffc400;
         font-size: 18px;
+        cursor: pointer;
+        
 
-        a {
-          color: white;
-          text-decoration: none;
-        }
       }
     }
   }
@@ -171,6 +166,10 @@ main {
     gap: 20px;
     padding: 0 60px;
 
+    h1{
+      font-size: 40px;
+    }
+
     button {
       width: 90px;
       height: 30px;
@@ -196,7 +195,8 @@ main {
       justify-content: center;
 
       img {
-        width: 60%;
+        width: 80%;
+        padding-right: 50px;
       }
     }
   }
