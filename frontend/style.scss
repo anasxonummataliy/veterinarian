@@ -39,7 +39,7 @@ nav {
   }
 
   form {
-    width: 232px;
+    width: 250px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -52,7 +52,14 @@ nav {
       outline: none;
       color: white;
       height: 50px;
+      padding: 10px;
+      font-size: 20px;
+      width: 80%;
+
+    
     }
+
+
     input::placeholder {
       color: white;
       font-size: 20px;
@@ -64,6 +71,18 @@ nav {
       justify-content: center;
       background-color: #00c0ca;
       width: 70px;
+
+       a{
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+       
+      }
     }
   }
 }
@@ -526,9 +545,11 @@ main {
       }
      
       input{
-        height: 100%;
-        width: 90%;
-        border: none;
+            height: 100%;
+            width: 90%;
+            border: none;
+            padding: 15px;
+            font-size: 20px;
       }
     }
 
