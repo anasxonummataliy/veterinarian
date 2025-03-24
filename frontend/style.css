@@ -153,19 +153,24 @@ main .main-right .dog-img {
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 0 60px;
+  gap: 30px;
+  padding: 0 130px;
 }
 .main2 .main-2-left h1 {
-  font-size: 40px;
+  font-size: 48px;
+}
+.main2 .main-2-left p {
+  font-size: 25px;
 }
 .main2 .main-2-left button {
-  width: 90px;
-  height: 30px;
+  width: 180px;
+  height: 60px;
   background-color: #ffc400;
   color: white;
   border: 1px solid #ffc400;
-  border-radius: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
 }
 .main2 .main-2-right {
   width: 50%;
@@ -184,39 +189,63 @@ main .main-right .dog-img {
 }
 .main2 .main-2-right .video-container img {
   width: 80%;
+  width: 400px;
+  height: 400px;
   padding-right: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .main-3 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 800px;
+  height: 850px;
   background-color: #ffc400;
-  gap: 20px;
+  gap: 80px;
   align-items: center;
   justify-content: center;
 }
-.main-3 h1 {
-  color: white;
+.main-3 .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
 }
-.main-3 p {
+.main-3 .title .title_header {
+  color: white;
+  font-size: 58px;
+  font-weight: 900;
+}
+.main-3 .title .title_paragraph {
+  color: white;
+  font-size: 25px;
+  width: 50%;
+}
+.main-3 h1, .main-3 p {
+  text-align: center;
   color: white;
 }
 .main-3 .product {
   display: flex;
-  gap: 30px;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 .main-3 .product .product-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 240px;
+  width: 300px;
+  justify-content: space-around;
   gap: 20px;
 }
 .main-3 .product .product-item img {
-  width: 240px;
-  border: 3px solid white;
+  height: 320px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 5px solid white;
 }
 
 .main-4 {
@@ -246,19 +275,25 @@ main .main-right .dog-img {
   align-items: end;
   justify-content: center;
   gap: 20px;
-  margin-right: 60px;
+  margin-right: 130px;
 }
-.main-4 .main-4-right h1,
+.main-4 .main-4-right h1 {
+  text-align: end;
+  font-size: 50px;
+}
 .main-4 .main-4-right p {
   text-align: end;
+  font-size: 25px;
 }
 .main-4 .main-4-right button {
-  width: 90px;
-  height: 30px;
+  width: 180px;
+  height: 60px;
   background-color: #ffc400;
   color: white;
   border: 1px solid #ffc400;
-  border-radius: 2px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .main-5 {
@@ -390,7 +425,8 @@ main .main-right .dog-img {
 .main-8 .posts {
   display: flex;
   gap: 20px;
-  height: 500px;
+  min-height: 500px;
+  flex-wrap: wrap;
 }
 .main-8 .post:hover {
   transform: scale(1.05);
@@ -440,7 +476,7 @@ main .main-right .dog-img {
 .main-9 {
   color: white;
   background-color: #303030;
-  height: 500px;
+  min-height: 500px;
   width: 100%;
   display: flex;
   gap: 40px;
