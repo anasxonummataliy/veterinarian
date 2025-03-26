@@ -147,7 +147,7 @@ main .main-right .dog-img {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 700px;
+  min-height: 700px;
 }
 .main2 .main-2-left {
   width: 50%;
@@ -200,7 +200,7 @@ main .main-right .dog-img {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 850px;
+  min-height: 850px;
   background-color: #ffc400;
   gap: 80px;
   align-items: center;
@@ -231,6 +231,8 @@ main .main-right .dog-img {
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .main-3 .product .product-item {
   display: flex;
@@ -251,7 +253,7 @@ main .main-right .dog-img {
 .main-4 {
   display: flex;
   width: 100%;
-  height: 700px;
+  min-height: 700px;
   background-color: #fff;
   align-items: center;
   justify-content: center;
@@ -298,31 +300,50 @@ main .main-right .dog-img {
 
 .main-5 {
   width: 100%;
-  height: 800px;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #ffc400;
-  gap: 30px;
+  gap: 80px;
   color: white;
   padding: 0 60px;
+}
+.main-5 .title_5 {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+}
+.main-5 .title_5 h1 {
+  font-size: 50px;
+}
+.main-5 .title_5 p {
+  font-size: 25px;
 }
 .main-5 .buy-product {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 .main-5 .buy-product .buy-product-item {
-  width: 240px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 .main-5 .buy-product .buy-product-item img {
-  width: 250px;
-  border: 3px solid white;
+  width: 280px;
+  height: 300px;
+  border: 5px solid white;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-5 .buy-product .buy-product-item .price {
   display: flex;
@@ -335,17 +356,18 @@ main .main-right .dog-img {
   color: white;
 }
 .main-5 .buy-product .buy-product-item button {
-  height: 30px;
-  width: 90px;
+  height: 50px;
+  width: 140px;
   border: none;
-  border-radius: 15px;
+  border-radius: 25px;
   color: white;
   background-color: #00c0ca;
+  font-size: 18px;
 }
 
 .main-6 {
   width: 100%;
-  height: 800px;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -357,6 +379,7 @@ main .main-right .dog-img {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .main-6 .team .member {
   display: flex;
@@ -408,7 +431,7 @@ main .main-right .dog-img {
 
 .main-8 {
   width: 100%;
-  height: 850px;
+  min-height: 850px;
   display: flex;
   flex-direction: column;
   margin-top: 50px;
@@ -445,6 +468,8 @@ main .main-right .dog-img {
 .main-8 .post img {
   width: 100%;
   height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-8 .post .post-items {
   display: flex;

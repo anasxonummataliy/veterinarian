@@ -157,7 +157,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 700px;
+  min-height: 700px;
 
   .main-2-left {
     width: 50%;
@@ -213,7 +213,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 850px;
+  min-height: 850px;
   background-color: #ffc400;
   gap: 80px;
   align-items: center;
@@ -250,6 +250,8 @@ main {
     display: flex;
     gap: 50px;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
     .product-item {
       display: flex;
@@ -270,7 +272,7 @@ main {
 .main-4 {
   display: flex;
   width: 100%;
-  height: 700px;
+  min-height: 700px;
   background-color: #fff;
   align-items: center;
   justify-content: center;
@@ -284,7 +286,7 @@ main {
 
     img {
       width: 60%;
-      
+
     }
   }
   .main-4-right {
@@ -320,31 +322,52 @@ main {
 }
 .main-5 {
   width: 100%;
-  height: 800px;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #ffc400;
-  gap: 30px;
+  gap: 80px;
   color: white;
   padding: 0 60px;
+
+  .title_5{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+
+    h1{
+      font-size: 50px;
+    }
+    p{
+      font-size: 25px;
+    }
+
+  }
 
   .buy-product {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
+    flex-wrap: wrap;
 
     .buy-product-item {
-      width: 240px;
+      width: 280px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 20px;
 
       img {
-        width: 250px;
-        border: 3px solid white;
+        width: 280px;
+        height: 300px;
+        border: 5px solid white;
+        object-fit: cover;
       }
       .price {
         display: flex;
@@ -358,12 +381,13 @@ main {
         color: white;
       }
       button {
-        height: 30px;
-        width: 90px;
+        height: 50px;
+        width: 140px;
         border: none;
-        border-radius: 15px;
+        border-radius: 25px;
         color: white;
         background-color: #00c0ca;
+        font-size: 18px;
       }
     }
   }
@@ -371,7 +395,7 @@ main {
 
 .main-6 {
   width: 100%;
-  height: 800px;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -383,6 +407,7 @@ main {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 
     .member {
       display: flex;
@@ -440,7 +465,7 @@ main {
 }
 .main-8 {
   width: 100%;
-  height: 850px;
+  min-height: 850px;
   display: flex;
   flex-direction: column;
   margin-top: 50px;
@@ -480,6 +505,7 @@ main {
     img {
       width: 100%;
       height: 300px;
+      object-fit: cover;
     }
 
     .post-items {
