@@ -700,3 +700,36 @@ main {
   }
   
 }
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .card {
+        width: 100%;
+    }
+}
