@@ -733,6 +733,180 @@ main .main-right .dog-img {
   .main2 .main-2-right .video-container img {
     width: 100%;
     height: 200px;
+    padding-right: 20px;
+  }
+  .main-3 {
+    min-height: 500px;
+    gap: 20px;
+    padding: 20px;
+  }
+  .main-3 .title {
+    width: 100%;
+    gap: 10px;
+  }
+  .main-3 .title h1 {
+    font-size: 30px;
+    width: 100%;
+  }
+  .main-3 .title p {
+    width: 100% !important;
+    font-size: 15px;
+  }
+  .main-3 .product {
+    gap: 60px;
+  }
+  .main-3 .product .product-item {
+    width: 100%;
+  }
+  .main-3 .product .product-item img {
+    height: 300px;
+    width: 100%;
+  }
+  .main-4 {
+    min-height: 400px;
+    gap: 20px;
+    padding: 20px;
+  }
+  .main-4 .main-4-left {
+    width: 50%;
+  }
+  .main-4 .main-4-left img {
+    width: 100%;
+  }
+  .main-4 .main-4-right {
+    width: 50%;
+  }
+  .main-4 .main-4-right h1 {
+    font-size: 30px;
+  }
+  .main-4 .main-4-right p {
+    font-size: 15px;
+  }
+  .main-5 {
+    min-height: 500px;
+    gap: 20px;
+    padding: 20px;
+  }
+  .main-5 .title_5 {
+    width: 100%;
+  }
+  .main-5 .title_5 h1 {
+    font-size: 30px;
+  }
+  .main-5 .title_5 p {
+    font-size: 15px;
+  }
+  .main-5 .buy-product {
+    gap: 20px;
+  }
+  .main-5 .buy-product .buy-product-item {
+    width: 100%;
+  }
+  .main-5 .buy-product .buy-product-item img {
+    height: 200px;
+    width: 100%;
+  }
+  .main-5 .buy-product .buy-product-item .price {
+    flex-direction: column;
+  }
+  .main-5 .buy-product .buy-product-item .price .line {
+    font-size: 15px;
+  }
+  .main-5 .buy-product .buy-product-item h2 {
+    font-size: 20px;
+  }
+  .main-6 {
+    min-height: 500px;
+    gap: 20px;
+    padding: 20px;
+  }
+  .main-6 .title_6 {
+    width: 100%;
+  }
+  .main-6 .title_6 h1 {
+    font-size: 30px;
+  }
+  .main-6 .title_6 p {
+    font-size: 15px;
+  }
+  .main-6 .team {
+    gap: 20px;
+  }
+  .main-6 .team .member {
+    width: 100%;
+  }
+  .main-6 .team .member img {
+    height: 200px;
+    width: 100%;
+  }
+  .main-6 .team .member .about_member h1 {
+    font-size: 20px;
+  }
+  .main-6 .team .member .about_member p {
+    font-size: 15px;
+  }
+  .main-7 {
+    min-height: 300px;
+    gap: 20px;
+    padding: 20px;
+  }
+  .main-7 .data-about-vet i {
+    font-size: 20px;
+  }
+  .main-8 {
+    min-height: 500px;
+    gap: 20px;
+    padding: 20px;
+  }
+  .main-8 h1 {
+    font-size: 30px;
+  }
+  .main-8 .posts {
+    min-height: 300px;
+  }
+  .main-8 .posts .post {
+    width: 100%;
+  }
+  .main-8 .posts .post img {
+    height: 200px;
+    width: 100%;
+  }
+  .main-8 .posts .post .post-items h4, .main-8 .posts .post .post-items h3, .main-8 .posts .post .post-items a, .main-8 .posts .post .post-items p {
+    font-size: 15px;
+  }
+  .main-9 {
+    min-height: 300px;
+    gap: 20px;
+    padding: 20px;
+  }
+  .main-9 .first {
+    width: 100%;
+  }
+  .main-9 .first ul li {
+    font-size: 15px;
+  }
+  .main-9 .second {
+    width: 100%;
+  }
+  .main-9 .second ul li {
+    font-size: 15px;
+  }
+  .main-9 .third {
+    width: 100%;
+  }
+  .main-9 .third .title_third h1 {
+    font-size: 25px;
+  }
+  .main-9 .third .title_third p {
+    font-size: 15px;
+  }
+  .main-9 .third form {
+    width: 100%;
+  }
+  .main-9 .third form input {
+    width: 90%;
+    height: 50px;
+    font-size: 15px;
   }
 }
 @media (max-width: 768px) {
