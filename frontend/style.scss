@@ -21,6 +21,13 @@ nav {
   background-color: #eaae00;
   color: white;
 
+  .menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  }
+
   .logo {
     width: 230px;
     height: auto;
@@ -702,18 +709,108 @@ main {
 }
 @media (max-width: 576px) {
     body {
-        font-size: 14px;
+        font-size: 20px;
     }
-    .container {
+    nav{
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0 20px;
+      
+
+      .logo_menu{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .menu-icon{
+        display: block;        
+      }
+      .logo{
+        width: 120px;
+        padding-left: 0;
+      }
+      form{
+        width: 200px;
+        height: 50px;
+        input{
+          width: 90%;
+          height: 50px;
+          font-size: 10px;
+        }
+        .search-icon{
+          width: 70px;
+          height: 50px;
+          font-size: 20px;
+        }
+      }
+
+
+
+      ul > li{
+        display: none;
+      }
+    }
+    main{
+      min-height:400px ;
+      .main-left{
+        width: 50%;
+        padding:20px;
+        gap: 10px;
+
+        h1{
+          font-size: 15px;
+        }
+        p{
+          font-size: 13px;
+          font-weight: 100;
+        }
+        .buttons{
+          flex-direction: column;
+          gap: 10px;
+          padding-bottom: 20px;
+
+          .contact-us{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+          }
+          .our-ser{
+            width: 100%;
+            height: 50px;
+            font-size: 15px;
+          }
+        }
+      }
+      .main-right{
+
+        .dog-img{
+          height: 250px;
+        }
+      }
+    }
+    .main2{
+      min-height: 350px;
+      gap: 20px;
+      padding: 20px;
+      .main-2-left{
         width: 100%;
-        padding: 10px;
-    }
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-    .card {
+        padding: 0 20px;
+        h1{
+          font-size: 15px;
+        }
+        p{
+          font-size: 13px;
+        }
+      }
+      .main-2-right{
         width: 100%;
+        .video-container{
+          img{
+            width: 100%;
+            height: 200px;
+          }
+        }
+      }
     }
 }
 
@@ -733,3 +830,24 @@ main {
         width: 100%;
     }
 }
+
+
+
+@media (max-width: 992px) {
+    body {
+        font-size: 20px;
+    }
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .card {
+        width: 100%;
+    }
+}
+
+

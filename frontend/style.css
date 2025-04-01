@@ -22,6 +22,12 @@ nav {
   background-color: #eaae00;
   color: white;
 }
+nav .menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
 nav .logo {
   width: 230px;
   height: auto;
@@ -637,7 +643,101 @@ main .main-right .dog-img {
 
 @media (max-width: 576px) {
   body {
-    font-size: 14px;
+    font-size: 20px;
+  }
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 20px;
+  }
+  nav .logo_menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  nav .menu-icon {
+    display: block;
+  }
+  nav .logo {
+    width: 120px;
+    padding-left: 0;
+  }
+  nav form {
+    width: 200px;
+    height: 50px;
+  }
+  nav form input {
+    width: 90%;
+    height: 50px;
+    font-size: 10px;
+  }
+  nav form .search-icon {
+    width: 70px;
+    height: 50px;
+    font-size: 20px;
+  }
+  nav ul > li {
+    display: none;
+  }
+  main {
+    min-height: 400px;
+  }
+  main .main-left {
+    width: 50%;
+    padding: 20px;
+    gap: 10px;
+  }
+  main .main-left h1 {
+    font-size: 15px;
+  }
+  main .main-left p {
+    font-size: 13px;
+    font-weight: 100;
+  }
+  main .main-left .buttons {
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+  main .main-left .buttons .contact-us {
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+  }
+  main .main-left .buttons .our-ser {
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+  }
+  main .main-right .dog-img {
+    height: 250px;
+  }
+  .main2 {
+    min-height: 350px;
+    gap: 20px;
+    padding: 20px;
+  }
+  .main2 .main-2-left {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .main2 .main-2-left h1 {
+    font-size: 15px;
+  }
+  .main2 .main-2-left p {
+    font-size: 13px;
+  }
+  .main2 .main-2-right {
+    width: 100%;
+  }
+  .main2 .main-2-right .video-container img {
+    width: 100%;
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
   }
   .container {
     width: 100%;
@@ -651,9 +751,9 @@ main .main-right .dog-img {
     width: 100%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   body {
-    font-size: 16px;
+    font-size: 20px;
   }
   .container {
     width: 100%;
