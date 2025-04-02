@@ -106,7 +106,7 @@ main .main-left {
   gap: 40px;
 }
 main .main-left h1 {
-  font-size: 58px;
+  font-size: 50px;
 }
 main .main-left p {
   font-size: 20px;
@@ -163,7 +163,7 @@ main .main-right .dog-img {
   padding: 0 130px;
 }
 .main2 .main-2-left h1 {
-  font-size: 48px;
+  font-size: 40px;
 }
 .main2 .main-2-left p {
   font-size: 25px;
@@ -249,7 +249,7 @@ main .main-right .dog-img {
 .main-3 .title .title_paragraph {
   color: white;
   font-size: 25px;
-  width: 50%;
+  width: 60%;
 }
 .main-3 h1,
 .main-3 p {
