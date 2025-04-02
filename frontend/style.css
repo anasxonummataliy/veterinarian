@@ -512,19 +512,16 @@ main .main-right .dog-img {
   justify-content: center;
   padding-bottom: 20px;
 }
-.main-8 .post:hover {
-  transform: scale(1.05);
-  transition: 0.5s;
-}
 .main-8 .post {
   width: 350px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  border: 1px solid rgb(210, 204, 204);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
-.main-8 .post .post:hover {
-  transform: scale(1.2);
+.main-8 .post:hover {
+  transform: translateY(-5px);
 }
 .main-8 .post img {
   width: 100%;
