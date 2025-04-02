@@ -9,6 +9,7 @@
   max-width: 1920px;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 nav {
   display: flex;
@@ -16,7 +17,6 @@ nav {
   align-items: center;
   width: 100%;
   height: 120px;
-  border: 1px solid;
   justify-content: space-around;
   background-color: #eaae00;
   color: white;
@@ -36,8 +36,8 @@ nav {
     text-decoration: none;
     list-style: none;
     display: flex;
-    gap: 20px;
-    font-size: 27px;
+    gap: 25px;
+    font-size: 22px;
 
     a {
       color: white;
@@ -192,28 +192,41 @@ main {
     align-items: center;
     justify-content: center;
 
-    .video-container {
+    .video-section1 {
       position: relative;
-      display: inline-block;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .overlay {
+    .video-wrapper1 {
+      position: relative;
+      width: 450px; /* O'zingizga mos ravishda o'zgartiring */
+      height: 400px;
+    }
+
+    #video1 {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .overlay1 {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 204, 0, 0.6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 0.5s;
+      background: rgba(255, 204, 0, 0.6); /* Sariq filtr */
+      transition: opacity 0.3s ease;
     }
 
-    .play-button {
+    .play-button1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       background: white;
       width: 60px;
       height: 60px;
@@ -222,15 +235,26 @@ main {
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease;
     }
 
-    .play-button::after {
+    .play-button1 i {
+      font-size: 24px;
+      color: #ffc400;
+    }
+
+    .video-wrapper1::before {
       content: "";
-      width: 0;
-      height: 0;
-      border-left: 20px solid black;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
+      position: absolute;
+      width: 220px;
+      height: 200px;
+      background: #ffc400;
+      z-index: -1;
+    }
+    .video-wrapper1::before {
+      bottom: -8%;
+      left: -8%;
     }
   }
 }
@@ -298,9 +322,10 @@ main {
   display: flex;
   width: 100%;
   min-height: 700px;
-  background-color: #fff;
   align-items: center;
   justify-content: center;
+  position: relative; 
+
   .main-4-left {
     width: 50%;
     display: flex;
@@ -309,10 +334,72 @@ main {
     padding: 0 60px;
     align-items: center;
 
-    img {
-      width: 60%;
+    .video-section2 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .video-wrapper2 {
+      position: relative;
+      width: 450px;
+      height: 400px;
+    }
+
+    #video2 {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .overlay2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 204, 0, 0.6);
+      transition: opacity 0.3s ease;
+      pointer-events: none; 
+    }
+
+    .play-button2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease;
+      z-index: 10; 
+    }
+
+    .play-button2 i {
+      font-size: 24px;
+      color: #ffc400;
+    }
+
+    .video-wrapper2::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 200px;
+      background: #ffc400;
+      z-index: -1;
+      bottom: -8%;
+      right: -8%;
     }
   }
+
   .main-4-right {
     width: 50%;
     height: 100%;
@@ -506,15 +593,33 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: url("../frontend/image/back-image.png") center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    /* Pseudoelement to‘g‘ri ishlashi uchun & qo‘shildi */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 196, 0, 0.8); /* Sariq filtr shaffof qilib qo‘yildi */
+    z-index: 1;
+  }
 
   .data-about-vet {
+    position: relative;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
+    z-index: 2; /* Matn filtr ostida qolib ketmasligi uchun */
 
     i {
-      font-size: 40px;
+      font-size: 60px;
       padding-bottom: 20px;
     }
   }
@@ -546,7 +651,6 @@ main {
     padding-bottom: 20px;
   }
 
-
   .post {
     width: 350px;
     display: flex;
@@ -556,9 +660,8 @@ main {
     transition: transform 0.3s;
 
     &:hover {
-          transform: translateY(-5px);
-        }
-
+      transform: scale(1.05);
+    }
 
     img {
       width: 100%;
@@ -1014,21 +1117,600 @@ main {
 }
 
 @media (max-width: 768px) {
-}
+  body {
+    font-size: 20px;
+  }
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 20px;
 
+    .logo_menu {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .menu-icon {
+      display: block;
+    }
+    .logo {
+      width: 120px;
+      padding-left: 0;
+    }
+    form {
+      width: 200px;
+      height: 50px;
+      input {
+        width: 90%;
+        height: 50px;
+        font-size: 10px;
+      }
+      .search-icon {
+        width: 70px;
+        height: 50px;
+        font-size: 20px;
+      }
+    }
+
+    ul > li {
+      display: none;
+    }
+  }
+  main {
+    min-height: 400px;
+    .main-left {
+      width: 50%;
+      padding: 20px;
+      gap: 10px;
+
+      h1 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 100;
+      }
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 20px;
+
+        .contact-us {
+          width: 100%;
+          height: 50px;
+          font-size: 15px;
+        }
+        .our-ser {
+          width: 100%;
+          height: 50px;
+          font-size: 15px;
+        }
+      }
+    }
+    .main-right {
+      .dog-img {
+        height: 250px;
+      }
+    }
+  }
+  .main2 {
+    min-height: 350px;
+    gap: 20px;
+    padding: 20px;
+    .main-2-left {
+      width: 100%;
+      padding: 0 20px;
+      h1 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+    .main-2-right {
+      width: 100%;
+      .video-container {
+        img {
+          width: 100%;
+          height: 200px;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+  .main-3 {
+    min-height: 500px;
+    gap: 20px;
+    padding: 20px;
+
+    .title {
+      width: 100%;
+      gap: 10px;
+      h1 {
+        font-size: 30px;
+        width: 100%;
+      }
+      p {
+        width: 100% !important;
+        font-size: 15px;
+      }
+    }
+    .product {
+      gap: 60px;
+      .product-item {
+        width: 100%;
+        img {
+          height: 300px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .main-4 {
+    min-height: 400px;
+    gap: 20px;
+    padding: 20px;
+
+    .main-4-left {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    .main-4-right {
+      width: 50%;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+  .main-5 {
+    min-height: 500px;
+    gap: 20px;
+    padding: 20px;
+
+    .title_5 {
+      width: 100%;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    .buy-product {
+      gap: 20px;
+      .buy-product-item {
+        width: 100%;
+        img {
+          height: 200px;
+          width: 100%;
+        }
+        .price {
+          flex-direction: column;
+          .line {
+            font-size: 15px;
+          }
+        }
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .main-6 {
+    min-height: 500px;
+    gap: 20px;
+    padding: 40px;
+
+    .title_6 {
+      width: 100%;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    .team {
+      gap: 20px;
+      .member {
+        width: 100%;
+        img {
+          height: 200px;
+          width: 100%;
+        }
+        .about_member {
+          h1 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .main-7 {
+    min-height: 300px;
+    gap: 40px;
+    padding: 20px;
+
+    .data-about-vet {
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+  .main-8 {
+    min-height: 500px;
+    gap: 40px;
+    padding: 20px;
+
+    h1 {
+      font-size: 30px;
+    }
+    .posts {
+      min-height: 300px;
+      .post {
+        width: 100%;
+        img {
+          height: 200px;
+          width: 100%;
+        }
+        .post-items {
+          h4,
+          h3,
+          a,
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .main-9 {
+    min-height: 300px;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+    .first {
+      width: 40%;
+      ul {
+        li {
+          font-size: 15px;
+        }
+      }
+    }
+    .second {
+      width: 40%;
+      ul {
+        li {
+          font-size: 15px;
+        }
+      }
+    }
+    .third {
+      width: 100%;
+      .title_third {
+        h1 {
+          font-size: 25px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+      form {
+        width: 100%;
+        height: 80px;
+        input {
+          width: 90%;
+          height: 80px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 992px) {
   body {
     font-size: 20px;
   }
-  .container {
-    width: 100%;
-    padding: 10px;
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 20px;
+
+    .logo_menu {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .menu-icon {
+      display: block;
+    }
+    .logo {
+      width: 120px;
+      padding-left: 0;
+    }
+    form {
+      width: 200px;
+      height: 50px;
+      input {
+        width: 90%;
+        height: 50px;
+        font-size: 10px;
+      }
+      .search-icon {
+        width: 70px;
+        height: 50px;
+        font-size: 20px;
+      }
+    }
+
+    ul > li {
+      display: none;
+    }
   }
-  nav ul {
-    flex-direction: column;
-    text-align: center;
+  main {
+    min-height: 400px;
+    .main-left {
+      width: 50%;
+      padding: 20px;
+      gap: 10px;
+
+      h1 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 100;
+      }
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 20px;
+
+        .contact-us {
+          width: 100%;
+          height: 50px;
+          font-size: 15px;
+        }
+        .our-ser {
+          width: 100%;
+          height: 50px;
+          font-size: 15px;
+        }
+      }
+    }
+    .main-right {
+      .dog-img {
+        height: 250px;
+      }
+    }
   }
-  .card {
-    width: 100%;
+  .main2 {
+    min-height: 350px;
+    gap: 20px;
+    padding: 20px;
+    .main-2-left {
+      width: 100%;
+      padding: 0 20px;
+      h1 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+    .main-2-right {
+      width: 100%;
+      .video-container {
+        img {
+          width: 100%;
+          height: 200px;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+  .main-3 {
+    min-height: 500px;
+    gap: 20px;
+    padding: 20px;
+
+    .title {
+      width: 100%;
+      gap: 10px;
+      h1 {
+        font-size: 30px;
+        width: 100%;
+      }
+      p {
+        width: 100% !important;
+        font-size: 15px;
+      }
+    }
+    .product {
+      gap: 60px;
+      .product-item {
+        width: 100%;
+        img {
+          height: 300px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .main-4 {
+    min-height: 400px;
+    gap: 20px;
+    padding: 20px;
+
+    .main-4-left {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    .main-4-right {
+      width: 50%;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+  .main-5 {
+    min-height: 500px;
+    gap: 20px;
+    padding: 20px;
+
+    .title_5 {
+      width: 100%;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    .buy-product {
+      gap: 20px;
+      .buy-product-item {
+        width: 100%;
+        img {
+          height: 200px;
+          width: 100%;
+        }
+        .price {
+          flex-direction: column;
+          .line {
+            font-size: 15px;
+          }
+        }
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .main-6 {
+    min-height: 500px;
+    gap: 20px;
+    padding: 40px;
+
+    .title_6 {
+      width: 100%;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    .team {
+      gap: 20px;
+      .member {
+        width: 100%;
+        img {
+          height: 200px;
+          width: 100%;
+        }
+        .about_member {
+          h1 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .main-7 {
+    min-height: 300px;
+    gap: 40px;
+    padding: 20px;
+
+    .data-about-vet {
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+  .main-8 {
+    min-height: 500px;
+    gap: 40px;
+    padding: 20px;
+
+    h1 {
+      font-size: 30px;
+    }
+    .posts {
+      min-height: 300px;
+      .post {
+        width: 100%;
+        img {
+          height: 200px;
+          width: 100%;
+        }
+        .post-items {
+          h4,
+          h3,
+          a,
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .main-9 {
+    min-height: 300px;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+    .first {
+      width: 40%;
+      ul {
+        li {
+          font-size: 15px;
+        }
+      }
+    }
+    .second {
+      width: 40%;
+      ul {
+        li {
+          font-size: 15px;
+        }
+      }
+    }
+    .third {
+      width: 100%;
+      .title_third {
+        h1 {
+          font-size: 25px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+      form {
+        width: 100%;
+        height: 80px;
+        input {
+          width: 90%;
+          height: 80px;
+          font-size: 15px;
+        }
+      }
+    }
   }
 }
