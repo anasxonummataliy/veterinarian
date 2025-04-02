@@ -438,6 +438,7 @@ main .main-right .dog-img {
   align-items: center;
   gap: 50px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .main-5 .buy-product .buy-product-item {
   width: 280px;
@@ -796,202 +797,205 @@ main .main-right .dog-img {
     display: none;
   }
   main {
-    min-height: 400px;
+    flex-direction: column-reverse;
+    min-height: 500px;
   }
   main .main-left {
-    width: 50%;
+    width: 100%;
     padding: 20px;
-    gap: 10px;
+    gap: 20px;
   }
   main .main-left h1 {
-    font-size: 15px;
+    font-size: 28px;
   }
   main .main-left p {
-    font-size: 13px;
-    font-weight: 100;
+    font-size: 16px;
   }
   main .main-left .buttons {
     flex-direction: column;
-    gap: 10px;
-    padding-bottom: 20px;
   }
-  main .main-left .buttons .contact-us {
-    width: 100%;
-    height: 50px;
-    font-size: 15px;
-  }
+  main .main-left .buttons .contact-us,
   main .main-left .buttons .our-ser {
     width: 100%;
     height: 50px;
-    font-size: 15px;
+    font-size: 16px;
+  }
+  main .main-right {
+    width: 100%;
   }
   main .main-right .dog-img {
-    height: 250px;
+    height: 300px;
   }
   .main2 {
-    min-height: 350px;
-    gap: 20px;
-    padding: 20px;
+    flex-direction: column-reverse;
+    min-height: 600px;
   }
   .main2 .main-2-left {
     width: 100%;
-    padding: 0 20px;
+    padding: 20px;
   }
   .main2 .main-2-left h1 {
-    font-size: 15px;
+    font-size: 24px;
   }
   .main2 .main-2-left p {
-    font-size: 13px;
+    font-size: 18px;
+  }
+  .main2 .main-2-left button {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
   }
   .main2 .main-2-right {
     width: 100%;
   }
-  .main2 .main-2-right .video-container img {
+  .main2 .main-2-right .video-wrapper1 {
     width: 100%;
-    height: 200px;
-    padding-right: 20px;
+    height: 250px;
   }
   .main-3 {
-    min-height: 500px;
-    gap: 20px;
+    min-height: 700px;
     padding: 20px;
+    gap: 40px;
   }
-  .main-3 .title {
+  .main-3 .title .title_header {
+    font-size: 36px;
+  }
+  .main-3 .title .title_paragraph {
+    font-size: 18px;
     width: 100%;
-    gap: 10px;
-  }
-  .main-3 .title h1 {
-    font-size: 30px;
-    width: 100%;
-  }
-  .main-3 .title p {
-    width: 100% !important;
-    font-size: 15px;
-  }
-  .main-3 .product {
-    gap: 60px;
   }
   .main-3 .product .product-item {
     width: 100%;
   }
   .main-3 .product .product-item img {
-    height: 300px;
     width: 100%;
+    height: 250px;
+  }
+  .main-3 .product .product-item h1 {
+    font-size: 24px;
+  }
+  .main-3 .product .product-item p {
+    font-size: 16px;
   }
   .main-4 {
-    min-height: 400px;
-    gap: 20px;
-    padding: 20px;
+    flex-direction: column;
+    min-height: 600px;
   }
   .main-4 .main-4-left {
-    width: 50%;
-  }
-  .main-4 .main-4-left img {
     width: 100%;
+    padding: 20px;
+  }
+  .main-4 .main-4-left .video-wrapper2 {
+    width: 100%;
+    height: 250px;
   }
   .main-4 .main-4-right {
-    width: 50%;
+    width: 100%;
+    margin-right: 0;
+    padding: 20px;
+    align-items: center;
   }
   .main-4 .main-4-right h1 {
-    font-size: 30px;
+    font-size: 28px;
+    text-align: center;
   }
   .main-4 .main-4-right p {
-    font-size: 15px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .main-4 .main-4-right button {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
   }
   .main-5 {
-    min-height: 500px;
-    gap: 20px;
+    min-height: 700px;
     padding: 20px;
   }
   .main-5 .title_5 {
     width: 100%;
   }
   .main-5 .title_5 h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
   .main-5 .title_5 p {
-    font-size: 15px;
-  }
-  .main-5 .buy-product {
-    gap: 20px;
+    font-size: 18px;
   }
   .main-5 .buy-product .buy-product-item {
     width: 100%;
   }
   .main-5 .buy-product .buy-product-item img {
-    height: 200px;
     width: 100%;
-  }
-  .main-5 .buy-product .buy-product-item .price {
-    flex-direction: column;
-  }
-  .main-5 .buy-product .buy-product-item .price .line {
-    font-size: 15px;
+    height: 200px;
   }
   .main-5 .buy-product .buy-product-item h2 {
     font-size: 20px;
   }
+  .main-5 .buy-product .buy-product-item button {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+  }
   .main-6 {
-    min-height: 500px;
-    gap: 20px;
-    padding: 40px;
+    min-height: 700px;
+    padding: 20px;
   }
   .main-6 .title_6 {
     width: 100%;
   }
   .main-6 .title_6 h1 {
-    font-size: 30px;
+    font-size: 36px;
   }
   .main-6 .title_6 p {
-    font-size: 15px;
-  }
-  .main-6 .team {
-    gap: 20px;
+    font-size: 18px;
   }
   .main-6 .team .member {
     width: 100%;
   }
   .main-6 .team .member img {
-    height: 200px;
     width: 100%;
+    height: 250px;
   }
   .main-6 .team .member .about_member h1 {
-    font-size: 20px;
+    font-size: 24px;
   }
   .main-6 .team .member .about_member p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .main-7 {
-    min-height: 300px;
-    gap: 40px;
+    height: 400px;
+    flex-direction: column;
     padding: 20px;
   }
   .main-7 .data-about-vet i {
-    font-size: 20px;
+    font-size: 40px;
+  }
+  .main-7 .data-about-vet h1 {
+    font-size: 24px;
   }
   .main-8 {
-    min-height: 500px;
-    gap: 40px;
+    min-height: 800px;
     padding: 20px;
   }
   .main-8 h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
-  .main-8 .posts {
-    min-height: 300px;
+  .main-8 .recent {
+    font-size: 18px;
   }
   .main-8 .posts .post {
     width: 100%;
   }
   .main-8 .posts .post img {
     height: 200px;
-    width: 100%;
+  }
+  .main-8 .posts .post .post-items h3 {
+    font-size: 20px;
   }
   .main-8 .posts .post .post-items h4,
-  .main-8 .posts .post .post-items h3,
-  .main-8 .posts .post .post-items a,
-  .main-8 .posts .post .post-items p {
-    font-size: 15px;
+  .main-8 .posts .post .post-items p,
+  .main-8 .posts .post .post-items a {
+    font-size: 16px;
   }
   .main-9 {
     min-height: 300px;
@@ -1030,549 +1034,245 @@ main .main-right .dog-img {
     font-size: 15px;
   }
 }
-@media (max-width: 768px) {
-  body {
-    font-size: 20px;
-  }
+/* Media Query for Tablet (577px to 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
   nav {
-    flex-direction: row;
-    justify-content: space-around;
+    height: 100px;
     padding: 0 20px;
-  }
-  nav .logo_menu {
-    display: flex;
-    align-items: center;
-    gap: 5px;
   }
   nav .menu-icon {
     display: block;
   }
   nav .logo {
-    width: 120px;
-    padding-left: 0;
+    width: 180px;
+  }
+  nav ul {
+    display: none; /* Hide menu items; assume JS will toggle them */
   }
   nav form {
     width: 200px;
-    height: 50px;
+    height: 45px;
   }
   nav form input {
-    width: 90%;
-    height: 50px;
-    font-size: 10px;
+    font-size: 18px;
   }
   nav form .search-icon {
-    width: 70px;
-    height: 50px;
-    font-size: 20px;
-  }
-  nav ul > li {
-    display: none;
+    width: 60px;
   }
   main {
-    min-height: 400px;
+    flex-direction: column-reverse;
+    min-height: 600px;
   }
   main .main-left {
-    width: 50%;
-    padding: 20px;
-    gap: 10px;
+    width: 100%;
+    padding: 30px;
+    gap: 30px;
   }
   main .main-left h1 {
-    font-size: 15px;
+    font-size: 36px;
   }
   main .main-left p {
-    font-size: 13px;
-    font-weight: 100;
+    font-size: 18px;
   }
-  main .main-left .buttons {
-    flex-direction: column;
-    gap: 10px;
-    padding-bottom: 20px;
-  }
-  main .main-left .buttons .contact-us {
-    width: 100%;
-    height: 50px;
-    font-size: 15px;
-  }
+  main .main-left .buttons .contact-us,
   main .main-left .buttons .our-ser {
+    width: 160px;
+    height: 55px;
+    font-size: 16px;
+  }
+  main .main-right {
     width: 100%;
-    height: 50px;
-    font-size: 15px;
   }
   main .main-right .dog-img {
-    height: 250px;
+    height: 400px;
   }
   .main2 {
-    min-height: 350px;
-    gap: 20px;
-    padding: 20px;
+    flex-direction: column-reverse;
+    min-height: 700px;
   }
   .main2 .main-2-left {
     width: 100%;
-    padding: 0 20px;
+    padding: 30px;
   }
   .main2 .main-2-left h1 {
-    font-size: 15px;
+    font-size: 32px;
   }
   .main2 .main-2-left p {
-    font-size: 13px;
+    font-size: 20px;
+  }
+  .main2 .main-2-left button {
+    width: 160px;
+    height: 55px;
+    font-size: 16px;
   }
   .main2 .main-2-right {
     width: 100%;
   }
-  .main2 .main-2-right .video-container img {
-    width: 100%;
-    height: 200px;
-    padding-right: 20px;
+  .main2 .main-2-right .video-wrapper1 {
+    width: 80%;
+    height: 350px;
+    margin: 0 auto;
   }
   .main-3 {
-    min-height: 500px;
-    gap: 20px;
-    padding: 20px;
-  }
-  .main-3 .title {
-    width: 100%;
-    gap: 10px;
-  }
-  .main-3 .title h1 {
-    font-size: 30px;
-    width: 100%;
-  }
-  .main-3 .title p {
-    width: 100% !important;
-    font-size: 15px;
-  }
-  .main-3 .product {
+    min-height: 800px;
+    padding: 30px;
     gap: 60px;
   }
+  .main-3 .title .title_header {
+    font-size: 48px;
+  }
+  .main-3 .title .title_paragraph {
+    font-size: 20px;
+    width: 80%;
+  }
   .main-3 .product .product-item {
-    width: 100%;
+    width: 45%;
   }
   .main-3 .product .product-item img {
-    height: 300px;
     width: 100%;
+    height: 280px;
+  }
+  .main-3 .product .product-item h1 {
+    font-size: 28px;
+  }
+  .main-3 .product .product-item p {
+    font-size: 18px;
   }
   .main-4 {
-    min-height: 400px;
-    gap: 20px;
-    padding: 20px;
+    flex-direction: column;
+    min-height: 700px;
   }
   .main-4 .main-4-left {
-    width: 50%;
-  }
-  .main-4 .main-4-left img {
     width: 100%;
+    padding: 30px;
+  }
+  .main-4 .main-4-left .video-wrapper2 {
+    width: 80%;
+    height: 350px;
+    margin: 0 auto;
   }
   .main-4 .main-4-right {
-    width: 50%;
-  }
-  .main-4 .main-4-right h1 {
-    font-size: 30px;
-  }
-  .main-4 .main-4-right p {
-    font-size: 15px;
-  }
-  .main-5 {
-    min-height: 500px;
-    gap: 20px;
-    padding: 20px;
-  }
-  .main-5 .title_5 {
     width: 100%;
-  }
-  .main-5 .title_5 h1 {
-    font-size: 30px;
-  }
-  .main-5 .title_5 p {
-    font-size: 15px;
-  }
-  .main-5 .buy-product {
-    gap: 20px;
-  }
-  .main-5 .buy-product .buy-product-item {
-    width: 100%;
-  }
-  .main-5 .buy-product .buy-product-item img {
-    height: 200px;
-    width: 100%;
-  }
-  .main-5 .buy-product .buy-product-item .price {
-    flex-direction: column;
-  }
-  .main-5 .buy-product .buy-product-item .price .line {
-    font-size: 15px;
-  }
-  .main-5 .buy-product .buy-product-item h2 {
-    font-size: 20px;
-  }
-  .main-6 {
-    min-height: 500px;
-    gap: 20px;
-    padding: 40px;
-  }
-  .main-6 .title_6 {
-    width: 100%;
-  }
-  .main-6 .title_6 h1 {
-    font-size: 30px;
-  }
-  .main-6 .title_6 p {
-    font-size: 15px;
-  }
-  .main-6 .team {
-    gap: 20px;
-  }
-  .main-6 .team .member {
-    width: 100%;
-  }
-  .main-6 .team .member img {
-    height: 200px;
-    width: 100%;
-  }
-  .main-6 .team .member .about_member h1 {
-    font-size: 20px;
-  }
-  .main-6 .team .member .about_member p {
-    font-size: 15px;
-  }
-  .main-7 {
-    min-height: 300px;
-    gap: 40px;
-    padding: 20px;
-  }
-  .main-7 .data-about-vet i {
-    font-size: 20px;
-  }
-  .main-8 {
-    min-height: 500px;
-    gap: 40px;
-    padding: 20px;
-  }
-  .main-8 h1 {
-    font-size: 30px;
-  }
-  .main-8 .posts {
-    min-height: 300px;
-  }
-  .main-8 .posts .post {
-    width: 100%;
-  }
-  .main-8 .posts .post img {
-    height: 200px;
-    width: 100%;
-  }
-  .main-8 .posts .post .post-items h4,
-  .main-8 .posts .post .post-items h3,
-  .main-8 .posts .post .post-items a,
-  .main-8 .posts .post .post-items p {
-    font-size: 15px;
-  }
-  .main-9 {
-    min-height: 300px;
-    gap: 20px;
-    padding: 40px;
-    flex-wrap: wrap;
-  }
-  .main-9 .first {
-    width: 40%;
-  }
-  .main-9 .first ul li {
-    font-size: 15px;
-  }
-  .main-9 .second {
-    width: 40%;
-  }
-  .main-9 .second ul li {
-    font-size: 15px;
-  }
-  .main-9 .third {
-    width: 100%;
-  }
-  .main-9 .third .title_third h1 {
-    font-size: 25px;
-  }
-  .main-9 .third .title_third p {
-    font-size: 15px;
-  }
-  .main-9 .third form {
-    width: 100%;
-    height: 80px;
-  }
-  .main-9 .third form input {
-    width: 90%;
-    height: 80px;
-    font-size: 15px;
-  }
-}
-@media (max-width: 992px) {
-  body {
-    font-size: 20px;
-  }
-  nav {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0 20px;
-  }
-  nav .logo_menu {
-    display: flex;
+    margin-right: 0;
+    padding: 30px;
     align-items: center;
-    gap: 5px;
-  }
-  nav .menu-icon {
-    display: block;
-  }
-  nav .logo {
-    width: 120px;
-    padding-left: 0;
-  }
-  nav form {
-    width: 200px;
-    height: 50px;
-  }
-  nav form input {
-    width: 90%;
-    height: 50px;
-    font-size: 10px;
-  }
-  nav form .search-icon {
-    width: 70px;
-    height: 50px;
-    font-size: 20px;
-  }
-  nav ul > li {
-    display: none;
-  }
-  main {
-    min-height: 400px;
-  }
-  main .main-left {
-    width: 50%;
-    padding: 20px;
-    gap: 10px;
-  }
-  main .main-left h1 {
-    font-size: 15px;
-  }
-  main .main-left p {
-    font-size: 13px;
-    font-weight: 100;
-  }
-  main .main-left .buttons {
-    flex-direction: column;
-    gap: 10px;
-    padding-bottom: 20px;
-  }
-  main .main-left .buttons .contact-us {
-    width: 100%;
-    height: 50px;
-    font-size: 15px;
-  }
-  main .main-left .buttons .our-ser {
-    width: 100%;
-    height: 50px;
-    font-size: 15px;
-  }
-  main .main-right .dog-img {
-    height: 250px;
-  }
-  .main2 {
-    min-height: 350px;
-    gap: 20px;
-    padding: 20px;
-  }
-  .main2 .main-2-left {
-    width: 100%;
-    padding: 0 20px;
-  }
-  .main2 .main-2-left h1 {
-    font-size: 15px;
-  }
-  .main2 .main-2-left p {
-    font-size: 13px;
-  }
-  .main2 .main-2-right {
-    width: 100%;
-  }
-  .main2 .main-2-right .video-container img {
-    width: 100%;
-    height: 200px;
-    padding-right: 20px;
-  }
-  .main-3 {
-    min-height: 500px;
-    gap: 20px;
-    padding: 20px;
-  }
-  .main-3 .title {
-    width: 100%;
-    gap: 10px;
-  }
-  .main-3 .title h1 {
-    font-size: 30px;
-    width: 100%;
-  }
-  .main-3 .title p {
-    width: 100% !important;
-    font-size: 15px;
-  }
-  .main-3 .product {
-    gap: 60px;
-  }
-  .main-3 .product .product-item {
-    width: 100%;
-  }
-  .main-3 .product .product-item img {
-    height: 300px;
-    width: 100%;
-  }
-  .main-4 {
-    min-height: 400px;
-    gap: 20px;
-    padding: 20px;
-  }
-  .main-4 .main-4-left {
-    width: 50%;
-  }
-  .main-4 .main-4-left img {
-    width: 100%;
-  }
-  .main-4 .main-4-right {
-    width: 50%;
   }
   .main-4 .main-4-right h1 {
-    font-size: 30px;
+    font-size: 36px;
+    text-align: center;
   }
   .main-4 .main-4-right p {
-    font-size: 15px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .main-4 .main-4-right button {
+    width: 160px;
+    height: 55px;
+    font-size: 16px;
   }
   .main-5 {
-    min-height: 500px;
-    gap: 20px;
-    padding: 20px;
+    min-height: 800px;
+    padding: 30px;
   }
   .main-5 .title_5 {
-    width: 100%;
+    width: 80%;
   }
   .main-5 .title_5 h1 {
-    font-size: 30px;
+    font-size: 36px;
   }
   .main-5 .title_5 p {
-    font-size: 15px;
-  }
-  .main-5 .buy-product {
-    gap: 20px;
+    font-size: 20px;
   }
   .main-5 .buy-product .buy-product-item {
-    width: 100%;
+    width: 45%;
   }
   .main-5 .buy-product .buy-product-item img {
-    height: 200px;
     width: 100%;
-  }
-  .main-5 .buy-product .buy-product-item .price {
-    flex-direction: column;
-  }
-  .main-5 .buy-product .buy-product-item .price .line {
-    font-size: 15px;
+    height: 250px;
   }
   .main-5 .buy-product .buy-product-item h2 {
-    font-size: 20px;
+    font-size: 22px;
+  }
+  .main-5 .buy-product .buy-product-item button {
+    width: 130px;
+    height: 45px;
+    font-size: 16px;
   }
   .main-6 {
-    min-height: 500px;
-    gap: 20px;
-    padding: 40px;
+    min-height: 800px;
+    padding: 30px;
   }
   .main-6 .title_6 {
-    width: 100%;
+    width: 80%;
   }
   .main-6 .title_6 h1 {
-    font-size: 30px;
+    font-size: 48px;
   }
   .main-6 .title_6 p {
-    font-size: 15px;
-  }
-  .main-6 .team {
-    gap: 20px;
+    font-size: 20px;
   }
   .main-6 .team .member {
-    width: 100%;
+    width: 45%;
   }
   .main-6 .team .member img {
-    height: 200px;
     width: 100%;
+    height: 280px;
   }
   .main-6 .team .member .about_member h1 {
-    font-size: 20px;
+    font-size: 28px;
   }
   .main-6 .team .member .about_member p {
-    font-size: 15px;
+    font-size: 18px;
   }
   .main-7 {
-    min-height: 300px;
-    gap: 40px;
-    padding: 20px;
+    height: 450px;
+    padding: 30px;
   }
   .main-7 .data-about-vet i {
-    font-size: 20px;
+    font-size: 50px;
+  }
+  .main-7 .data-about-vet h1 {
+    font-size: 28px;
   }
   .main-8 {
-    min-height: 500px;
-    gap: 40px;
-    padding: 20px;
+    min-height: 900px;
+    padding: 30px;
   }
   .main-8 h1 {
-    font-size: 30px;
+    font-size: 36px;
   }
-  .main-8 .posts {
-    min-height: 300px;
+  .main-8 .recent {
+    font-size: 20px;
   }
   .main-8 .posts .post {
-    width: 100%;
+    width: 48%;
   }
   .main-8 .posts .post img {
-    height: 200px;
-    width: 100%;
+    height: 250px;
+  }
+  .main-8 .posts .post .post-items h3 {
+    font-size: 22px;
   }
   .main-8 .posts .post .post-items h4,
-  .main-8 .posts .post .post-items h3,
-  .main-8 .posts .post .post-items a,
-  .main-8 .posts .post .post-items p {
-    font-size: 15px;
+  .main-8 .posts .post .post-items p,
+  .main-8 .posts .post .post-items a {
+    font-size: 18px;
   }
   .main-9 {
-    min-height: 300px;
-    gap: 20px;
-    padding: 40px;
-    flex-wrap: wrap;
+    padding: 60px 30px;
   }
-  .main-9 .first {
-    width: 40%;
-  }
-  .main-9 .first ul li {
-    font-size: 15px;
-  }
+  .main-9 .first,
   .main-9 .second {
-    width: 40%;
-  }
-  .main-9 .second ul li {
-    font-size: 15px;
+    width: 30%;
   }
   .main-9 .third {
-    width: 100%;
-  }
-  .main-9 .third .title_third h1 {
-    font-size: 25px;
-  }
-  .main-9 .third .title_third p {
-    font-size: 15px;
+    width: 40%;
   }
   .main-9 .third form {
     width: 100%;
-    height: 80px;
+    height: 70px;
   }
   .main-9 .third form input {
-    width: 90%;
-    height: 80px;
-    font-size: 15px;
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */
