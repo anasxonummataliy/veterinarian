@@ -9,16 +9,29 @@ menuBtn.onclick = ()=>{
   searchBtn.classList.add("hide"); 
   cancelBtn.classList.add("show");
 }
-cancelBtn.onclick = ()=>{
-  items.classList.remove("active");
-  menuBtn.classList.remove("hide");
-  searchBtn.classList.remove("hide");
-  cancelBtn.classList.remove("show");
-  form.classList.remove("active"); 
-  cancelBtn.style.color = "#ff3d00";
-}
+// cancelBtn.onclick = ()=>{
+//   items.classList.remove("active");
+//   menuBtn.classList.remove("hide");
+//   searchBtn.classList.remove("hide");
+//   cancelBtn.classList.remove("show");
+//   form.classList.remove("active"); 
+//   cancelBtn.style.color = "#ff3d00";
+// }
 searchBtn.onclick = ()=>{ 
   form.classList.add("active");
   searchBtn.classList.add("hide");
   cancelBtn.classList.add("show");
 }
+
+
+
+
+// Video konteyner
+
+document.getElementById("playButton").addEventListener("click", function () {
+  document.getElementById("video").play();
+  document.getElementById("overlay").style.opacity = "0";
+  setTimeout(() => {
+    document.getElementById("overlay").style.display = "none";
+  }, 500);
+});
