@@ -6,7 +6,6 @@
 }
 
 #root {
-  max-width: 1920px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -776,7 +775,7 @@ main {
     gap: 40px;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 130px;
   }
 
   .first {
