@@ -179,7 +179,7 @@ main .main-right .dog-img {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 0 130px;
+  padding: 0 60px;
 }
 .main2 .main-2-left h1 {
   font-size: 40px;
