@@ -1,6 +1,6 @@
 
 
-// Video konteyner
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const menuIcon = document.querySelector(".menu-icon");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  
+
   const video1 = document.getElementById("video1"),
      playBtn1 = document.getElementById("play-btn1"),
      overlay1 = document.querySelector(".overlay1"),

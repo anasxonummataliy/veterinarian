@@ -1106,6 +1106,7 @@ main .main-right .dog-img {
   .main-9 .container {
     flex-wrap: wrap;
     padding: 0 20px;
+    align-items: start;
   }
   .main-9 .first {
     width: 40%;
