@@ -710,6 +710,7 @@ main .main-right .dog-img {
   font-size: 40px;
 }
 .main-9 .third .title_third p {
+  text-align: end;
   font-size: 25px;
 }
 .main-9 .third form {
@@ -1047,6 +1048,11 @@ main .main-right .dog-img {
     height: 100px;
     padding: 0 20px;
   }
+  nav .logo_menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
   nav .menu-icon {
     display: block;
   }
@@ -1058,7 +1064,7 @@ main .main-right .dog-img {
   }
   nav form {
     width: 200px;
-    height: 45px;
+    height: 50px;
   }
   nav form input {
     font-size: 18px;
@@ -1092,6 +1098,7 @@ main .main-right .dog-img {
   }
   main .main-right .dog-img {
     height: 400px;
+    padding: 20px;
   }
   .main2 {
     flex-direction: column-reverse;
@@ -1114,6 +1121,7 @@ main .main-right .dog-img {
   }
   .main2 .main-2-right {
     width: 100%;
+    padding: 20px;
   }
   .main2 .main-2-right .video-wrapper1 {
     width: 80%;
@@ -1198,11 +1206,11 @@ main .main-right .dog-img {
     height: 250px;
   }
   .main-5 .buy-product .buy-product-item h2 {
-    font-size: 22px;
+    font-size: 30px;
   }
   .main-5 .buy-product .buy-product-item button {
-    width: 130px;
-    height: 45px;
+    width: 140px;
+    height: 50px;
     font-size: 16px;
   }
   .main-6 {

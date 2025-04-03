@@ -762,6 +762,7 @@ main {
         font-size: 40px;
       }
       p {
+        text-align: end;
         font-size: 25px;
       }
     }
@@ -1139,6 +1140,12 @@ main {
   nav {
     height: 100px;
     padding: 0 20px;
+
+    .logo_menu {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
     .menu-icon {
       display: block;
     }
@@ -1150,7 +1157,7 @@ main {
     }
     form {
       width: 200px;
-      height: 45px;
+      height: 50px;
       input {
         font-size: 18px;
       }
@@ -1186,6 +1193,7 @@ main {
       width: 100%;
       .dog-img {
         height: 400px;
+        padding: 20px;
       }
     }
   }
@@ -1210,6 +1218,7 @@ main {
     }
     .main-2-right {
       width: 100%;
+      padding: 20px;
       .video-wrapper1 {
         width: 80%;
         height: 350px;
@@ -1301,11 +1310,11 @@ main {
           height: 250px;
         }
         h2 {
-          font-size: 22px;
+          font-size: 30px;
         }
         button {
-          width: 130px;
-          height: 45px;
+          width: 140px;
+          height: 50px;
           font-size: 16px;
         }
       }
