@@ -1125,7 +1125,7 @@ main .main-right .dog-img {
   }
 }
 /* Media Query for Tablet (577px to 992px) */
-@media (min-width: 577px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   .container {
     max-width: 960px;
   }
