@@ -493,6 +493,7 @@ main .main-right .dog-img {
 }
 .main-5 .buy-product .buy-product-item h2 {
   color: white;
+  font-size: 30px;
 }
 .main-5 .buy-product .buy-product-item button {
   height: 50px;
@@ -1389,18 +1390,22 @@ main .main-right .dog-img {
     padding: 60px 0;
   }
   .main-9 .container {
-    padding: 0 30px;
+    padding: 0 65px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
   .main-9 .first,
   .main-9 .second {
-    width: 30%;
-  }
-  .main-9 .third {
     width: 40%;
   }
-  .main-9 .third form {
+  .main-9 .third {
     width: 100%;
-    height: 70px;
+    flex-direction: end;
+  }
+  .main-9 .third form {
+    width: 80%;
+    height: 80px;
   }
   .main-9 .third form input {
     font-size: 18px;

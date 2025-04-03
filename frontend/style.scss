@@ -531,6 +531,7 @@ main {
       }
       h2 {
         color: white;
+        font-size: 30px;
       }
       button {
         height: 50px;
@@ -1563,18 +1564,22 @@ main {
     padding: 60px 0;
 
     .container {
-      padding: 0 30px;
+      padding: 0 65px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .first,
     .second {
-      width: 30%;
+      width: 40%;
     }
     .third {
-      width: 40%;
+      width: 100%;
+      flex-direction: end;
       form {
-        width: 100%;
-        height: 70px;
+        width: 80%;
+        height: 80px;
         input {
           font-size: 18px;
         }
