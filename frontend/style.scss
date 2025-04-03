@@ -790,6 +790,11 @@ main {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      
+      a{
+        text-decoration: none;
+        color: white;
+      }
 
       li {
         font-size: 20px;
@@ -802,12 +807,17 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 25%;
 
     ul {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 10px;
+      a{
+        text-decoration: none;
+        color: white;
+      }
 
       li {
         font-size: 20px;
@@ -873,6 +883,11 @@ main {
       gap: 15px;
       align-items: center;
       justify-content: center;
+
+      a{
+        text-decoration: none;
+        color: white;
+      }
 
       i {
         color: #303030;

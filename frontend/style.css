@@ -727,6 +727,10 @@ main .main-right .dog-img {
   flex-direction: column;
   gap: 10px;
 }
+.main-9 .first ul a {
+  text-decoration: none;
+  color: white;
+}
 .main-9 .first ul li {
   font-size: 20px;
 }
@@ -735,12 +739,17 @@ main .main-right .dog-img {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 25%;
 }
 .main-9 .second ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.main-9 .second ul a {
+  text-decoration: none;
+  color: white;
 }
 .main-9 .second ul li {
   font-size: 20px;
@@ -799,6 +808,10 @@ main .main-right .dog-img {
   gap: 15px;
   align-items: center;
   justify-content: center;
+}
+.main-9 .third .icons-team a {
+  text-decoration: none;
+  color: white;
 }
 .main-9 .third .icons-team i {
   color: #303030;
