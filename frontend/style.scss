@@ -11,6 +11,14 @@
   flex-direction: column;
   margin: 0 auto;
 }
+
+.container {
+  max-width: 1400px; 
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px; 
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -20,6 +28,12 @@ nav {
   justify-content: space-around;
   background-color: #eaae00;
   color: white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .menu-icon {
     display: none;
@@ -88,12 +102,18 @@ nav {
     }
   }
 }
+
 main {
   width: 100%;
   min-height: 700px;
   display: flex;
   align-items: center;
   background-color: #ffc400;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
 
   .main-left {
     width: 60%;
@@ -159,6 +179,11 @@ main {
   width: 100%;
   min-height: 700px;
 
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
   .main-2-left {
     width: 50%;
     display: flex;
@@ -201,7 +226,7 @@ main {
 
     .video-wrapper1 {
       position: relative;
-      width: 450px; /* O'zingizga mos ravishda o'zgartiring */
+      width: 450px;
       height: 400px;
     }
 
@@ -218,7 +243,7 @@ main {
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 204, 0, 0.6); /* Sariq filtr */
+      background: rgba(255, 204, 0, 0.6);
       transition: opacity 0.3s ease;
     }
 
@@ -251,8 +276,6 @@ main {
       height: 200px;
       background: #ffc400;
       z-index: -1;
-    }
-    .video-wrapper1::before {
       bottom: -8%;
       left: -8%;
     }
@@ -268,6 +291,13 @@ main {
   gap: 80px;
   align-items: center;
   justify-content: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
 
   .title {
     display: flex;
@@ -318,13 +348,18 @@ main {
     }
   }
 }
+
 .main-4 {
   display: flex;
   width: 100%;
   min-height: 700px;
   align-items: center;
   justify-content: center;
-  position: relative; 
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
 
   .main-4-left {
     width: 50%;
@@ -362,7 +397,7 @@ main {
       height: 100%;
       background: rgba(255, 204, 0, 0.6);
       transition: opacity 0.3s ease;
-      pointer-events: none; 
+      pointer-events: none;
     }
 
     .play-button2 {
@@ -380,7 +415,7 @@ main {
       cursor: pointer;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
       transition: opacity 0.3s ease;
-      z-index: 10; 
+      z-index: 10;
     }
 
     .play-button2 i {
@@ -431,6 +466,7 @@ main {
     }
   }
 }
+
 .main-5 {
   width: 100%;
   min-height: 800px;
@@ -441,7 +477,13 @@ main {
   background-color: #ffc400;
   gap: 80px;
   color: white;
-  padding: 0 60px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
 
   .title_5 {
     width: 60%;
@@ -512,6 +554,13 @@ main {
   align-items: center;
   justify-content: center;
   gap: 50px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
 
   .title_6 {
     display: flex;
@@ -598,15 +647,20 @@ main {
   position: relative;
   overflow: hidden;
 
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   &::before {
-    /* Pseudoelement to‘g‘ri ishlashi uchun & qo‘shildi */
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 196, 0, 0.8); /* Sariq filtr shaffof qilib qo‘yildi */
+    background: rgba(255, 196, 0, 0.8);
     z-index: 1;
   }
 
@@ -617,7 +671,7 @@ main {
     flex-direction: column;
     align-items: center;
     color: #fff;
-    z-index: 2; /* Matn filtr ostida qolib ketmasligi uchun */
+    z-index: 2;
 
     i {
       font-size: 60px;
@@ -625,6 +679,7 @@ main {
     }
   }
 }
+
 .main-8 {
   width: 100%;
   min-height: 950px;
@@ -632,8 +687,14 @@ main {
   flex-direction: column;
   margin-top: 50px;
   align-items: center;
-  padding: 0 60px;
   gap: 50px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
 
   h1 {
     font-size: 50px;
@@ -650,56 +711,57 @@ main {
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
-  }
 
-  .post {
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-
-    img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    .post-items {
+    .post {
+      width: 350px;
       display: flex;
       flex-direction: column;
-      padding: 10px;
-      gap: 20px;
+      gap: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
 
-      a {
-        text-decoration: none;
-        color: #00d2da;
+      &:hover {
+        transform: scale(1.05);
       }
 
-      h4,
-      h3,
-      a,
-      p {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 200;
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
       }
-      h4 {
-        color: #00d2da;
-      }
-      h4,
-      h3,
-      a {
-        font-weight: 500;
-        font-size: 20px;
+
+      .post-items {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+
+        a {
+          text-decoration: none;
+          color: #00d2da;
+        }
+
+        h4,
+        h3,
+        a,
+        p {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 200;
+        }
+        h4 {
+          color: #00d2da;
+        }
+        h4,
+        h3,
+        a {
+          font-weight: 500;
+          font-size: 20px;
+        }
       }
     }
   }
 }
+
 .main-9 {
   color: white;
   background-color: #303030;
@@ -708,7 +770,14 @@ main {
   display: flex;
   gap: 40px;
   justify-content: space-around;
-  padding: 100px 130px;
+
+  .container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+  }
 
   .first {
     display: flex;
@@ -752,6 +821,7 @@ main {
     gap: 50px;
     justify-content: center;
     align-items: end;
+    padding-top: 40px;
 
     .title_third {
       display: flex;
@@ -818,14 +888,21 @@ main {
     }
   }
 }
+
+/* Media Query for Mobile (max-width: 576px) */
 @media (max-width: 576px) {
-  body {
-    font-size: 20px;
+  .container {
+    padding: 0 10px;
   }
+
   nav {
     flex-direction: row;
     justify-content: space-around;
-    padding: 0 20px;
+    padding: 0;
+
+    .container {
+      justify-content: space-between;
+    }
 
     .logo_menu {
       display: flex;
@@ -837,7 +914,6 @@ main {
     }
     .logo {
       width: 120px;
-      padding-left: 0;
     }
     form {
       width: 200px;
@@ -853,7 +929,6 @@ main {
         font-size: 20px;
       }
     }
-
     ul > li {
       display: none;
     }
@@ -861,8 +936,12 @@ main {
 
   main {
     flex-direction: column-reverse;
-    
     min-height: 500px;
+
+    .container {
+      flex-direction: column-reverse;
+    }
+
     .main-left {
       width: 100%;
       padding: 20px;
@@ -894,6 +973,11 @@ main {
   .main2 {
     flex-direction: column-reverse;
     min-height: 600px;
+
+    .container {
+      flex-direction: column-reverse;
+    }
+
     .main-2-left {
       width: 100%;
       padding: 20px;
@@ -923,6 +1007,11 @@ main {
     min-height: 700px;
     padding: 20px;
     gap: 40px;
+
+    .container {
+      padding: 20px;
+    }
+
     .title {
       .title_header {
         font-size: 36px;
@@ -952,6 +1041,11 @@ main {
   .main-4 {
     flex-direction: column;
     min-height: 600px;
+
+    .container {
+      flex-direction: column;
+    }
+
     .main-4-left {
       width: 100%;
       padding: 25px;
@@ -984,6 +1078,11 @@ main {
   .main-5 {
     min-height: 700px;
     padding: 20px;
+
+    .container {
+      padding: 20px;
+    }
+
     .title_5 {
       width: 100%;
       h1 {
@@ -1008,8 +1107,7 @@ main {
           height: 40px;
           font-size: 16px;
         }
-        .price > h2{
-
+        .price > h2 {
           font-size: 30px;
         }
       }
@@ -1019,6 +1117,11 @@ main {
   .main-6 {
     min-height: 700px;
     padding: 20px;
+
+    .container {
+      padding: 20px;
+    }
+
     .title_6 {
       width: 100%;
       h1 {
@@ -1051,6 +1154,11 @@ main {
     min-height: 400px;
     flex-direction: column;
     padding: 30px;
+
+    .container {
+      flex-direction: column;
+    }
+
     .data-about-vet {
       i {
         font-size: 40px;
@@ -1064,6 +1172,11 @@ main {
   .main-8 {
     min-height: 800px;
     padding: 30px;
+
+    .container {
+      padding: 30px;
+    }
+
     h1 {
       font-size: 28px;
     }
@@ -1095,7 +1208,11 @@ main {
     min-height: 300px;
     gap: 20px;
     padding: 40px;
-    flex-wrap: wrap;
+
+    .container {
+      flex-wrap: wrap;
+    }
+
     .first {
       width: 40%;
       ul {
@@ -1137,9 +1254,17 @@ main {
 
 /* Media Query for Tablet (577px to 992px) */
 @media (min-width: 577px) and (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
   nav {
     height: 100px;
-    padding: 0 20px;
+    padding: 0;
+
+    .container {
+      justify-content: space-between;
+    }
 
     .logo_menu {
       display: flex;
@@ -1153,7 +1278,7 @@ main {
       width: 180px;
     }
     ul {
-      display: none; /* Hide menu items; assume JS will toggle them */
+      display: none;
     }
     form {
       width: 200px;
@@ -1170,6 +1295,11 @@ main {
   main {
     flex-direction: column-reverse;
     min-height: 600px;
+
+    .container {
+      flex-direction: column-reverse;
+    }
+
     .main-left {
       width: 100%;
       padding: 30px;
@@ -1201,6 +1331,11 @@ main {
   .main2 {
     flex-direction: column-reverse;
     min-height: 700px;
+
+    .container {
+      flex-direction: column-reverse;
+    }
+
     .main-2-left {
       width: 100%;
       padding: 30px;
@@ -1231,6 +1366,11 @@ main {
     min-height: 800px;
     padding: 30px;
     gap: 60px;
+
+    .container {
+      padding: 30px;
+    }
+
     .title {
       .title_header {
         font-size: 48px;
@@ -1260,6 +1400,11 @@ main {
   .main-4 {
     flex-direction: column;
     min-height: 700px;
+
+    .container {
+      flex-direction: column;
+    }
+
     .main-4-left {
       width: 100%;
       padding: 30px;
@@ -1293,6 +1438,11 @@ main {
   .main-5 {
     min-height: 800px;
     padding: 30px;
+
+    .container {
+      padding: 30px;
+    }
+
     .title_5 {
       width: 80%;
       h1 {
@@ -1324,6 +1474,11 @@ main {
   .main-6 {
     min-height: 800px;
     padding: 30px;
+
+    .container {
+      padding: 30px;
+    }
+
     .title_6 {
       width: 80%;
       h1 {
@@ -1355,6 +1510,11 @@ main {
   .main-7 {
     height: 450px;
     padding: 30px;
+
+    .container {
+      padding: 30px;
+    }
+
     .data-about-vet {
       i {
         font-size: 50px;
@@ -1368,6 +1528,11 @@ main {
   .main-8 {
     min-height: 900px;
     padding: 30px;
+
+    .container {
+      padding: 30px;
+    }
+
     h1 {
       font-size: 36px;
     }
@@ -1395,7 +1560,12 @@ main {
   }
 
   .main-9 {
-    padding: 60px 30px;
+    padding: 60px 0;
+
+    .container {
+      padding: 0 30px;
+    }
+
     .first,
     .second {
       width: 30%;
@@ -1409,5 +1579,6 @@ main {
           font-size: 18px;
         }
       }
-    }}
+    }
   }
+}

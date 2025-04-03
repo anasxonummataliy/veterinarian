@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +12,13 @@
   margin: 0 auto;
 }
 
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -22,6 +28,11 @@ nav {
   justify-content: space-around;
   background-color: #eaae00;
   color: white;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 nav .menu-icon {
   display: none;
@@ -96,6 +107,10 @@ main {
   align-items: center;
   background-color: #ffc400;
 }
+main .container {
+  display: flex;
+  align-items: center;
+}
 main .main-left {
   width: 60%;
   height: 100%;
@@ -156,6 +171,10 @@ main .main-right .dog-img {
   width: 100%;
   min-height: 700px;
 }
+.main2 .container {
+  display: flex;
+  align-items: center;
+}
 .main2 .main-2-left {
   width: 50%;
   display: flex;
@@ -195,7 +214,7 @@ main .main-right .dog-img {
 }
 .main2 .main-2-right .video-wrapper1 {
   position: relative;
-  width: 450px; /* O'zingizga mos ravishda o'zgartiring */
+  width: 450px;
   height: 400px;
 }
 .main2 .main-2-right #video1 {
@@ -211,7 +230,7 @@ main .main-right .dog-img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 204, 0, 0.6); /* Sariq filtr */
+  background: rgba(255, 204, 0, 0.6);
   transition: opacity 0.3s ease;
 }
 .main2 .main-2-right .play-button1 {
@@ -241,8 +260,6 @@ main .main-right .dog-img {
   height: 200px;
   background: #ffc400;
   z-index: -1;
-}
-.main2 .main-2-right .video-wrapper1::before {
   bottom: -8%;
   left: -8%;
 }
@@ -256,6 +273,12 @@ main .main-right .dog-img {
   gap: 80px;
   align-items: center;
   justify-content: center;
+}
+.main-3 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
 }
 .main-3 .title {
   display: flex;
@@ -308,7 +331,10 @@ main .main-right .dog-img {
   min-height: 700px;
   align-items: center;
   justify-content: center;
-  position: relative;
+}
+.main-4 .container {
+  display: flex;
+  align-items: center;
 }
 .main-4 .main-4-left {
   width: 50%;
@@ -416,7 +442,12 @@ main .main-right .dog-img {
   background-color: #ffc400;
   gap: 80px;
   color: white;
-  padding: 0 60px;
+}
+.main-5 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
 }
 .main-5 .title_5 {
   width: 60%;
@@ -481,6 +512,12 @@ main .main-right .dog-img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 50px;
+}
+.main-6 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 50px;
 }
 .main-6 .title_6 {
@@ -559,15 +596,19 @@ main .main-right .dog-img {
   position: relative;
   overflow: hidden;
 }
+.main-7 .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .main-7::before {
-  /* Pseudoelement to‘g‘ri ishlashi uchun & qo‘shildi */
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 196, 0, 0.8); /* Sariq filtr shaffof qilib qo‘yildi */
+  background: rgba(255, 196, 0, 0.8);
   z-index: 1;
 }
 .main-7 .data-about-vet {
@@ -577,7 +618,7 @@ main .main-right .dog-img {
   flex-direction: column;
   align-items: center;
   color: #fff;
-  z-index: 2; /* Matn filtr ostida qolib ketmasligi uchun */
+  z-index: 2;
 }
 .main-7 .data-about-vet i {
   font-size: 60px;
@@ -591,7 +632,12 @@ main .main-right .dog-img {
   flex-direction: column;
   margin-top: 50px;
   align-items: center;
-  padding: 0 60px;
+  gap: 50px;
+}
+.main-8 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 50px;
 }
 .main-8 h1 {
@@ -609,7 +655,7 @@ main .main-right .dog-img {
   justify-content: center;
   padding-bottom: 20px;
 }
-.main-8 .post {
+.main-8 .posts .post {
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -617,38 +663,38 @@ main .main-right .dog-img {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
-.main-8 .post:hover {
+.main-8 .posts .post:hover {
   transform: scale(1.05);
 }
-.main-8 .post img {
+.main-8 .posts .post img {
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.main-8 .post .post-items {
+.main-8 .posts .post .post-items {
   display: flex;
   flex-direction: column;
   padding: 10px;
   gap: 20px;
 }
-.main-8 .post .post-items a {
+.main-8 .posts .post .post-items a {
   text-decoration: none;
   color: #00d2da;
 }
-.main-8 .post .post-items h4,
-.main-8 .post .post-items h3,
-.main-8 .post .post-items a,
-.main-8 .post .post-items p {
+.main-8 .posts .post .post-items h4,
+.main-8 .posts .post .post-items h3,
+.main-8 .posts .post .post-items a,
+.main-8 .posts .post .post-items p {
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
 }
-.main-8 .post .post-items h4 {
+.main-8 .posts .post .post-items h4 {
   color: #00d2da;
 }
-.main-8 .post .post-items h4,
-.main-8 .post .post-items h3,
-.main-8 .post .post-items a {
+.main-8 .posts .post .post-items h4,
+.main-8 .posts .post .post-items h3,
+.main-8 .posts .post .post-items a {
   font-weight: 500;
   font-size: 20px;
 }
@@ -661,7 +707,13 @@ main .main-right .dog-img {
   display: flex;
   gap: 40px;
   justify-content: space-around;
-  padding: 100px 130px;
+}
+.main-9 .container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
 }
 .main-9 .first {
   display: flex;
@@ -700,6 +752,7 @@ main .main-right .dog-img {
   gap: 50px;
   justify-content: center;
   align-items: end;
+  padding-top: 40px;
 }
 .main-9 .third .title_third {
   display: flex;
@@ -759,14 +812,18 @@ main .main-right .dog-img {
   border-radius: 50%;
 }
 
+/* Media Query for Mobile (max-width: 576px) */
 @media (max-width: 576px) {
-  body {
-    font-size: 20px;
+  .container {
+    padding: 0 10px;
   }
   nav {
     flex-direction: row;
     justify-content: space-around;
-    padding: 0 20px;
+    padding: 0;
+  }
+  nav .container {
+    justify-content: space-between;
   }
   nav .logo_menu {
     display: flex;
@@ -778,7 +835,6 @@ main .main-right .dog-img {
   }
   nav .logo {
     width: 120px;
-    padding-left: 0;
   }
   nav form {
     width: 200px;
@@ -800,6 +856,9 @@ main .main-right .dog-img {
   main {
     flex-direction: column-reverse;
     min-height: 500px;
+  }
+  main .container {
+    flex-direction: column-reverse;
   }
   main .main-left {
     width: 100%;
@@ -831,6 +890,9 @@ main .main-right .dog-img {
     flex-direction: column-reverse;
     min-height: 600px;
   }
+  .main2 .container {
+    flex-direction: column-reverse;
+  }
   .main2 .main-2-left {
     width: 100%;
     padding: 20px;
@@ -859,6 +921,9 @@ main .main-right .dog-img {
     padding: 20px;
     gap: 40px;
   }
+  .main-3 .container {
+    padding: 20px;
+  }
   .main-3 .title .title_header {
     font-size: 36px;
   }
@@ -882,6 +947,9 @@ main .main-right .dog-img {
   .main-4 {
     flex-direction: column;
     min-height: 600px;
+  }
+  .main-4 .container {
+    flex-direction: column;
   }
   .main-4 .main-4-left {
     width: 100%;
@@ -912,6 +980,9 @@ main .main-right .dog-img {
   }
   .main-5 {
     min-height: 700px;
+    padding: 20px;
+  }
+  .main-5 .container {
     padding: 20px;
   }
   .main-5 .title_5 {
@@ -945,6 +1016,9 @@ main .main-right .dog-img {
     min-height: 700px;
     padding: 20px;
   }
+  .main-6 .container {
+    padding: 20px;
+  }
   .main-6 .title_6 {
     width: 100%;
   }
@@ -972,6 +1046,9 @@ main .main-right .dog-img {
     flex-direction: column;
     padding: 30px;
   }
+  .main-7 .container {
+    flex-direction: column;
+  }
   .main-7 .data-about-vet i {
     font-size: 40px;
   }
@@ -980,6 +1057,9 @@ main .main-right .dog-img {
   }
   .main-8 {
     min-height: 800px;
+    padding: 30px;
+  }
+  .main-8 .container {
     padding: 30px;
   }
   .main-8 h1 {
@@ -1009,6 +1089,8 @@ main .main-right .dog-img {
     min-height: 300px;
     gap: 20px;
     padding: 40px;
+  }
+  .main-9 .container {
     flex-wrap: wrap;
   }
   .main-9 .first {
@@ -1044,9 +1126,15 @@ main .main-right .dog-img {
 }
 /* Media Query for Tablet (577px to 992px) */
 @media (min-width: 577px) and (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
   nav {
     height: 100px;
-    padding: 0 20px;
+    padding: 0;
+  }
+  nav .container {
+    justify-content: space-between;
   }
   nav .logo_menu {
     display: flex;
@@ -1060,7 +1148,7 @@ main .main-right .dog-img {
     width: 180px;
   }
   nav ul {
-    display: none; /* Hide menu items; assume JS will toggle them */
+    display: none;
   }
   nav form {
     width: 200px;
@@ -1075,6 +1163,9 @@ main .main-right .dog-img {
   main {
     flex-direction: column-reverse;
     min-height: 600px;
+  }
+  main .container {
+    flex-direction: column-reverse;
   }
   main .main-left {
     width: 100%;
@@ -1103,6 +1194,9 @@ main .main-right .dog-img {
   .main2 {
     flex-direction: column-reverse;
     min-height: 700px;
+  }
+  .main2 .container {
+    flex-direction: column-reverse;
   }
   .main2 .main-2-left {
     width: 100%;
@@ -1133,6 +1227,9 @@ main .main-right .dog-img {
     padding: 30px;
     gap: 60px;
   }
+  .main-3 .container {
+    padding: 30px;
+  }
   .main-3 .title .title_header {
     font-size: 48px;
   }
@@ -1156,6 +1253,9 @@ main .main-right .dog-img {
   .main-4 {
     flex-direction: column;
     min-height: 700px;
+  }
+  .main-4 .container {
+    flex-direction: column;
   }
   .main-4 .main-4-left {
     width: 100%;
@@ -1189,6 +1289,9 @@ main .main-right .dog-img {
     min-height: 800px;
     padding: 30px;
   }
+  .main-5 .container {
+    padding: 30px;
+  }
   .main-5 .title_5 {
     width: 80%;
   }
@@ -1217,6 +1320,9 @@ main .main-right .dog-img {
     min-height: 800px;
     padding: 30px;
   }
+  .main-6 .container {
+    padding: 30px;
+  }
   .main-6 .title_6 {
     width: 80%;
   }
@@ -1243,6 +1349,9 @@ main .main-right .dog-img {
     height: 450px;
     padding: 30px;
   }
+  .main-7 .container {
+    padding: 30px;
+  }
   .main-7 .data-about-vet i {
     font-size: 50px;
   }
@@ -1251,6 +1360,9 @@ main .main-right .dog-img {
   }
   .main-8 {
     min-height: 900px;
+    padding: 30px;
+  }
+  .main-8 .container {
     padding: 30px;
   }
   .main-8 h1 {
@@ -1274,7 +1386,10 @@ main .main-right .dog-img {
     font-size: 18px;
   }
   .main-9 {
-    padding: 60px 30px;
+    padding: 60px 0;
+  }
+  .main-9 .container {
+    padding: 0 30px;
   }
   .main-9 .first,
   .main-9 .second {
