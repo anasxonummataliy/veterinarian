@@ -54,49 +54,17 @@ nav ul a {
   color: white;
   text-decoration: none;
 }
-nav form {
-  width: 250px;
+nav .direct_for_user {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  display: flex;
-  height: 50px;
-  padding-left: 10px;
-  background-color: #ffc400;
 }
-nav form input {
-  border: none;
-  background-color: #ffc400;
-  outline: none;
-  color: white;
-  height: 50px;
-  padding: 10px;
-  font-size: 20px;
-  width: 80%;
+nav .direct_for_user a {
+  color: #fff;
 }
-nav form input::-moz-placeholder {
-  color: white;
-  font-size: 20px;
-}
-nav form input::placeholder {
-  color: white;
-  font-size: 20px;
-}
-nav form .search-icon {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #00c0ca;
-  width: 70px;
-}
-nav form .search-icon a {
-  color: white;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+nav .direct_for_user i {
+  font-size: 25px;
 }
 
 main {
