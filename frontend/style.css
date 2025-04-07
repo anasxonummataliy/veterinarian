@@ -56,15 +56,19 @@ nav ul a {
 }
 nav .direct_for_user {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
-nav .direct_for_user a {
+nav .direct_for_user button {
+  height: 40px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
   color: #fff;
-}
-nav .direct_for_user i {
-  font-size: 25px;
+  background-color: #00c0ca;
+  cursor: pointer;
 }
 
 main {
@@ -817,19 +821,12 @@ main .main-right .dog-img {
   nav .logo {
     width: 120px;
   }
-  nav form {
-    width: 200px;
-    height: 50px;
+  nav .direct_for_user {
+    gap: 5px;
   }
-  nav form input {
-    width: 90%;
-    height: 50px;
-    font-size: 15px;
-  }
-  nav form .search-icon {
-    width: 70px;
-    height: 50px;
-    font-size: 20px;
+  nav .direct_for_user button {
+    height: 30px;
+    padding: 5px;
   }
   nav ul > li {
     display: none;

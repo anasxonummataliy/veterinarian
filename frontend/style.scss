@@ -59,16 +59,19 @@ nav {
   }
   .direct_for_user{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
-    a{
+    button{
+      height: 40px;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: 5px;
+      border: none;
       color: #fff;
-    }
-
-    i{
-      font-size: 25px;
+      background-color: #00c0ca;
+      cursor: pointer;
     }
   }
 
@@ -903,20 +906,15 @@ main {
     .logo {
       width: 120px;
     }
-    form {
-      width: 200px;
-      height: 50px;
-      input {
-        width: 90%;
-        height: 50px;
-        font-size: 15px;
-      }
-      .search-icon {
-        width: 70px;
-        height: 50px;
-        font-size: 20px;
-      }
+   .direct_for_user{
+    gap: 5px;
+    button{
+      height: 30px;
+      padding: 5px;
+
+      
     }
+   }
     ul > li {
       display: none;
     }
