@@ -880,7 +880,6 @@ main {
   }
 }
 
-/* Media Query for Mobile (max-width: 576px) */
 @media (max-width: 576px) {
   .container {
     padding: 0 10px;
@@ -1132,10 +1131,12 @@ main {
   .main-7 {
     min-height: 400px;
     flex-direction: column;
-    padding: 30px;
+    padding: 40px;
+
 
     .container {
       flex-direction: column;
+      gap: 20px;
     }
 
     .data-about-vet {
@@ -1233,7 +1234,7 @@ main {
   }
 }
 
-/* Media Query for Tablet (577px to 992px) */
+
 @media (min-width: 577px) and (max-width: 1200px) {
   .container {
     max-width: 960px;

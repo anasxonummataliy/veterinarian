@@ -796,7 +796,6 @@ main .main-right .dog-img {
   border-radius: 50%;
 }
 
-/* Media Query for Mobile (max-width: 576px) */
 @media (max-width: 576px) {
   .container {
     padding: 0 10px;
@@ -1014,10 +1013,11 @@ main .main-right .dog-img {
   .main-7 {
     min-height: 400px;
     flex-direction: column;
-    padding: 30px;
+    padding: 40px;
   }
   .main-7 .container {
     flex-direction: column;
+    gap: 20px;
   }
   .main-7 .data-about-vet i {
     font-size: 40px;
@@ -1096,7 +1096,6 @@ main .main-right .dog-img {
     font-size: 15px;
   }
 }
-/* Media Query for Tablet (577px to 992px) */
 @media (min-width: 577px) and (max-width: 1200px) {
   .container {
     max-width: 960px;
