@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    justify-content: space-around;
+    background-color: #eaae00;
+    color: white;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .logo {
+        width: 230px;
+        height: auto;
+    }
+    ul {
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        font-size: 22px;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+    .direct_for_user {
+        margin-right: 20px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 25px;
+
+        a {
+            color: black;
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+
+        .container {
+            justify-content: space-between;
+        }
+
+        .logo_menu {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .menu-icon {
+            display: block;
+        }
+        .logo {
+            width: 120px;
+        }
+
+        ul > li {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    nav {
+        height: 100px;
+        padding: 0;
+
+        .container {
+            justify-content: space-between;
+        }
+
+        .logo_menu {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .menu-icon {
+            display: block;
+        }
+
+        .logo {
+            width: 180px;
+        }
+
+        ul {
+            display: none;
+        }
+
+        form {
+            width: 200px;
+            height: 50px;
+
+            input {
+                font-size: 18px;
+            }
+
+            .search-icon {
+                width: 60px;
+            }
+        }
+    }
+}

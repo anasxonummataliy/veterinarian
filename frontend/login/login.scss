@@ -12,7 +12,6 @@
     margin: 0 auto;
 }
 
-
 .page_login {
     height: calc(100vh - 123px);
     display: flex;
@@ -23,8 +22,9 @@
     .container {
         display: flex;
         width: 60%;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
+        box-shadow:
+            rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
         border-radius: 20px;
         overflow: hidden;
@@ -38,7 +38,7 @@
             width: 60%;
             justify-content: center;
             gap: 30px;
-            padding: 100px 0 ;
+            padding: 100px 0;
             .greet {
                 text-align: center;
             }
@@ -108,7 +108,6 @@
             background-color: #eaae00;
             padding: 20px;
             text-align: center;
-            
 
             h1,
             p {
