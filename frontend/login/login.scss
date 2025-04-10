@@ -13,177 +13,123 @@
 }
 
 .page_login {
-    height: calc(100vh - 123px);
-    display: flex;
     width: 100%;
+    height: 100vh;
+    display: flex;
     align-items: center;
     justify-content: center;
 
     .container {
         display: flex;
-        width: 60%;
-        box-shadow:
-            rgba(0, 0, 0, 0.16) 0px 3px 6px,
-            rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-        border-radius: 20px;
-        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
         justify-content: center;
-        padding: 0;
 
         .child1 {
+            flex-basis: 40%;
+            background: #eaae00;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding: 20px;
+            height: 100%;
+
+            h2 {
+                font-size: 48px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+        .child2 {
+            width: 60%;
+            height: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 60%;
             justify-content: center;
-            gap: 30px;
-            padding: 100px 0;
-            .greet {
-                text-align: center;
-            }
+
             form {
+                -webkit-box-shadow: 9px -4px 41px 0px rgba(34, 60, 80, 0.2);
+                -moz-box-shadow: 9px -4px 41px 0px rgba(34, 60, 80, 0.2);
+                box-shadow: 9px -4px 41px 0px rgba(34, 60, 80, 0.2);
                 display: flex;
                 flex-direction: column;
+                gap: 20px;
                 align-items: center;
+                justify-content: center;
+                max-width: 500px;
                 width: 100%;
+                border-radius: 10px;
+                padding: 30px;
 
-                label {
-                    padding: 20px;
-                    border-radius: 20px;
+                h1 {
+                    padding-top: 20px;
+                }
+
+                .form-control {
+                    width: 100%;
                     display: flex;
-                    gap: 10px;
-                    width: 80%;
-                    height: 55px;
+                    flex-direction: column;
                     align-items: center;
-                    box-shadow: 2px 2px 15px #ccc;
+                    justify-content: center;
+                    gap: 10px;
+
+                    label {
+                        width: 100%;
+                        display: flex;
+                        font-size: 18px;
+                    }
+
+                    .input-icon {
+                        border: 1px solid black;
+                        padding: 5px;
+                        border-radius: 8px;
+                        width: 100%;
+
+                        label {
+                            display: flex;
+                            gap: 10px;
+                            padding: 5px;
+                            width: 100%;
+
+                            input {
+                                border: none;
+                                outline: none;
+
+                                font-size: 18px;
+                            }
+                        }
+                    }
                 }
-                i {
-                    color: #eaae00;
-                    font-size: 20px;
-                }
-                input {
+
+                input[type="submit"] {
+                    background: #eaae00;
+                    color: #fff;
+                    cursor: pointer;
+                    width: 100%;
+                    padding: 5px;
+                    border-radius: 8px;
+                    font-size: 18px;
                     border: none;
-                    width: 90%;
-                    font-size: large;
-                    text-decoration: none;
-                    color: #eaae00;
+                    height: 40px;
                 }
-                input:focus {
-                    outline: none;
-                }
-                input::placeholder {
-                    color: black;
-                    font-weight: 300;
-                }
-            }
-            p {
-                text-align: center;
-                color: black;
-
-                a {
-                    text-decoration: none;
-                    color: rgb(66, 59, 59);
-                }
-            }
-            button {
-                width: 160px;
-                height: 40px;
-                border-radius: 30px;
-                background-color: #eaae00;
-                font-weight: 900;
-                color: white;
-                box-shadow: 2px 2px 20px 1px #eaae00;
-                border: none;
-                cursor: pointer;
-            }
-        }
-
-        .child2 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 40%;
-            justify-content: center;
-            background-color: #eaae00;
-            padding: 20px;
-            text-align: center;
-
-            h1,
-            p {
-                color: white;
             }
         }
     }
 }
 
-@media (max-width: 576px) {
-    .container {
-        padding: 0 10px;
-    }
-
-    nav {
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 0;
-
-        .container {
-            justify-content: space-between;
-        }
-
-        .logo_menu {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .menu-icon {
-            display: block;
-        }
-        .logo {
-            width: 120px;
-        }
-
-        ul > li {
-            display: none;
-        }
-    }
-}
 @media (max-width: 1200px) {
-    .container {
-        max-width: 960px;
-    }
-
-    nav {
-        height: 100px;
-        padding: 0;
-
-        .container {
-            justify-content: space-between;
-        }
-
-        .logo_menu {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .menu-icon {
-            display: block;
-        }
-        .logo {
-            width: 180px;
-        }
-        ul {
+    .page_login {
+        .container > .child1 {
             display: none;
         }
-        form {
-            width: 200px;
-            height: 50px;
-            input {
-                font-size: 18px;
-            }
-            .search-icon {
-                width: 60px;
-            }
+        .child2 {
+            flex-basis: 100%;
         }
     }
 }

@@ -34,7 +34,7 @@
   gap: 20px;
   border-radius: 12px;
   padding: 40px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: 9px -4px 41px 0px rgba(34, 60, 80, 0.2);
 }
 .auth-container .left-side form .form-control {
   width: 100%;
