@@ -1,22 +1,29 @@
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
-
   const menuIcon = document.querySelector(".menu-icon");
   const navMenu = document.querySelector(".nav-menu");
+  const body = document.body;
 
-  menuIcon.addEventListener("click", () => {
+  menuIcon.addEventListener("click", (e) => {
+    e.stopPropagation();
     navMenu.classList.toggle("active");
+    body.classList.toggle("menu-open"); // Add overlay class to body
   });
 
   // Close menu when clicking outside
   document.addEventListener("click", (e) => {
     if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
       navMenu.classList.remove("active");
+      body.classList.remove("menu-open");
     }
   });
 
+  // Close menu when clicking a menu item
+  navMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      body.classList.remove("menu-open");
+    });
+  });
 
 
   const video1 = document.getElementById("video1"),

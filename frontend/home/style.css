@@ -824,6 +824,47 @@ main .main-right .dog-img {
   nav ul > li {
     display: none;
   }
+  nav .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100vh;
+    background-color: #eaae00;
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+  }
+  nav .nav-menu.active {
+    left: 0;
+  }
+  nav .nav-menu.active li {
+    display: block;
+  }
+  nav .nav-menu li {
+    width: 100%;
+    text-align: left;
+  }
+  nav .nav-menu li a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  nav .nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  nav .nav-menu li body.menu-open::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
   main {
     flex-direction: column-reverse;
     min-height: 500px;
@@ -1105,9 +1146,42 @@ main .main-right .dog-img {
   nav {
     height: 100px;
     padding: 0;
+    position: relative;
   }
   nav .container {
     justify-content: space-between;
+  }
+  nav .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100vh;
+    background-color: #eaae00;
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+  }
+  nav .nav-menu.active {
+    left: 0;
+  }
+  nav .nav-menu li {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  nav .nav-menu li a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+  }
+  nav .nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
   nav .logo_menu {
     display: flex;
@@ -1120,18 +1194,15 @@ main .main-right .dog-img {
   nav .logo {
     width: 180px;
   }
-  nav ul {
-    display: none;
-  }
-  nav form {
-    width: 200px;
-    height: 50px;
-  }
-  nav form input {
-    font-size: 18px;
-  }
-  nav form .search-icon {
-    width: 60px;
+  body.menu-open::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
   }
   main {
     flex-direction: column-reverse;
