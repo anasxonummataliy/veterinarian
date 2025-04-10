@@ -2,10 +2,11 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
 
-
+from app.database.base import create_db_and_tables
+from app.api.auth import router as auth
 @asynccontextmanager
 async def lifespan( app : FastAPI):
-
+    await create_db_and_tables()
     yield
 
 
@@ -24,3 +25,5 @@ app.add_middleware(
     allow_methods = ["*"],
     allow_headers = ["*"]
 )
+
+app.include_router(auth)
