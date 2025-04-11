@@ -5,6 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import JSONResponse
 
 from app.core.logger import logger
+from app.core.security.jwt import create_jwt_token, decode_jwt_token
 from app.database.session import get_db
 from app.database.models.user import User
 from app.core.utils import hash_password, verify_password
@@ -16,7 +17,7 @@ router = APIRouter(
 )
 
 
-@router.post("/register")
+@router.post("/register/")
 async def registration(
     user_in: RegisRequest,
     db: AsyncSession = Depends(get_db)
@@ -41,14 +42,12 @@ async def registration(
         raise HTTPException(detail=f"Password error: {e}", status_code=500)
 
 
-
-@router.post('/login')
+@router.post('/login/')
 async def login(
         request: LoginRequest,
         db: AsyncSession = Depends(get_db)
 ):
     try:
-
         stmt = select(User).where(User.email == request.email)
         result = await db.execute(stmt)
         user = result.scalar_one_or_none()
@@ -60,14 +59,21 @@ async def login(
             )
         if verify_password(user.password, request.password):
             logger.info("Kirish muvafaqiyatli amalga oshirildi.")
-            return {
-                "message": "Tizimga muvaffaqiyatli kirdingiz.",
-                "user_id": user.id,
-                "name": user.name
-            }
+            token = create_jwt_token(user.id)
+            return JSONResponse(content={"message": "", "token": token})
+        return JSONResponse(content={"message": "Ma'lumotlar xato"})
     except VerificationError as e:
         logger.warning(f"Password error: {e}")
-        raise HTTPException(detail="Parol xato", status_code=500)
+        return HTTPException(detail="Parol xato", status_code=500)
     except Exception as e:
         logger.error("Parolni tekshirish imkoni bo'lmadi.")
         raise HTTPException(detail=f"Server error: {e}", status_code=500)
+
+
+@router.get("/me/{token}")
+async def get_me(token: str, db: AsyncSession = Depends(get_db)):
+    user_id = decode_jwt_token(token)
+    smtm = select(User).where(User.id == user_id)
+    result = await db.execute(smtm)
+    db_user = result.scalar_one_or_none()
+    return db_user
