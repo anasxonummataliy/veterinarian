@@ -91,6 +91,9 @@
   padding: 5px;
   width: 100%;
 }
+.page_login .container .child2 form .form-control .input-icon label i {
+  color: #888;
+}
 .page_login .container .child2 form .form-control .input-icon label input {
   border: none;
   outline: none;

@@ -1,6 +1,6 @@
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    db_url : str = "sqlite+aioslite///./auth.db"
+    db_url : str = "sqlite+aiosqlite:///./main.db"
 
 settings = Settings()
