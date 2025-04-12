@@ -36,7 +36,9 @@ login.addEventListener("submit", async (e) => {
         const data = await login_response.json();
         if (login_response.ok) {
             console.log("Success", data);
+            document.cookie=`session=${JSON.stringify(data)}; SameSite=strict; Secure=true`;
             window.location.href = "../user-page/index.html";
+
         }
         else {
         }

@@ -79,18 +79,109 @@ nav .direct_for_user a {
 .center main {
   width: 17%;
   height: 100vh;
-  background-color: #888;
-  justify-content: center;
+  background-color: #fff;
   display: flex;
+  flex-direction: column;
   padding: 40px;
+  align-items: center;
+  gap: 20px;
 }
-.center main button {
-  width: 200px;
+.center main h1 {
+  font-size: 22px;
+}
+.center main .tab-button {
+  width: 100%;
   height: 50px;
   border: none;
-  background-color: #888;
   cursor: pointer;
   font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #fff;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 19px;
+  justify-content: start;
+}
+.center main .tab-button:hover {
+  background-color: #666;
+  transform: translateY(-2px);
+}
+.center main .tab-button.active {
+  background-color: #eaae00;
+  transform: translateY(0);
+}
+.center aside {
+  flex: 1;
+  padding: 40px;
+  background-color: #eaeaea;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.center aside #profile {
+  width: 90%;
+  height: 40vh;
+  border: 1px solid;
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
+  background-color: #fff;
+}
+.center aside #profile .user-icon {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.center aside #profile .user-icon i {
+  font-size: 150px;
+  border: 1px solid black;
+  padding: 50px;
+  border-radius: 50%;
+  background-color: #cfcfcf;
+}
+.center aside #profile .datas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.center aside #profile .datas h2 {
+  font-size: 25px;
+}
+.center aside #profile .datas p {
+  font-size: 25px;
+}
+.center aside .tab-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.center aside .tab-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.center aside .tab-content h2 {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.center aside .tab-content p {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.center aside .tab-content p span {
+  color: #eaae00;
 }
 
 @media (max-width: 576px) {
@@ -119,6 +210,20 @@ nav .direct_for_user a {
   nav ul > li {
     display: none;
   }
+  .center {
+    flex-direction: column;
+  }
+  .center main {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .center main .tab-button {
+    width: 100%;
+  }
+  .center aside {
+    padding: 20px;
+  }
 }
 @media (min-width: 577px) and (max-width: 1200px) {
   .container {
@@ -145,14 +250,10 @@ nav .direct_for_user a {
   nav ul {
     display: none;
   }
-  nav form {
-    width: 200px;
-    height: 50px;
+  .center main {
+    width: 25%;
   }
-  nav form input {
-    font-size: 18px;
-  }
-  nav form .search-icon {
-    width: 60px;
+  .center main .tab-button {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
