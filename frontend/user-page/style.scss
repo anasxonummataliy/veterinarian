@@ -74,6 +74,32 @@ nav {
         }
     }
 }
+.center{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+
+    background-color: #333;
+
+    main{
+        width: 17%;
+        height: 100vh;
+        background-color: #888;
+        justify-content: center;
+        display: flex;
+        padding: 40px;
+
+
+        button{
+            width: 200px;
+            height: 50px;
+            border: none;
+            background-color: #888;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    }
+}
 
 @media (max-width: 576px) {
     .container {
