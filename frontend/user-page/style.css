@@ -88,6 +88,7 @@ nav .direct_for_user a {
 }
 .center aside h1 {
   font-size: 22px;
+  cursor: pointer;
 }
 .center aside .buttons {
   width: 100%;
@@ -132,7 +133,6 @@ nav .direct_for_user a {
 }
 .center main #profile {
   width: 90%;
-  border: 1px solid;
   display: flex;
   gap: 20px;
   padding: 40px;
@@ -148,12 +148,13 @@ nav .direct_for_user a {
   justify-content: center;
 }
 .center main #profile .user-icon i {
-  font-size: 150px;
-  border: 1px solid black;
+  font-size: 120px;
+  border: 1px solid rgb(118, 118, 118);
   padding: 50px;
   margin: 20px;
   border-radius: 50%;
-  background-color: #cfcfcf;
+  background-color: #f7f7f7;
+  color: #888;
 }
 .center main #profile .datas {
   display: flex;

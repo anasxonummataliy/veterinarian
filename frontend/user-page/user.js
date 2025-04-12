@@ -21,11 +21,12 @@ tab_buttons.forEach(button => {
                 const response = await fetch('/api/user-profile');
                 if (!response.ok) throw new Error('Ma’lumot olishda xato yuz berdi');
                 const data = await response.json();
+                document.cookie = `session=${JSON.stringify(data)};  SameSite = strict; Secure = true`
                 targetContent.innerHTML = `
           <h2>Foydalanuvchi ma'lumotlari</h2>
-          <p>Foydalanuvchi idsi: <span>${data.id}</span></p>
-          <p>Foydalanuvchi ismi: <span>${data.name}</span></p>
-          <p>Foydalanuvchi emaili: <span>${data.email}</span></p>
+          <p>Id : <span>${data.id}</span></p>
+          <p>Ismi: <span>${data.name}</span></p>
+          <p>Emaili: <span>${data.email}</span></p>
         `;
             } catch (error) {
                 targetContent.innerHTML = `<p>Xato: ${error.message}</p>`;
