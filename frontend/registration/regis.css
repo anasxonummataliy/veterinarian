@@ -42,12 +42,25 @@
   flex-direction: column;
   gap: 10px;
 }
+.auth-container .left-side form .form-control .icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid;
+  padding-left: 15px;
+  border-radius: 8px;
+}
+.auth-container .left-side form .form-control .icon i {
+  color: #888;
+}
 .auth-container .left-side form .form-control input {
   width: 100%;
   height: 45px;
-  padding-left: 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 18px;
+  border: none;
+  outline: none;
   font-size: 18px;
 }
 .auth-container .left-side form .form-control > input[type=submit] {
@@ -66,10 +79,13 @@
   padding: 20px;
 }
 .auth-container .right-side h2 {
-  font-size: 48px;
+  font-size: 35px;
+  text-align: center;
 }
 .auth-container .right-side p {
-  font-size: 22px;
+  font-size: 20px;
+  text-align: center;
+  width: 70%;
 }
 
 @media (max-width: 1200px) {

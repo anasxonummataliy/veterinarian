@@ -38,10 +38,12 @@
   height: 100%;
 }
 .page_login .container .child1 h2 {
-  font-size: 48px;
+  font-size: 35px;
 }
 .page_login .container .child1 p {
-  font-size: 22px;
+  font-size: 20px;
+  text-align: center;
+  width: 70%;
 }
 .page_login .container .child2 {
   width: 60%;

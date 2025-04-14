@@ -18,58 +18,6 @@
   padding: 0 15px;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 120px;
-  justify-content: space-around;
-  background-color: #eaae00;
-  color: white;
-}
-nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-nav .menu-icon {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  color: white;
-}
-nav .logo {
-  width: 230px;
-  height: auto;
-}
-nav ul {
-  text-decoration: none;
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  font-size: 22px;
-}
-nav ul a {
-  color: white;
-  text-decoration: none;
-}
-nav .direct_for_user {
-  margin-right: 20px;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 25px;
-}
-nav .direct_for_user a {
-  color: black;
-  font-size: 20px;
-}
-
 .center {
   display: flex;
   min-height: 100vh;
@@ -152,7 +100,7 @@ nav .direct_for_user a {
   border: 1px solid rgb(118, 118, 118);
   padding: 50px;
   margin: 20px;
-  border-radius: 50%;
+  border-radius: 48%;
   background-color: #f7f7f7;
   color: #888;
 }
@@ -190,78 +138,4 @@ nav .direct_for_user a {
 }
 .center main .tab-content p span {
   color: #eaae00;
-}
-
-@media (max-width: 576px) {
-  .container {
-    padding: 0 10px;
-  }
-  nav {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0;
-  }
-  nav .container {
-    justify-content: space-between;
-  }
-  nav .logo_menu {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  nav .menu-icon {
-    display: block;
-  }
-  nav .logo {
-    width: 120px;
-  }
-  nav ul > li {
-    display: none;
-  }
-  .center {
-    flex-direction: column;
-  }
-  .center main {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-  .center main .tab-button {
-    width: 100%;
-  }
-  .center aside {
-    padding: 20px;
-  }
-}
-@media (min-width: 577px) and (max-width: 1200px) {
-  .container {
-    max-width: 960px;
-  }
-  nav {
-    height: 100px;
-    padding: 0;
-  }
-  nav .container {
-    justify-content: space-between;
-  }
-  nav .logo_menu {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  nav .menu-icon {
-    display: block;
-  }
-  nav .logo {
-    width: 180px;
-  }
-  nav ul {
-    display: none;
-  }
-  .center main {
-    width: 25%;
-  }
-  .center main .tab-button {
-    width: 100%;
-  }
 }/*# sourceMappingURL=style.css.map */
