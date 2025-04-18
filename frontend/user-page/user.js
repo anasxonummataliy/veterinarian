@@ -24,9 +24,9 @@ tab_buttons.forEach(button => {
                 document.cookie = `session=${JSON.stringify(data)};  SameSite = strict; Secure = true`
                 targetContent.innerHTML = `
           <h2>Foydalanuvchi ma'lumotlari</h2>
-          <p>Id : <span>${data.id}</span></p>
-          <p>Ismi: <span>${data.name}</span></p>
-          <p>Emaili: <span>${data.email}</span></p>
+          <p>Id :   <span>${data.id}</span></p>
+          <p>Ismi:  <span>${data.name}</span></p>
+          <p>Emaili:    <span>${data.email}</span></p>
         `;
             } catch (error) {
                 targetContent.innerHTML = `<p>Xato: ${error.message}</p>`;
