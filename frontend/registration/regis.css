@@ -87,6 +87,12 @@
   text-align: center;
   width: 70%;
 }
+.auth-container #error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
 
 @media (max-width: 1200px) {
   .auth-container .right-side {

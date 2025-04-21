@@ -112,6 +112,12 @@
   border: none;
   height: 40px;
 }
+.page_login .container .child2 form #error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
 
 @media (max-width: 1200px) {
   .page_login .container > .child1 {

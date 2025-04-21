@@ -99,7 +99,7 @@
                             padding: 5px;
                             width: 100%;
 
-                            i{
+                            i {
                                 color: #888;
                             }
 
@@ -124,6 +124,12 @@
                     border: none;
                     height: 40px;
                 }
+                #error-message {
+                    color: red;
+                    font-size: 14px;
+                    margin-top: 10px;
+                    text-align: center;
+                }
             }
         }
     }
@@ -139,5 +145,3 @@
         }
     }
 }
-
-

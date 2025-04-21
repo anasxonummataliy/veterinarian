@@ -1,29 +1,34 @@
 const form = document.getElementById("register-form");
 
-form.addEventListener('submit', async (e) => {
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('name').value.trim(),
-        email = document.getElementById('email').value.trim(),
-        password = document.getElementById('password').value;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
 
     if (!name || !email || !password) {
-        alert("Iltimos hammasini to'ldiring.");
+        showError("Iltimos, barcha maydonlarni to‘ldiring!");
         return;
     }
 
     if (!/\S+@\S+\.\S+/.test(email)) {
-        alert("Please enter a valid email address.");
+        showError("Iltimos, to‘g‘ri email manzilini kiriting!");
         return;
     }
 
     if (password.length < 6) {
-        alert("Password must be at least 6 characters long.");
+        showError("Parol kamida 6 belgidan iborat bo‘lishi kerak!");
+        return;
+    }
+
+    if (!/(?=.*[A-Z])(?=.*[0-9]).{6,}/.test(password)) {
+        showError("Parolda kamida 1 katta harf va 1 raqam bo‘lishi kerak!");
         return;
     }
 
     if (name.length < 2) {
-        alert("Name must be at least 2 characters long.");
+        showError("Ism kamida 2 belgidan iborat bo‘lishi kerak!");
         return;
     }
 
@@ -31,23 +36,42 @@ form.addEventListener('submit', async (e) => {
         const response = await fetch("http://localhost:8000/auth/register/", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                name: name,
-                email: email,
-                password: password
-            })
+                name,
+                email,
+                password,
+            }),
         });
 
         const data = await response.json();
+
         if (response.ok) {
-            console.log("Success:", data, data.user_id);
+            console.log("Muvaffaqiyatli ro‘yxatdan o‘tish:", data);
+            if (data.token) {
+                document.cookie = `token=${data.token}; SameSite=strict; Secure=true`;
+            } else {
+                console.warn("API token qaytarmadi, cookie sozlanmadi.");
+            }
             window.location.href = "../user-page/index.html";
         } else {
-            alert(`Error: ${data.detail || data.message || "Unknown error"}`);
+            showError(data.detail || data.message || "Ro‘yxatdan o‘tishda xato yuz berdi!");
         }
     } catch (error) {
-        alert("Something went wrong. Please try again later.");
+        console.error("Xato yuz berdi:", error);
+        showError("Tarmoq xatosi yuz berdi. Iltimos, qayta urinib ko‘ring.");
     }
 });
+
+function showError(message) {
+    const errorDiv = document.getElementById("error-message") || document.createElement("div");
+    errorDiv.id = "error-message";
+    errorDiv.style.color = "red";
+    errorDiv.style.marginTop = "10px";
+    errorDiv.style.textAlign = "center";
+    errorDiv.textContent = message;
+    form.appendChild(errorDiv);
+
+    setTimeout(() => errorDiv.remove(), 3000);
+}

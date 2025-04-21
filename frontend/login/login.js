@@ -1,4 +1,3 @@
-
 const login = document.getElementById("login-form");
 
 login.addEventListener("submit", async (e) => {
@@ -19,8 +18,11 @@ login.addEventListener("submit", async (e) => {
         alert("Password uzunligi kamida 6 ga teng bo'lishi kerak!");
         return;
     }
+    else{
+        alert(data.message || "Login yoki parol xato!");
+    }
     try {
-        const login_response = await fetch(" http://127.0.0.1:8000/auth/login/",
+        const login_response = await fetch("http://127.0.0.1:8000auth/login/",
             {
                 method: "POST",
                 headers:
@@ -44,6 +46,6 @@ login.addEventListener("submit", async (e) => {
         }
     }
     catch (error) {
-
+        console.log(`Eror : ${error}`)
     }
 });

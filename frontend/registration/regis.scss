@@ -36,8 +36,8 @@
 
             padding: 40px;
             -webkit-box-shadow: 9px -4px 41px 0px rgba(34, 60, 80, 0.2);
-                -moz-box-shadow: 9px -4px 41px 0px rgba(34, 60, 80, 0.2);
-                box-shadow: 9px -4px 41px 0px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 9px -4px 41px 0px rgba(34, 60, 80, 0.2);
+            box-shadow: 9px -4px 41px 0px rgba(34, 60, 80, 0.2);
 
             .form-control {
                 width: 100%;
@@ -45,19 +45,18 @@
                 flex-direction: column;
                 gap: 10px;
 
-                .icon{
+                .icon {
                     display: flex;
                     align-items: center;
                     gap: 10px;
                     border: 1px solid;
-                        padding-left: 15px;
+                    padding-left: 15px;
                     border-radius: 8px;
 
-                    i{
-                       color:  #888;
+                    i {
+                        color: #888;
                     }
                 }
-
 
                 input {
                     width: 100%;
@@ -98,6 +97,12 @@
             text-align: center;
             width: 70%;
         }
+    }
+    #error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: center;
     }
 }
 
