@@ -80,7 +80,6 @@
         flex: 1;
         padding: 40px;
         background-color: #f7f7f7;
-        align-items: center;
         display: flex;
         flex-direction: column;
 
@@ -125,8 +124,18 @@
                 }
             }
         }
+        #emlash{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+             -webkit-box-shadow: -4px -1px 5px 0px rgb(63, 60, 60);
+            -moz-box-shadow: -4px -1px 5px 0px rgb(193, 193, 193);
+            box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
+            }
 
         .tab-content {
+            height: auto;
+            padding: 30px;
             display: none;
             opacity: 0;
             transform: translateY(10px);

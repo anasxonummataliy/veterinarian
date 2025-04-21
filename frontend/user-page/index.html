@@ -10,7 +10,6 @@
         content="veterinariya, uy hayvonlari, hayvonlar, g'amxo'rlik, veterinar xizmatlari, vaksina, emlash, stomatologiya, hayvonlarni davolash, sog'liqni saqlash, tajribali veterinarlar, bog'lanish, xizmat ko'rsatish" />
     <title>Veterinariya</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -20,42 +19,38 @@
         <div class="center">
             <aside>
                 <h1 onclick="location.href='../home/index.html'">Sizning kabinetingiz</h1>
-
                 <div class="buttons">
                     <button data-target="profile" class="tab-button active"><i class="fa-solid fa-user"></i>Sizning
                         profilingiz</button>
                     <button data-target="emlash" class="tab-button"><i class="fa-solid fa-syringe"></i>Emlash</button>
-                    <button data-target="nofication" class="tab-button"><i
+                    <button data-target="notification" class="tab-button"><i
                             class="fa-solid fa-comments"></i>Bildirishnomalar</button>
                 </div>
             </aside>
             <main>
                 <div id="profile" class="tab-content active">
-
                     <div class="user-icon">
                         <i class="fa-solid fa-user"></i>
                     </div>
                     <div class="datas">
                         <h2>Foydalanuvchi ma'lumotlari:</h2>
-                        <p>Id:    <span>12345</span></p>
+                        <p>Id: <span>12345</span></p>
                         <p>Ism: <span>John Doe</span></p>
                         <p>Email: <span>john@example.com</span></p>
                     </div>
-
                 </div>
                 <div id="emlash" class="tab-content">
-                    <h2>Emlash tarixi</h2>
-                    <p>Bu yerda emlash ma'lumotlari ko‘rinadi.</p>
+                    <h2>Emlash</h2>
+                    <p>Sanasi: 25.05.2025</p>
+                    <p>Emlash turi: Virusli kassaliklar uchun</p>
                 </div>
-                <div id="nofication" class="tab-content">
+                <div id="notification" class="tab-content">
                     <h2>Bildirishnomalar</h2>
                     <p>Yangiliklar va xabarlar bu yerda.</p>
                 </div>
             </main>
         </div>
-
     </div>
-
     <script src="./user.js"></script>
 </body>
 

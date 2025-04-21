@@ -75,7 +75,6 @@
   flex: 1;
   padding: 40px;
   background-color: #f7f7f7;
-  align-items: center;
   display: flex;
   flex-direction: column;
 }
@@ -115,7 +114,15 @@
 .center main #profile .datas p {
   font-size: 25px;
 }
+.center main #emlash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
+}
 .center main .tab-content {
+  height: auto;
+  padding: 30px;
   display: none;
   opacity: 0;
   transform: translateY(10px);
