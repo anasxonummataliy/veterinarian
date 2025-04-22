@@ -1,5 +1,8 @@
 const tabButtons = document.querySelectorAll('.tab-button');
 const tabContents = document.querySelectorAll('.tab-content');
+const profile = document.getElementById('profile');
+const notification = document.getElementById("notification");
+const emlash = document.getElementById("emlash");
 
 tabButtons.forEach(button => {
     button.addEventListener('click', async () => {
@@ -13,15 +16,15 @@ tabButtons.forEach(button => {
 
         if (target === 'profile') {
             try {
+                profile.style.display = "flex"
+                emlash.style.display = "none"
+                notification.style.display = "none"
+
                 targetContent.innerHTML = '<p>Loading...</p>';
                 const response = await fetch('/api/user-profile');
                 if (!response.ok) throw new Error('Ma’lumot olishda xato yuz berdi');
                 const data = await response.json();
                 document.cookie = `session=${JSON.stringify(data)}; SameSite=strict; Secure=true`;
-
-                if (profileSection) {
-                    profileSection.style.display = 'flex';
-                }
 
                 targetContent.innerHTML = `
                     <div class="user-icon">
@@ -41,6 +44,11 @@ tabButtons.forEach(button => {
 
         if (target === 'emlash') {
             try {
+
+                profile.style.display = "none"
+                emlash.style.display = "flex"
+                notification.style.display = "none"
+
                 targetContent.innerHTML = '<p>Loading...</p>';
                 const response = await fetch('/api/emlash');
                 if (!response.ok) throw new Error('Ma’lumot olishda xato yuz berdi');
@@ -61,10 +69,10 @@ tabButtons.forEach(button => {
         }
 
         if (target === 'notification') { 
-            if (profileSection) {
-                profileSection.style.display = 'flex'; 
-            }
-
+            profile.style.display = "none"
+            emlash.style.display = "none"
+            notification.style.display = "flex"
+            
             targetContent.innerHTML = `
                 <h2>Bildirishnomalar</h2>
                 <p>Yangiliklar va xabarlar bu yerda.</p>

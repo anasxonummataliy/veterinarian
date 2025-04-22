@@ -120,6 +120,15 @@
   justify-content: center;
   box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
 }
+.center main #notification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+}
+.center main #notification h1 {
+  font-size: 18px;
+}
 .center main .tab-content {
   height: auto;
   padding: 30px;
