@@ -22,6 +22,8 @@
                 <div class="buttons">
                     <button data-target="profile" class="tab-button active"><i class="fa-solid fa-user"></i>Sizning
                         profilingiz</button>
+                    <button data-target="murojaatlar" class="tab-button"><i
+                            class="fa-solid fa-stethoscope"></i>Murojaatlar</button>
                     <button data-target="emlash" class="tab-button"><i class="fa-solid fa-syringe"></i>Emlash</button>
                     <button data-target="notification" class="tab-button"><i
                             class="fa-solid fa-comments"></i>Bildirishnomalar</button>
@@ -39,13 +41,27 @@
                         <p>Email: <span>john@example.com</span></p>
                     </div>
                 </div>
+                <div id="murojaatlar" class="tab-content">
+                    <h2>Murojaat qo‘shish</h2>
+                    <form id="murojaat-form">
+                        <label for="doctor">Doktor:</label>
+                        <input type="text" id="doctor" placeholder="Doktor ismi" required />
+                        <label for="disease">Kasallik:</label>
+                        <input type="text" id="disease" placeholder="Kasallik turi" required />
+                        <button type="submit">Yuborish</button>
+                    </form>
+                    <h3>Murojaatlar tarixi</h3>
+                    <div id="murojaatlar-list"></div>
+                </div>
                 <div id="emlash" class="tab-content">
-                    <h2>Emlash</h2>
-                    <p>Sanasi: 25.05.2025</p>
-                    <p>Emlash turi: Virusli kassaliklar uchun</p>
+                    <h2>Emlash tarixi</h2>
+                    <p>Emlash sanasi: <span id="emlash-date"></span></p>
+                    <p>Turi: <span id="emlash-type"></span></p>
+                    <h3>Navbatdagi emlash</h3>
+                    <p>Sana: <span id="next-emlash-date"></span></p>
                 </div>
                 <div id="notification" class="tab-content">
-                    <h2>Bildirishnomalar</h2>
+                    <h2>Sizning emlash sanangiz yetib kelganini ma'lum qilamiz.</h2>
                     <p>Yangiliklar va xabarlar bu yerda.</p>
                 </div>
             </main>

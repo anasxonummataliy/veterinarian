@@ -26,7 +26,6 @@
 }
 .center aside {
   width: 17%;
-  height: 100vh;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -79,7 +78,7 @@
   flex-direction: column;
 }
 .center main #profile {
-  width: 90%;
+  width: 100%;
   display: flex;
   gap: 20px;
   padding: 40px;
@@ -114,6 +113,38 @@
 .center main #profile .datas p {
   font-size: 25px;
 }
+.center main #murojaatlar {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.center main #murojaatlar form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.center main #murojaatlar form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.center main #murojaatlar form button {
+  padding: 10px;
+  background-color: #eaae00;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.center main #murojaatlar form button:hover {
+  background-color: #d89b00;
+}
+.center main #murojaatlar #murojaatlar-list p {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
 .center main #emlash {
   display: flex;
   flex-direction: column;
@@ -124,9 +155,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid;
+  width: 400px;
+  gap: 20px;
+  background-color: #fff;
+  box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
 }
-.center main #notification h1 {
+.center main #notification h2 {
   font-size: 18px;
 }
 .center main .tab-content {
