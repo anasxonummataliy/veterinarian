@@ -77,3 +77,4 @@ async def get_me(token: str, db: AsyncSession = Depends(get_db)):
     result = await db.execute(smtm)
     db_user = result.scalar_one_or_none()
     return db_user
+
