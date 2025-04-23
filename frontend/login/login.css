@@ -112,6 +112,10 @@
   border: none;
   height: 40px;
 }
+.page_login .container .child2 form p > a {
+  color: #eaae00;
+  font-weight: 900;
+}
 .page_login .container .child2 form #error-message {
   color: red;
   font-size: 14px;
