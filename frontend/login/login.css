@@ -112,9 +112,13 @@
   border: none;
   height: 40px;
 }
-.page_login .container .child2 form p > a {
+.page_login .container .child2 form p {
+  width: 100%;
+}
+.page_login .container .child2 form p a {
   color: #eaae00;
-  font-weight: 900;
+  text-decoration: underline;
+  font-weight: bold;
 }
 .page_login .container .child2 form #error-message {
   color: red;

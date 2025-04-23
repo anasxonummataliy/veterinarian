@@ -124,9 +124,13 @@
                     border: none;
                     height: 40px;
                 }
-                p > a{
-                    color: #eaae00;
-                    font-weight: 900;
+                p {
+                    width: 100%;
+                    a {
+                        color: #eaae00;
+                        text-decoration: underline;
+                        font-weight: bold;
+                    }
                 }
                 #error-message {
                     color: red;
