@@ -11,34 +11,34 @@
     <title>Veterinariya</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./regis.css">
+    <link rel="stylesheet" href="./regis.css" >
 </head>
 
 <body>
     <div id="root">
         <div class="auth-container">
             <div class="left-side">
-                <form>
+                <form id="register-form">
                     <h1>Ro'yhatdan o'tish</h1>
                     <div class="form-control">
                         <label for="first_name">Ism</label>
                         <div class="icon">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="first_name" placeholder="Ism">
+                            <input id="name" type="text" name="first_name" placeholder="Ism">
                         </div>
                     </div>
                     <div class="form-control">
                         <label for="email">Email</label>
                         <div class="icon">
                             <i class="fa-solid fa-envelope-open"></i>
-                            <input type="email" name="email" placeholder="Email">
+                            <input id="email" type="email" name="email" placeholder="Email">
                         </div>
                     </div>
                     <div class="form-control">
                         <label for="password">Parol</label>
                         <div class="icon">
                             <i class="fa-solid fa-lock"></i>
-                            <input type="password" name="password" placeholder="Parol">
+                            <input id="password" type="password" name="password" placeholder="Parol">
                         </div>
                     </div>
                     <div id="error-message"></div>

@@ -1,4 +1,10 @@
-const form = document.getElementById("register-form");
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("register-form");
+
+    if (!form) {
+        console.error("Forma topilmadi! HTML’da id='register-form' bo‘lgan element mavjudligini tekshiring.");
+        return;
+    }
 
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -53,9 +59,10 @@ const form = document.getElementById("register-form");
                     localStorage.setItem("access_token", data.access_token);
                     showSuccess("Ro‘yxatdan o‘tish muvaffaqiyatli! Shaxsiy kabinetga o‘tmoqdasiz...");
                     setTimeout(() => {
-                        window.location.href = "../user-page/index.html";
+                        window.location.href = "../ home / index.html";
                     }, 2000);
                 } else {
+                    showError("API token qaytarmadi. Iltimos, qayta urinib ko‘ring.");
                     console.warn("API token qaytarmadi, localStorage sozlanmadi.");
                 }
             } else {
@@ -67,16 +74,36 @@ const form = document.getElementById("register-form");
         }
     });
 
+    function showError(message) {
+        const errorDiv = document.createElement("div");
+        errorDiv.id = "error-message";
+        errorDiv.style.color = "red";
+        errorDiv.style.marginTop = "10px";
+        errorDiv.style.textAlign = "center";
+        errorDiv.textContent = message;
+        const formElement = document.getElementById("register-form");
+        if (formElement) {
+            formElement.appendChild(errorDiv);
+            setTimeout(() => errorDiv.remove(), 3000);
+        } else {
+            console.error("Forma elementi topilmadi, xato xabari ko‘rsatilmadi.");
+        }
+    }
+    
 
-function showError(message) {
-    const errorDiv = document.getElementById("error-message") || document.createElement("div");
-    errorDiv.id = "error-message";
-    errorDiv.style.color = "red";
-    errorDiv.style.marginTop = "10px";
-    errorDiv.style.textAlign = "center";
-    errorDiv.textContent = message;
-    const formElement = document.getElementById("register-form");
-    if (formElement) formElement.appendChild(errorDiv);
-
-    setTimeout(() => errorDiv.remove(), 3000);
-}
+    function showSuccess(message) {
+        const successDiv = document.createElement("div");
+        successDiv.id = "success-message";
+        successDiv.style.color = "green";
+        successDiv.style.marginTop = "10px";
+        successDiv.style.textAlign = "center";
+        successDiv.textContent = message;
+        const formElement = document.getElementById("register-form");
+        if (formElement) {
+            formElement.appendChild(successDiv);
+            setTimeout(() => successDiv.remove(), 3000);
+        } else {
+            console.error("Forma elementi topilmadi, muvaffaqiyat xabari ko‘rsatilmadi.");
+        }
+    }
+});
