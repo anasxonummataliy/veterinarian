@@ -1,10 +1,13 @@
-const login = document.getElementById("login-form");
+const login = document.querySelector(".login-form");
+
 
 login.addEventListener("submit", async (e) => {
     e.preventDefault();
+    console.log("first")
 
-    const email = document.getElementById("email").value.trim(),
-        password = document.getElementById("password").value;
+    const email = e.target.email.value
+    const password = e.target.password.value;
+
 
     if (!email || !password) {
         alert("Email yoki password kiritilmadi!")
@@ -18,11 +21,9 @@ login.addEventListener("submit", async (e) => {
         alert("Password uzunligi kamida 6 ga teng bo'lishi kerak!");
         return;
     }
-    else{
-        alert(data.message || "Login yoki parol xato!");
-    }
+
     try {
-        const login_response = await fetch("http://127.0.0.1:8000auth/login/",
+        const login_response = await fetch("http://127.0.0.1:8000/auth/login/",
             {
                 method: "POST",
                 headers:
@@ -38,7 +39,7 @@ login.addEventListener("submit", async (e) => {
         const data = await login_response.json();
         if (login_response.ok) {
             console.log("Success", data);
-            document.cookie=`session=${JSON.stringify(data)}; SameSite=strict; Secure=true`;
+            document.cookie = `session=${JSON.stringify(data)}; SameSite=strict; Secure=true`;
             window.location.href = "../user-page/index.html";
 
         }

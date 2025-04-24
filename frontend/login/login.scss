@@ -112,7 +112,9 @@
                         }
                     }
                 }
-
+                input[type="email"], input[type="password"]{
+                    width: 100%;
+                }
                 input[type="submit"] {
                     background: #eaae00;
                     color: #fff;

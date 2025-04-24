@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
+        const name = document.getElementById("name").value
+        const email = document.getElementById("email").value
+        const password = document.getElementById("password").value
 
         if (!name || !email || !password) {
             showError("Iltimos, barcha maydonlarni to‘ldiring!");
@@ -23,16 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        if (password.length < 6) {
-            showError("Parol kamida 6 belgidan iborat bo‘lishi kerak!");
-            return;
-        }
-
-        if (!/(?=.*[A-Z])(?=.*[0-9]).{6,}/.test(password)) {
-            showError("Parolda kamida 1 katta harf va 1 raqam bo‘lishi kerak!");
-            return;
-        }
-
         if (name.length < 2) {
             showError("Ism kamida 2 belgidan iborat bo‘lishi kerak!");
             return;
@@ -41,14 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             const response = await fetch("http://localhost:8000/auth/register/", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    password,
-                }),
+                headers: { "Content-Type": "application/json", },
+                body: JSON.stringify({ name, email, password }),
             });
 
             const data = await response.json();
@@ -56,11 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (response.ok) {
                 console.log("Muvaffaqiyatli ro‘yxatdan o‘tish:", data);
                 if (data.access_token) {
-                    localStorage.setItem("access_token", data.access_token);
-                    showSuccess("Ro‘yxatdan o‘tish muvaffaqiyatli! Shaxsiy kabinetga o‘tmoqdasiz...");
-                    setTimeout(() => {
-                        window.location.href = "../ home / index.html";
-                    }, 2000);
+                    // localStorage.setItem("access_token", data.access_token);
+                    // window.location.href = "../home/index.html";
                 } else {
                     showError("API token qaytarmadi. Iltimos, qayta urinib ko‘ring.");
                     console.warn("API token qaytarmadi, localStorage sozlanmadi.");
@@ -89,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Forma elementi topilmadi, xato xabari ko‘rsatilmadi.");
         }
     }
-    
+
 
     function showSuccess(message) {
         const successDiv = document.createElement("div");
@@ -99,11 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         successDiv.style.textAlign = "center";
         successDiv.textContent = message;
         const formElement = document.getElementById("register-form");
-        if (formElement) {
-            formElement.appendChild(successDiv);
-            setTimeout(() => successDiv.remove(), 3000);
-        } else {
-            console.error("Forma elementi topilmadi, muvaffaqiyat xabari ko‘rsatilmadi.");
-        }
+        formElement.appendChild(successDiv);
+        setTimeout(() => successDiv.remove(), 3000);
     }
 });

@@ -101,6 +101,9 @@
   outline: none;
   font-size: 18px;
 }
+.page_login .container .child2 form input[type=email], .page_login .container .child2 form input[type=password] {
+  width: 100%;
+}
 .page_login .container .child2 form input[type=submit] {
   background: #eaae00;
   color: #fff;
