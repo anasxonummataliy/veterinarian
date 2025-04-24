@@ -7,11 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     form.addEventListener("submit", async (e) => {
-        e.preventDefault();
+        e.preventDefault(); 
 
-        const name = document.getElementById("name").value
-        const email = document.getElementById("email").value
-        const password = document.getElementById("password").value
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+
+        if (!nameInput || !emailInput || !passwordInput) {
+            showError("Forma maydonlari topilmadi!");
+            return;
+        }
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
 
         if (!name || !email || !password) {
             showError("Iltimos, barcha maydonlarni to‘ldiring!");
@@ -31,26 +40,23 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             const response = await fetch("http://localhost:8000/auth/register/", {
                 method: "POST",
-                headers: { "Content-Type": "application/json", },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, email, password }),
             });
 
             const data = await response.json();
+            console.log("Backend javobi:", data);
 
             if (response.ok) {
-                console.log("Muvaffaqiyatli ro‘yxatdan o‘tish:", data);
-                if (data.access_token) {
-                    // localStorage.setItem("access_token", data.access_token);
-                    // window.location.href = "../home/index.html";
-                } else {
-                    showError("API token qaytarmadi. Iltimos, qayta urinib ko‘ring.");
-                    console.warn("API token qaytarmadi, localStorage sozlanmadi.");
-                }
+                showSuccess("Siz muvaffaqiyatli ro‘yxatdan o‘tdingiz!");
+                setTimeout(() => {
+                    window.location.href = "../login/login.html"; // Login sahifasiga yo‘naltirish
+                }, 2000);
             } else {
                 showError(data.detail || "Ro‘yxatdan o‘tishda xato yuz berdi!");
             }
         } catch (error) {
-            console.error("Xato yuz berdi:", error);
+            console.error("Xato yuz berdi:", error.message, error.stack);
             showError("Tarmoq xatosi yuz berdi. Iltimos, qayta urinib ko‘ring.");
         }
     });
@@ -71,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-
     function showSuccess(message) {
         const successDiv = document.createElement("div");
         successDiv.id = "success-message";
@@ -80,7 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
         successDiv.style.textAlign = "center";
         successDiv.textContent = message;
         const formElement = document.getElementById("register-form");
-        formElement.appendChild(successDiv);
-        setTimeout(() => successDiv.remove(), 3000);
+        if (formElement) {
+            formElement.appendChild(successDiv);
+            setTimeout(() => successDiv.remove(), 3000);
+        }
     }
 });
