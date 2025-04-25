@@ -6,10 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   menuIcon.addEventListener("click", (e) => {
     e.stopPropagation();
     navMenu.classList.toggle("active");
-    body.classList.toggle("menu-open"); // Add overlay class to body
+    body.classList.toggle("menu-open");
   });
 
-  // Close menu when clicking outside
   document.addEventListener("click", (e) => {
     if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
       navMenu.classList.remove("active");
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Close menu when clicking a menu item
   navMenu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       navMenu.classList.remove("active");
@@ -27,11 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   const video1 = document.getElementById("video1"),
-     playBtn1 = document.getElementById("play-btn1"),
-     overlay1 = document.querySelector(".overlay1"),
-     video2 = document.getElementById("video2"),
-     playBtn2 = document.getElementById("play-btn2"),
-     overlay2 = document.querySelector(".overlay2");
+    playBtn1 = document.getElementById("play-btn1"),
+    overlay1 = document.querySelector(".overlay1"),
+    video2 = document.getElementById("video2"),
+    playBtn2 = document.getElementById("play-btn2"),
+    overlay2 = document.querySelector(".overlay2");
 
   // Video 1
   playBtn1.addEventListener("click", () => {
@@ -58,4 +56,22 @@ document.addEventListener("DOMContentLoaded", () => {
       playBtn2.style.opacity = "1";
     }
   });
+
+
+  async function getUserMe() {
+    const token = localStorage.getItem("token")
+    if (!token) {
+      return null
+    }
+    const response = await fetch(`http://localhost:8000/auth/me/${token}`)
+    const data = await response.json()
+    return data
+  }
+  getUserMe()
 });
+
+
+const data = null
+
+data ? div : ""
+
