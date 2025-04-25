@@ -27,6 +27,7 @@ nav {
   justify-content: space-around;
   background-color: #eaae00;
   color: white;
+  position: relative;
 }
 nav .container {
   display: flex;
@@ -56,7 +57,7 @@ nav ul a {
 }
 nav .direct_for_user {
   width: auto;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
@@ -72,16 +73,18 @@ nav .direct_for_user button {
   cursor: pointer;
 }
 nav .direct {
-  display: none;
+  display: flex;
   gap: 10px;
   align-items: center;
   justify-content: center;
 }
+nav .direct div {
+  text-align: end;
+}
 nav .direct i {
   font-size: 30px;
-  border: 1px solid;
   padding: 15px;
-  border-radius: 50%;
+  border-radius: 25px;
   color: #888;
   background-color: #f7f7f7;
 }
