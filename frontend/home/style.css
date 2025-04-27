@@ -882,6 +882,22 @@ main .main-right .dog-img {
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
   }
+  nav .direct {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  nav .direct div {
+    text-align: end;
+  }
+  nav .direct div p {
+    font-size: 12px;
+  }
+  nav .direct i {
+    font-size: 20px;
+    padding: 10px;
+  }
   main {
     flex-direction: column-reverse;
     min-height: 500px;
