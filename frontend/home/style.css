@@ -84,8 +84,8 @@ nav .direct div {
 nav .direct i {
   font-size: 30px;
   padding: 15px;
-  border-radius: 25px;
-  color: #888;
+  border-radius: 50%;
+  color: #999;
   background-color: #f7f7f7;
 }
 

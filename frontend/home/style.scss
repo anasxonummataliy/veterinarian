@@ -87,8 +87,8 @@ nav {
     i {
       font-size: 30px;
       padding: 15px;
-      border-radius: 25px;
-      color: #888;
+      border-radius: 50%;
+      color: #999;
       background-color: #f7f7f7;
     }
   }
@@ -1362,7 +1362,6 @@ main {
     // "ul { display: none; }" olib tashlandi, chunki .nav-menu o‘zi boshqaradi
   }
 
-  // Overlay effekti alohida qo‘shildi
   body.menu-open::after {
     content: "";
     position: fixed;
@@ -1371,7 +1370,7 @@ main {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 999; // Menyudan pastroq qatlamda
+    z-index: 999; 
   }
 
   main {
