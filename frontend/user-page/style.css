@@ -33,6 +33,12 @@
   align-items: center;
   gap: 20px;
 }
+.center aside .kabinet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 .center aside h1 {
   font-size: 22px;
   cursor: pointer;

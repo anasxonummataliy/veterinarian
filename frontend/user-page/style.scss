@@ -33,6 +33,13 @@
         align-items: center;
         gap: 20px;
 
+        .kabinet{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
         h1 {
             font-size: 22px;
             cursor: pointer;
@@ -214,6 +221,7 @@
 }
 
 @media (max-width: 576px) {
+
 }
 
 @media (min-width: 577px) and (max-width: 1200px) {
