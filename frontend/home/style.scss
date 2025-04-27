@@ -80,8 +80,10 @@ nav {
     gap: 10px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     div {
       text-align: end;
+      cursor: auto;
     }
 
     i {

@@ -77,9 +77,11 @@ nav .direct {
   gap: 10px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 nav .direct div {
   text-align: end;
+  cursor: auto;
 }
 nav .direct i {
   font-size: 30px;
