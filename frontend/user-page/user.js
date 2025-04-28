@@ -28,14 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
-
-
-
-
-
-
-
-
 const tabButtons = document.querySelectorAll('.tab-button');
 const tabContents = document.querySelectorAll('.tab-content');
 
