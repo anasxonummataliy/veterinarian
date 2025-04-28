@@ -24,6 +24,7 @@
     width: 100%;
     background-color: #333;
 
+
     aside {
         width: 17%;
         background-color: #fff;
@@ -38,6 +39,15 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            width: 100%;
+
+            h1{
+                text-align: center;
+            }
+
+            span{
+                display: none;
+            }
         }
 
         h1 {
@@ -221,8 +231,105 @@
 }
 
 @media (max-width: 576px) {
+    .center{
+        display: flex;
+        flex-direction: column;
 
+        aside{
+            height: 50px;
+            width: 100%;
+            justify-content: start;
+            align-items: start;
+            padding-left: 20px;
+            .kabinet{
+                display: flex;
+                justify-content: start;
+                gap: 20px;
+
+                span{
+                    display: block;
+                }
+            }
+
+            .buttons{
+                display: none;
+            }
+        }
+        main{
+            padding: 20px;
+
+            #profile{
+                gap: 40px;
+                .user-icon{
+
+                    i{
+                        font-size: 50px;
+                        padding: 25px;
+                    }
+                }
+                .datas{
+                    h2{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+
+        }
+    }
 }
 
 @media (min-width: 577px) and (max-width: 1200px) {
+      .center{
+        display: flex;
+        flex-direction: column;
+
+        aside{
+            height: 50px;
+            width: 100%;
+            justify-content: start;
+            align-items: start;
+            padding-left: 20px;
+            .kabinet{
+                display: flex;
+                justify-content: start;
+                gap: 20px;
+
+                span.fas {
+                    display: block;
+                }
+               
+            }
+
+            .buttons{
+                display: none;
+            }
+        }
+        main{
+            padding: 20px;
+
+            #profile{
+                gap: 40px;
+                .user-icon{
+
+                    i{
+                        font-size: 90px;
+                        padding: 40px;
+                    }
+                }
+                .datas{
+                    h2{
+                        font-size: 25px;
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+
+        }
+    }
 }
+

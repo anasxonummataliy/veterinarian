@@ -38,6 +38,13 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  width: 100%;
+}
+.center aside .kabinet h1 {
+  text-align: center;
+}
+.center aside .kabinet span {
+  display: none;
 }
 .center aside h1 {
   font-size: 22px;
@@ -194,4 +201,85 @@
 }
 .center main .tab-content p span {
   color: #eaae00;
+}
+
+@media (max-width: 576px) {
+  .center {
+    display: flex;
+    flex-direction: column;
+  }
+  .center aside {
+    height: 50px;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    padding-left: 20px;
+  }
+  .center aside .kabinet {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+  }
+  .center aside .kabinet span {
+    display: block;
+  }
+  .center aside .buttons {
+    display: none;
+  }
+  .center main {
+    padding: 20px;
+  }
+  .center main #profile {
+    gap: 40px;
+  }
+  .center main #profile .user-icon i {
+    font-size: 50px;
+    padding: 25px;
+  }
+  .center main #profile .datas h2 {
+    font-size: 20px;
+  }
+  .center main #profile .datas p {
+    font-size: 15px;
+  }
+}
+@media (min-width: 577px) and (max-width: 1200px) {
+  .center {
+    display: flex;
+    flex-direction: column;
+  }
+  .center aside {
+    height: 50px;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    padding-left: 20px;
+  }
+  .center aside .kabinet {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+  }
+  .center aside .kabinet span.fas {
+    display: block;
+  }
+  .center aside .buttons {
+    display: none;
+  }
+  .center main {
+    padding: 20px;
+  }
+  .center main #profile {
+    gap: 40px;
+  }
+  .center main #profile .user-icon i {
+    font-size: 90px;
+    padding: 40px;
+  }
+  .center main #profile .datas h2 {
+    font-size: 25px;
+  }
+  .center main #profile .datas p {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
