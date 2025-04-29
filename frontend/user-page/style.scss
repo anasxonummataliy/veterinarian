@@ -42,8 +42,7 @@
 
             #menu-icon {
                 display: none;
-                font-size: 30px;
-                color: white;
+                font-size: 20px;
 
                 .fa-solid,
                 .fas {
@@ -292,7 +291,7 @@
                 gap: 20px;
 
                 #menu-icon {
-                    display: block;
+                    display: flex;
                 }
             }
             #nav-menu {
@@ -362,6 +361,10 @@
 
                 #menu-icon {
                     display: block;
+
+                    i {
+                        color: #000;
+                    }
                 }
             }
 

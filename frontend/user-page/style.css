@@ -42,8 +42,7 @@
 }
 .center aside .kabinet #menu-icon {
   display: none;
-  font-size: 30px;
-  color: white;
+  font-size: 20px;
 }
 .center aside .kabinet #menu-icon .fa-solid,
 .center aside .kabinet #menu-icon .fas {
@@ -261,7 +260,7 @@
     gap: 20px;
   }
   .center aside .kabinet #menu-icon {
-    display: block;
+    display: flex;
   }
   .center aside #nav-menu {
     position: fixed;
@@ -321,6 +320,9 @@
   }
   .center aside .kabinet #menu-icon {
     display: block;
+  }
+  .center aside .kabinet #menu-icon i {
+    color: #000;
   }
   .center aside .buttons {
     display: none;
