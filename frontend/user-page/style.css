@@ -40,11 +40,18 @@
   gap: 10px;
   width: 100%;
 }
+.center aside .kabinet #menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+}
+.center aside .kabinet #menu-icon .fa-solid,
+.center aside .kabinet #menu-icon .fas {
+  font-weight: 900;
+  cursor: pointer;
+}
 .center aside .kabinet h1 {
   text-align: center;
-}
-.center aside .kabinet span {
-  display: none;
 }
 .center aside h1 {
   font-size: 22px;
@@ -130,20 +137,48 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-.center main #murojaatlar form {
+.center main #murojaatlar header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.center main #murojaatlar header button {
+  width: 40px;
+  height: 40px;
+  background-color: #d89b00;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+.center main #murojaatlar header button i {
+  font-size: 25px;
+}
+.center main #murojaatlar .add_murojaat {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: auto;
+  padding: 10px;
+  box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
+}
+.center main #murojaatlar .add_murojaat form {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
+  width: 100%;
 }
-.center main #murojaatlar form input {
+.center main #murojaatlar .add_murojaat form input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.center main #murojaatlar form button {
+.center main #murojaatlar .add_murojaat form button {
   padding: 10px;
   background-color: #eaae00;
   color: #fff;
@@ -151,8 +186,13 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.center main #murojaatlar form button:hover {
+.center main #murojaatlar .add_murojaat form button:hover {
   background-color: #d89b00;
+}
+.center main #murojaatlar #active {
+  display: flex;
+  width: 500px;
+  height: auto;
 }
 .center main #murojaatlar #murojaatlar-list p {
   padding: 10px;
@@ -220,7 +260,26 @@
     justify-content: start;
     gap: 20px;
   }
-  .center aside .kabinet span {
+  .center aside .kabinet #menu-icon {
+    display: block;
+  }
+  .center aside #nav-menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100vh;
+    background-color: #eaae00;
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+  }
+  .center aside #nav-menu.active {
+    left: 0;
+  }
+  .center aside #nav-menu.active li {
     display: block;
   }
   .center aside .buttons {
@@ -260,7 +319,7 @@
     justify-content: start;
     gap: 20px;
   }
-  .center aside .kabinet span.fas {
+  .center aside .kabinet #menu-icon {
     display: block;
   }
   .center aside .buttons {

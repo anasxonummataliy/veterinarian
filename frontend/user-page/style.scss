@@ -148,29 +148,68 @@
             background-color: #fff;
             display: flex;
             flex-direction: column;
-            width: 400px;
-            form {
+            width: 100%;
+            height: fit-content;
+
+            header {
                 display: flex;
-                flex-direction: column;
-                gap: 10px;
-                margin-bottom: 20px;
-                input {
-                    padding: 10px;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                }
+                width: 100%;
+                justify-content: space-between;
+
                 button {
-                    padding: 10px;
-                    background-color: #eaae00;
-                    color: #fff;
+                    width: 40px;
+                    height: 40px;
+                    background-color: #d89b00;
                     border: none;
                     border-radius: 4px;
-                    cursor: pointer;
-                    &:hover {
-                        background-color: #d89b00;
+                    color: white;
+
+                    i {
+                        font-size: 25px;
                     }
                 }
             }
+            .add_murojaat {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 500px;
+                height: auto;
+                padding: 10px;
+                -webkit-box-shadow: -4px -1px 5px 0px rgb(63, 60, 60);
+                -moz-box-shadow: -4px -1px 5px 0px rgb(193, 193, 193);
+                box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-bottom: 20px;
+                    width: 100%;
+                    input {
+                        padding: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                    }
+                    button {
+                        padding: 10px;
+                        background-color: #eaae00;
+                        color: #fff;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: #d89b00;
+                        }
+                    }
+                }
+            }
+            #active {
+                display: flex;
+                width: 500px;
+                height: auto;
+            }
+
             #murojaatlar-list {
                 p {
                     padding: 10px;
@@ -252,7 +291,7 @@
                 justify-content: start;
                 gap: 20px;
 
-                span {
+                #menu-icon {
                     display: block;
                 }
             }
@@ -321,7 +360,7 @@
                 justify-content: start;
                 gap: 20px;
 
-                span {
+                #menu-icon {
                     display: block;
                 }
             }
