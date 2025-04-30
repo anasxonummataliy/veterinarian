@@ -39,19 +39,15 @@
             justify-content: center;
             gap: 10px;
             width: 100%;
-
             #menu-icon {
                 display: none;
                 font-size: 20px;
-
-                .fa-solid,
-                .fas {
-                    font-weight: 900;
-                    cursor: pointer;
-                }
+                cursor: pointer;
+                color: #000;
             }
             h1 {
                 text-align: center;
+                
             }
         }
 
@@ -71,10 +67,9 @@
             height: 50px;
             border: none;
             cursor: pointer;
-            color: black;
             transition: all 0.3s ease;
-            background-color: #fff;
             gap: 10px;
+            background-color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -317,7 +312,7 @@
                 gap: 20px;
 
                 #menu-icon {
-                    display: flex;
+                    display: block;
                 }
             }
             #nav-menu {
@@ -335,14 +330,41 @@
 
                 &.active {
                     left: 0;
-                    li {
-                        display: block;
+                    .tab-button {
+                        display: flex;
+                        gap: 10px;
                     }
                 }
             }
 
-            .buttons {
+            .tab-button {
                 display: none;
+                background-color: #eaae00;
+                color: #fff;
+                display: flex;
+                gap: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+
+                &.active {
+                    transform: translateY(0);
+                }
+
+                body.menu-open {
+                    &::after {
+                        content: "";
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.5);
+                        z-index: 999;
+                    }
+                }
             }
         }
         main {

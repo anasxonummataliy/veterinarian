@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    navMenu.querySelectorAll("a").forEach(link => {
+    navMenu.querySelectorAll(".tab-button").forEach(link => {
         link.addEventListener("click", () => {
             navMenu.classList.remove("active");
             body.classList.remove("menu-open");
