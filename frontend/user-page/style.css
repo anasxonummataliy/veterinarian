@@ -243,21 +243,46 @@
   z-index: 900;
   top: 0;
   right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
 }
 .modal-body form {
   position: absolute;
-  top: -100%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   background: #fff;
   padding: 20px;
+  width: 500px;
+  height: auto;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-body form h2 {
+  text-align: center;
+}
+.modal-body form button {
+  padding: 10px;
+  background-color: #eaae00;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal-body form button:hover {
+  background-color: #d89b00;
 }
 .modal-body form input {
   width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 @media (max-width: 576px) {
