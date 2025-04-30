@@ -141,15 +141,16 @@
   width: 100%;
   justify-content: space-between;
 }
-.center main #murojaatlar header button {
+.center main #murojaatlar header .murojaat_button {
   width: 40px;
   height: 40px;
   background-color: #d89b00;
   border: none;
   border-radius: 4px;
   color: white;
+  cursor: pointer;
 }
-.center main #murojaatlar header button i {
+.center main #murojaatlar header .murojaat_button i {
   font-size: 25px;
 }
 .center main #murojaatlar .add_murojaat {
@@ -188,10 +189,6 @@
   display: flex;
   width: 500px;
   height: auto;
-}
-.center main #murojaatlar #murojaatlar-list p {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
 }
 .center main #emlash {
   display: flex;
