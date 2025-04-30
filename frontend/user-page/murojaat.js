@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modal_body.style.opacity = 0;
             modal_body.style.pointerEvents = "none";
         }
-    }, true); // could also be false
+    }, true); 
 
 
 
