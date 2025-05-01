@@ -129,17 +129,22 @@
   font-size: 25px;
 }
 .center main #murojaatlar {
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  gap: 40px;
+  background-color: #fff;
+  height: 100%;
 }
 .center main #murojaatlar header {
+  background-color: #fff;
   display: flex;
   width: 100%;
   justify-content: space-between;
+  padding: 15px;
+  border-bottom: 2px solid black;
 }
 .center main #murojaatlar header .murojaat_button {
   width: 40px;
@@ -152,6 +157,27 @@
 }
 .center main #murojaatlar header .murojaat_button i {
   font-size: 25px;
+}
+.center main #murojaatlar .post-murojat {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+}
+.center main #murojaatlar .post-murojat .block_mur {
+  width: 300px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.center main #murojaatlar .post-murojat .block_mur p {
+  width: 100%;
+  font-size: 15px;
 }
 .center main #murojaatlar .add_murojaat {
   display: none;
@@ -364,6 +390,10 @@
   }
   .center main #profile .datas p {
     font-size: 15px;
+  }
+  .center main #murojaatlar .post-murojat {
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (min-width: 577px) and (max-width: 1200px) {
