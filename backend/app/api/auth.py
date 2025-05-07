@@ -7,6 +7,7 @@ from fastapi.responses import JSONResponse
 
 from app.core.logger import logger
 from app.core.security import jwt
+import jwt
 from app.core.security.jwt import create_jwt_token, decode_jwt_token
 from app.database.session import get_db
 from app.database.models.user import User
@@ -21,6 +22,8 @@ router = APIRouter(
 SECRET_KEY = "your-secret-key"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+
 
 
 def create_access_token(data: dict):

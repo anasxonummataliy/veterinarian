@@ -5,3 +5,4 @@ router = APIRouter(
     prefix="/emlash",
     tags=['Emlash']
 )
+
