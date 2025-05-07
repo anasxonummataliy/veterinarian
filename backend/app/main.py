@@ -26,5 +26,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 app.include_router(auth_router)
+
+@app.get("/")
+async def start():
+    return {"message": "Ishlayapti Docs : http://127.0.0.1:8000/docs"}
