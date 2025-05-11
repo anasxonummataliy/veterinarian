@@ -6,3 +6,9 @@ router = APIRouter(
     tags=['Bildirishnoma']
 )
 
+
+
+@router.get("/bildirishnoma/")
+async def get_notification():
+  pass  
+

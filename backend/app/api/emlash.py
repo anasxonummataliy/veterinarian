@@ -6,3 +6,6 @@ router = APIRouter(
     tags=['Emlash']
 )
 
+@router.get("")
+async def emlash():
+    pass
