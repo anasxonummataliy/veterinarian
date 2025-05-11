@@ -8,7 +8,7 @@ router = APIRouter(
 
 
 
-@router.get("/bildirishnoma/")
+@router.get("/")
 async def get_notification():
   pass  
 

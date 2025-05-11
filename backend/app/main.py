@@ -4,6 +4,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.database.base import create_db_and_tables
 from app.api.auth import router as auth_router
+from app.api.bildirish import router as bildirish
+from app.api.emlash import router as emlash
+from app.api.murojaat import router as murojaat
 
 
 @asynccontextmanager
@@ -27,6 +30,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.include_router(auth_router)
+app.include_router(bildirish)
+app.include_router(emlash)
+app.include_router(murojaat)
 
 
 
