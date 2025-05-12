@@ -134,6 +134,13 @@
     <script src="./murojaat.js"></script>
     <script src="./emlash.js"></script>
     <script src="./bildirishnoma.js"></script>
+
+    <script>
+        const token = localStorage.getItem("token")
+        if (!token){
+            window.location.href = "/frontend/home/index.html"
+        }
+    </script>
 </body>
 
 </html>

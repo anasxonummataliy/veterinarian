@@ -5,6 +5,14 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.hidden{
+  display: none !important;
+}
+
+.show{
+  display: flex !important;
+}
+
 #root {
   display: flex;
   flex-direction: column;
@@ -76,7 +84,7 @@ nav {
     }
   }
   .direct {
-    display: flex;
+    display: none;
     gap: 10px;
     align-items: center;
     justify-content: center;

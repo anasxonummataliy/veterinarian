@@ -1,5 +1,7 @@
 from sqlalchemy import Integer, String, Column
 from app.database.base import Base
+from sqlalchemy.orm import relationship
+
 
 class User(Base):
     __tablename__ = "users"
@@ -9,3 +11,4 @@ class User(Base):
     email = Column(String)
     password = Column(String)
 
+    applications= relationship("Application", back_populates="owner")

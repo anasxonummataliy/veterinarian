@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuIcon = document.querySelector(".menu-icon");
   const navMenu = document.querySelector(".nav-menu");
   const body = document.body;
+  const profile = document.querySelector(".direct")
+  const authForm = document.querySelector(".direct_for_user")
 
   menuIcon.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -63,15 +65,29 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!token) {
       return null
     }
-    const response = await fetch(`http://localhost:8000/auth/me/${token}`)
-    const data = await response.json()
-    return data
+    const res = await fetch(`http://localhost:8000/auth/me/${token}`)
+    if (res.ok) {
+      profile.classList.add("show")
+      authForm.classList.add("hidden")
+      const data = await res.json()
+
+      const elem = `
+        <div>
+            <p>${data.name}</p>
+            <p>${data.email}</p>
+        </div>
+        <i onclick="location.href='../user-page/index.html'" class="fa-solid fa-user"></i>
+        `
+      profile.innerHTML = elem
+    }
+    else {
+      authForm.classList.add("show")
+      profile.classList.add("hidden")
+    }
   }
+
   getUserMe()
 });
 
 
-const data = null
-
-data ? div : ""
 

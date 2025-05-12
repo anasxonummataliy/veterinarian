@@ -10,3 +10,5 @@ class RegisRequest(BaseModel):
 class LoginRequest(BaseModel):
     email: EmailStr
     password: str
+
+
