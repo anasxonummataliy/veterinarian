@@ -4,9 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.database.base import create_db_and_tables
 from app.api.auth import router as auth_router
-from app.api.notification import router as bildirish
-from app.api.vaccination import router as emlash
-from app.api.application import router as murojaat
+from app.api.notification import router as notification
+from app.api.vaccination import router as voccation
+from app.api.application import router as application
+from app.api.doctors import router as doctors
 from app.database import models
 
 
@@ -31,9 +32,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.include_router(auth_router)
-app.include_router(bildirish)
-app.include_router(emlash)
-app.include_router(murojaat)
+app.include_router(notification)
+app.include_router(voccation)
+app.include_router(application)
+app.include_router(doctors)
 
 
 @app.get("/")
