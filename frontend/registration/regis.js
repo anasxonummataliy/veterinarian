@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (response.ok) {
                 showSuccess("Siz muvaffaqiyatli ro‘yxatdan o‘tdingiz!");
                 setTimeout(() => {
-                    window.location.href = "../login/login.html"; // Login sahifasiga yo‘naltirish
+                    window.location.href = "../user-page/index.html";
                 }, 2000);
             } else {
                 showError(data.detail || "Ro‘yxatdan o‘tishda xato yuz berdi!");

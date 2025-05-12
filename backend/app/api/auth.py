@@ -1,4 +1,3 @@
-from datetime import datetime, timedelta
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from argon2.exceptions import VerificationError
@@ -6,8 +5,6 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import JSONResponse
 
 from app.core.logger import logger
-from app.core.security import jwt
-import jwt
 from app.core.security.jwt import create_jwt_token, decode_jwt_token
 from app.database.session import get_db
 from app.database.models.user import User
@@ -18,20 +15,6 @@ router = APIRouter(
     prefix="/auth",
     tags=["Auth"]
 )
-
-SECRET_KEY = "your-secret-key"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
-
-
-
-
-def create_access_token(data: dict):
-    to_encode = data.copy()
-    expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-    to_encode.update({"exp": expire})
-    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
-    return encoded_jwt
 
 
 @router.post("/register/")
@@ -54,13 +37,7 @@ async def registration(
 
         db.add(new_user)
         await db.commit()
-
-        access_token = create_access_token(data={"sub": new_user.email})
-
-        return JSONResponse(content={
-        "message": "Siz muvafaqiyatli ro'yxatdan o'tdingiz",
-        "access_token": access_token
-    })
+        return JSONResponse(content={"message": "Siz muvafaqiyatli ro'yxatdan o'tdingiz"})
     except VerificationError as e:
         raise HTTPException(detail=f"Password error: {e}", status_code=500)
 
