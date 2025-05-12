@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Email yoki password kiritilmadi!")
             return;
         }
-       
+
 
         try {
             const login_response = await fetch("http://127.0.0.1:8000/auth/login/",
@@ -33,12 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await login_response.json();
             if (login_response.ok) {
                 console.log("Success", data);
-                document.cookie = `session=${JSON.stringify(data)}; SameSite=strict; Secure=true`;
+                localStorage.setItem("token", data.token);
                 window.location.href = "../user-page/index.html";
-
-            }
-            else {
-
             }
         }
         catch (error) {
@@ -47,13 +43,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     async function getUserMe() {
-        const token = localStorage.getItem("token")
-        if (!token) {
-            return null
+        const token = localStorage.getItem("token");
+        try {
+            const res = await fetch("http://127.0.0.1:8000/auth/me", {
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            });
+            const data = await res.json();
+            console.log("User info:", data);
+            return data;
+        } catch (error) {
+            console.error("Xatolik:", error);
         }
-        const response = await fetch(`http://localhost:8000/auth/me/${token}`)
-        const data = await response.json()
-        return data
     }
     getUserMe()
 })

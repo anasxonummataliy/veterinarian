@@ -1,7 +1,7 @@
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from argon2.exceptions import VerificationError
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Header
 from fastapi.responses import JSONResponse
 
 from app.core.logger import logger
@@ -70,10 +70,26 @@ async def login(
         raise HTTPException(detail=f"Server error: {e}", status_code=500)
 
 
-@router.get("/me/{token}")
-async def get_me(token: str, db: AsyncSession = Depends(get_db)):
+@router.get("/me")
+async def get_me(
+    authorization: str = Header(...),
+    db: AsyncSession = Depends(get_db)
+):
+    if not authorization.startswith("Bearer "):
+        raise HTTPException(status_code=401, detail="Token format noto‘g‘ri")
+
+    token = authorization.split(" ")[1]
     user_id = decode_jwt_token(token)
-    smtm = select(User).where(User.id == user_id)
-    result = await db.execute(smtm)
+
+    stmt = select(User).where(User.id == user_id)
+    result = await db.execute(stmt)
     db_user = result.scalar_one_or_none()
-    return db_user
+
+    if db_user is None:
+        raise HTTPException(status_code=404, detail="Foydalanuvchi topilmadi")
+
+    return {
+        "id": db_user.id,
+        "name": db_user.name,
+        "email": db_user.email
+    }
