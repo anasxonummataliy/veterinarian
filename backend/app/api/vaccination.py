@@ -2,8 +2,8 @@ from fastapi import APIRouter
 
 
 router = APIRouter(
-    prefix="/emlash",
-    tags=['Emlash']
+    prefix="/vaccination",
+    tags=['Vaccination']
 )
 
 @router.get("")

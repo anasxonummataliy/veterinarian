@@ -1,5 +1,5 @@
 from pydantic import BaseModel
 
-class Doctor(BaseModel):
+class CreateDoctor(BaseModel):
     name : str 
     doctor_type : str 

@@ -7,7 +7,7 @@ from app.database.models.application import Application
 
 router = APIRouter(
     prefix="/application",
-    tags=["Murojaat"]
+    tags=["Application"]
 )
 
 

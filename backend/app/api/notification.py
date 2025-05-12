@@ -2,8 +2,8 @@ from fastapi import APIRouter
 
 
 router = APIRouter(
-    prefix="/bildirishnoma",
-    tags=['Bildirishnoma']
+    prefix="/notification",
+    tags=['Notification']
 )
 
 
