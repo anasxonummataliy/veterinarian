@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.getElementById('menu-icon');
     const navMenu = document.getElementById('nav-menu');
     const body = document.body;
+    const exit = document.querySelector(".exit")
 
 
     menuIcon.addEventListener('click', (e) => {
@@ -23,6 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.remove("menu-open");
         });
     });
+
+    exit.addEventListener('click', () => {
+        localStorage.clear()
+        window.location.reload()
+    })
 
 })
 

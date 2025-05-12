@@ -68,15 +68,13 @@
   color: #fff;
   cursor: pointer;
 }
+.auth-container .left-side form .form-control > p {
+  width: 100%;
+  padding-top: 15px;
+}
 .auth-container .left-side form .form-control > p > a {
   color: #eaae00;
   font-weight: 900;
-}
-.auth-container .left-side form #error-message {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
 }
 .auth-container .right-side {
   flex-basis: 40%;

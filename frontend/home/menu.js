@@ -63,7 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
   async function getUserMe() {
     const token = localStorage.getItem("token")
     if (!token) {
-      return null
+      authForm.classList.add("show")
+      profile.classList.add("hidden")
     }
     const res = await fetch(`http://localhost:8000/auth/me/${token}`)
     if (res.ok) {

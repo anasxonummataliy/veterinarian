@@ -14,14 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Email yoki password kiritilmadi!")
             return;
         }
-        if (!/\S+@\S+\.\S+/.test(email)) {
-            alert("Email xato kiritdingiz!")
-            return;
-        }
-        if (password.length < 6) {
-            alert("Password uzunligi kamida 6 ga teng bo'lishi kerak!");
-            return;
-        }
+       
 
         try {
             const login_response = await fetch("http://127.0.0.1:8000/auth/login/",

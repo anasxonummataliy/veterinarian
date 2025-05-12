@@ -75,17 +75,17 @@
                     cursor: pointer;
                 }
             }
+            .form-control > p{
+                width: 100%;
+                padding-top: 15px;
+            }
             .form-control > p > a{
                 // text-decoration: none;
                 color: #eaae00;
                 font-weight: 900;
+                
             }
-            #error-message {
-                color: red;
-                font-size: 14px;
-                margin-top: 10px;
-                text-align: center;
-            }
+            
         }
     }
     .right-side {

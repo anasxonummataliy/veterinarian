@@ -48,10 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Backend javobi:", data);
 
             if (response.ok) {
-                showSuccess("Siz muvaffaqiyatli ro‘yxatdan o‘tdingiz!");
-                setTimeout(() => {
-                    window.location.href = "../user-page/index.html";
-                }, 2000);
+                console.log("Siz muvaffaqiyatli ro‘yxatdan o‘tdingiz!");
+                window.location.href = "../user-page/index.html";
             } else {
                 showError(data.detail || "Ro‘yxatdan o‘tishda xato yuz berdi!");
             }
@@ -61,33 +59,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    function showError(message) {
-        const errorDiv = document.createElement("div");
-        errorDiv.id = "error-message";
-        errorDiv.style.color = "red";
-        errorDiv.style.marginTop = "10px";
-        errorDiv.style.textAlign = "center";
-        errorDiv.textContent = message;
-        const formElement = document.getElementById("register-form");
-        if (formElement) {
-            formElement.appendChild(errorDiv);
-            setTimeout(() => errorDiv.remove(), 3000);
-        } else {
-            console.error("Forma elementi topilmadi, xato xabari ko‘rsatilmadi.");
-        }
-    }
-
-    function showSuccess(message) {
-        const successDiv = document.createElement("div");
-        successDiv.id = "success-message";
-        successDiv.style.color = "green";
-        successDiv.style.marginTop = "10px";
-        successDiv.style.textAlign = "center";
-        successDiv.textContent = message;
-        const formElement = document.getElementById("register-form");
-        if (formElement) {
-            formElement.appendChild(successDiv);
-            setTimeout(() => successDiv.remove(), 3000);
-        }
-    }
+    
 });
