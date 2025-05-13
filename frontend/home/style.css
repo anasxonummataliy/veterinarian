@@ -908,8 +908,9 @@ main .main-right .dog-img {
     font-size: 20px;
     padding: 10px;
   }
-  nav .direct_for_user > button {
-    font-size: 10px;
+  nav .direct_for_user button {
+    font-size: 15px;
+    padding: 10px;
   }
   main {
     flex-direction: column-reverse;
