@@ -49,7 +49,7 @@ nav .menu-icon {
   color: white;
 }
 nav .logo {
-  width: 230px;
+  width: 180px;
   height: auto;
 }
 nav ul {
@@ -907,6 +907,9 @@ main .main-right .dog-img {
   nav .direct i {
     font-size: 20px;
     padding: 10px;
+  }
+  nav .direct_for_user > button {
+    font-size: 10px;
   }
   main {
     flex-direction: column-reverse;

@@ -12,7 +12,6 @@ from app.core.utils import hash_password, verify_password
 from app.schemas.for_auth import RegisRequest, LoginRequest, UserResponse
 
 
-
 router = APIRouter(
     prefix="/auth",
     tags=["Auth"]
@@ -33,13 +32,13 @@ async def registration(
             raise HTTPException(
                 detail="Bu email allaqachon ro'yhatdan o'tgan.", status_code=400
             )
-        token = create_jwt_token(db_user.id)
         user_in.password = hash_password(user_in.password)
         new_user = User(**user_in.model_dump())
-
         db.add(new_user)
         await db.commit()
-        return JSONResponse(content={"message": "Siz muvafaqiyatli ro'yxatdan o'tdingiz", 'token' : token}, )
+
+        token = create_jwt_token(new_user.id)
+        return JSONResponse(content={"message": "Siz muvafaqiyatli ro'yxatdan o'tdingiz", 'token': token}, )
     except VerificationError as e:
         raise HTTPException(detail=f"Password error: {e}", status_code=500)
 
@@ -86,4 +85,3 @@ async def get_me(token: str, db: AsyncSession = Depends(get_db)):
 # async def get_user(
 #     db:AsyncSession = Depends(get_db)
 # ):
-    

@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!token) {
       authForm.classList.add("show")
       profile.classList.add("hidden")
+      return
     }
     const res = await fetch(`http://localhost:8000/auth/me/${token}`)
     if (res.ok) {
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>${data.name}</p>
             <p>${data.email}</p>
         </div>
-        <i onclick="location.href='../user-page/index.html'" class="fa-solid fa-user"></i>
+        <i onclick="location.href='../profile/index.html'" class="fa-solid fa-user"></i>
         `
       profile.innerHTML = elem
     }

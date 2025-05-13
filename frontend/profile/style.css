@@ -32,11 +32,26 @@
   padding: 40px 0;
   align-items: center;
   gap: 20px;
+  justify-content: space-between;
 }
 .center aside .exit {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  width: 90%;
+}
+.center aside .exit button {
+  height: 50px;
+  background-color: #eaae00;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 19px;
+}
+.center aside div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
 .center aside .kabinet {
   display: flex;
@@ -65,6 +80,10 @@
   display: flex;
   flex-direction: column;
 }
+.center aside .buttons a {
+  text-decoration: none;
+  color: black;
+}
 .center aside .tab-button {
   width: 100%;
   height: 50px;
@@ -92,10 +111,13 @@
 }
 .center main {
   flex: 1;
-  padding: 40px;
+  padding: 20px;
   background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
+}
+.center main > div {
+  padding: 20px;
 }
 .center main #profile {
   width: 100%;
@@ -242,7 +264,6 @@
 .center main .tab-content {
   height: auto;
   padding: 30px;
-  display: none;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -328,15 +349,15 @@
     align-items: start;
     padding-left: 20px;
   }
-  .center aside .kabinet {
+  .center aside div .kabinet {
     display: flex;
     justify-content: start;
     gap: 20px;
   }
-  .center aside .kabinet #menu-icon {
+  .center aside div .kabinet #menu-icon {
     display: block;
   }
-  .center aside #nav-menu {
+  .center aside div #nav-menu {
     position: fixed;
     top: 0;
     left: -260px;
@@ -349,12 +370,13 @@
     transition: left 0.3s ease-in-out;
     z-index: 999;
   }
-  .center aside #nav-menu.active {
+  .center aside div #nav-menu.active {
     left: 0;
   }
-  .center aside #nav-menu.active .tab-button {
+  .center aside div #nav-menu.active .tab-button {
     display: flex;
     gap: 10px;
+    color: white;
   }
   .center aside .tab-button {
     display: none;
@@ -369,6 +391,7 @@
   }
   .center aside .tab-button.active {
     transform: translateY(0);
+    background-color: rgba(255, 255, 255, 0.1);
   }
   .center aside .tab-button body.menu-open::after {
     content: "";
@@ -396,9 +419,9 @@
   .center main #profile .datas p {
     font-size: 15px;
   }
-  .center main #murojaatlar .post-murojat {
-    align-items: center;
+  .center main #murojaatlar > .post-murojat {
     justify-content: center;
+    align-items: center;
   }
 }
 @media (min-width: 577px) and (max-width: 1200px) {
@@ -413,15 +436,15 @@
     align-items: start;
     padding-left: 20px;
   }
-  .center aside .kabinet {
+  .center aside div .kabinet {
     display: flex;
     justify-content: start;
     gap: 20px;
   }
-  .center aside .kabinet #menu-icon {
+  .center aside div .kabinet #menu-icon {
     display: block;
   }
-  .center aside #nav-menu {
+  .center aside div #nav-menu {
     position: fixed;
     top: 0;
     left: -260px;
@@ -434,12 +457,13 @@
     transition: left 0.3s ease-in-out;
     z-index: 999;
   }
-  .center aside #nav-menu.active {
+  .center aside div #nav-menu.active {
     left: 0;
   }
-  .center aside #nav-menu.active .tab-button {
+  .center aside div #nav-menu.active .tab-button {
     display: flex;
     gap: 10px;
+    color: white;
   }
   .center aside .tab-button {
     display: none;

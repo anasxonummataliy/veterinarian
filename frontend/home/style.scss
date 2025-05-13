@@ -51,7 +51,7 @@ nav {
   }
 
   .logo {
-    width: 230px;
+    width: 180px;
     height: auto;
   }
   ul {
@@ -997,6 +997,9 @@ main {
         padding: 10px;
       }
     }
+    .direct_for_user > button{
+      font-size: 10px;
+    }
   }
 
   main {
@@ -1337,7 +1340,7 @@ main {
     .nav-menu {
       position: fixed;
       top: 0;
-      left: -260px; // Dastlab yashirin
+      left: -260px; 
       width: 260px;
       height: 100vh;
       background-color: #eaae00;
@@ -1345,15 +1348,15 @@ main {
       padding: 80px 20px 20px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       transition: left 0.3s ease-in-out;
-      z-index: 1000; // Yuqori qatlamda bo‘lishi uchun
-      display: flex; // Menyu doimo flex bo‘lib, faqat pozitsiya bilan boshqariladi
+      z-index: 1000; 
+      display: flex; 
 
       &.active {
-        left: 0; // Ochilganda ko‘rinadi
+        left: 0; 
       }
 
       li {
-        display: block; // <li> elementlari doimo ko‘rinsin
+        display: block; 
         width: 100%;
         text-align: left;
 
@@ -1385,7 +1388,6 @@ main {
       width: 180px;
     }
 
-    // "ul { display: none; }" olib tashlandi, chunki .nav-menu o‘zi boshqaradi
   }
 
   body.menu-open::after {

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Bizning veterinariya veb-saytimiz uy hayvonlaringiz uchun eng yaxshi tibbiy xizmatlarni taqdim etadi. Tajribali veterinarlar, vaksinalar, stomatologiya va boshqa g'amxo'rlik xizmatlari bilan hayvonlaringizning salomatligini ta'minlaymiz." />
+    <meta name="keywords"
+        content="veterinariya, uy hayvonlari, hayvonlar, g'amxo'rlik, veterinar xizmatlari, vaksina, emlash, stomatologiya, hayvonlarni davolash, sog'liqni saqlash, tajribali veterinarlar, bog'lanish, xizmat ko'rsatish" />
+    <title>Veterinariya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="../home/icons/title_icon.svg">
+
+</head>
+
+<body>
+    <div id="root">
+        <div class="center">
+            <aside>
+                <div>
+                    <div class="kabinet">
+                        <div id="menu-icon">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <h1 onclick="location.href='../home/index.html'">Sizning kabinetingiz</h1>
+                    </div>
+                    <div id="nav-menu" class="buttons">
+                        <a href="./index.html" class="tab-button">
+                            <i class="fa-solid fa-user"></i>Profil
+                        </a>
+                        <a href="./application.html" class="tab-button">
+                            <i class="fa-solid fa-stethoscope"></i>Murojaat
+                        </a>
+                        <a href="./vaccation.html" class="tab-button active">
+                            <i class="fa-solid fa-syringe"></i>Emlash
+                        </a>
+                        <a href="./notification.html" class="tab-button">
+                            <i class="fa-solid fa-comments"></i>Bildirishnoma
+                        </a>
+                    </div>
+                </div>
+
+                <div class="exit">
+                    <button>Chiqish <i class="fas fa-sign-out-alt"></i></button>
+                </div>
+            </aside>
+            <main>
+                <div id="emlash" class="tab-content active">
+                    <h2>Emlash tarixi</h2>
+                    <p>Emlash sanasi: <span id="emlash-date"></span></p>
+                    <p>Turi: <span id="emlash-type"></span></p>
+                    <h3>Navbatdagi emlash</h3>
+                    <p>Sana: <span id="next-emlash-date"></span></p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        const token = localStorage.getItem("token")
+        if (!token) {
+            window.location.href = "/frontend/home/index.html"
+        }
+    </script>
+    <script src="./navbar.js"></script>
+</body>
+
+</html>

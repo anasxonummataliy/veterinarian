@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     form.addEventListener("submit", async (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
 
         const nameInput = document.getElementById("name");
         const emailInput = document.getElementById("email");
@@ -39,26 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const response = await fetch("http://localhost:8000/auth/register/", {
+            const response = await fetch("http://localhost:8000/auth/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, email, password }),
             });
 
             const data = await response.json();
-            console.log("Backend javobi:", data);
-
-            if (response.ok) {
-                console.log("Siz muvaffaqiyatli ro‘yxatdan o‘tdingiz!");
-                window.location.href = '../user-page/index.html';
-            } else {
-                showError.innerHTML = (`<p>Ro‘yxatdan o‘tishda xato yuz berdi! Iltimos qayta urinib ko'ring.</p>`);
-            }
+            if (response.ok) window.location.href = '../profile/index.html';
+            else showError.innerHTML = (`<p>${data.detail}</p>`)
         } catch (error) {
             console.error("Xato yuz berdi:", error.message, error.stack);
-            showError.innerHTML = ("Tarmoq xatosi yuz berdi. Iltimos, qayta urinib ko‘ring.");
+            showError.innerHTML = ("<p>Tarmoq xatosi yuz berdi. Iltimos, qayta urinib ko‘ring.</p>");
         }
     });
 
-    
+
 });

@@ -32,11 +32,27 @@
         padding: 40px 0;
         align-items: center;
         gap: 20px;
-
-        .exit{
+        justify-content: space-between;
+        .exit {
             display: flex;
             flex-direction: column;
-            align-items: end;
+            width: 90%;
+
+            button {
+                height: 50px;
+                background-color: #eaae00;
+                border: none;
+                color: white;
+                cursor: pointer;
+                font-size: 19px;
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
         }
 
         .kabinet {
@@ -66,6 +82,11 @@
             gap: 10px;
             display: flex;
             flex-direction: column;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
         }
         .tab-button {
             width: 100%;
@@ -97,10 +118,14 @@
 
     main {
         flex: 1;
-        padding: 40px;
+        padding: 20px;
         background-color: #f7f7f7;
         display: flex;
         flex-direction: column;
+
+        & > div {
+            padding: 20px;
+        }
 
         #profile {
             width: 100%;
@@ -188,7 +213,9 @@
                     align-items: center;
                     background-color: #fff;
                     padding: 20px;
-                    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                    box-shadow:
+                        rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+                        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
                     p {
                         width: 100%;
                         font-size: 15px;
@@ -262,7 +289,6 @@
         .tab-content {
             height: auto;
             padding: 30px;
-            display: none;
             opacity: 0;
             transform: translateY(10px);
             transition:
@@ -357,33 +383,37 @@
             justify-content: start;
             align-items: start;
             padding-left: 20px;
-            .kabinet {
-                display: flex;
-                justify-content: start;
-                gap: 20px;
 
-                #menu-icon {
-                    display: block;
+            div {
+                .kabinet {
+                    display: flex;
+                    justify-content: start;
+                    gap: 20px;
+
+                    #menu-icon {
+                        display: block;
+                    }
                 }
-            }
-            #nav-menu {
-                position: fixed;
-                top: 0;
-                left: -260px;
-                width: 260px;
-                height: 100vh;
-                background-color: #eaae00;
-                flex-direction: column;
-                padding: 80px 20px 20px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transition: left 0.3s ease-in-out;
-                z-index: 999;
+                #nav-menu {
+                    position: fixed;
+                    top: 0;
+                    left: -260px;
+                    width: 260px;
+                    height: 100vh;
+                    background-color: #eaae00;
+                    flex-direction: column;
+                    padding: 80px 20px 20px;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                    transition: left 0.3s ease-in-out;
+                    z-index: 999;
 
-                &.active {
-                    left: 0;
-                    .tab-button {
-                        display: flex;
-                        gap: 10px;
+                    &.active {
+                        left: 0;
+                        .tab-button {
+                            display: flex;
+                            gap: 10px;
+                            color: white;
+                        }
                     }
                 }
             }
@@ -402,6 +432,8 @@
 
                 &.active {
                     transform: translateY(0);
+                    background-color: rgba(255, 255, 255, 0.1);
+                    
                 }
 
                 body.menu-open {
@@ -438,11 +470,9 @@
                     }
                 }
             }
-            #murojaatlar{
-                .post-murojat{
-                    align-items: center;
-                    justify-content: center;
-                }
+            #murojaatlar > .post-murojat {
+                justify-content: center;
+                align-items: center;
             }
         }
     }
@@ -459,33 +489,37 @@
             justify-content: start;
             align-items: start;
             padding-left: 20px;
-            .kabinet {
-                display: flex;
-                justify-content: start;
-                gap: 20px;
 
-                #menu-icon {
-                    display: block;
+            div {
+                .kabinet {
+                    display: flex;
+                    justify-content: start;
+                    gap: 20px;
+
+                    #menu-icon {
+                        display: block;
+                    }
                 }
-            }
-            #nav-menu {
-                position: fixed;
-                top: 0;
-                left: -260px;
-                width: 260px;
-                height: 100vh;
-                background-color: #eaae00;
-                flex-direction: column;
-                padding: 80px 20px 20px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transition: left 0.3s ease-in-out;
-                z-index: 999;
+                #nav-menu {
+                    position: fixed;
+                    top: 0;
+                    left: -260px;
+                    width: 260px;
+                    height: 100vh;
+                    background-color: #eaae00;
+                    flex-direction: column;
+                    padding: 80px 20px 20px;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                    transition: left 0.3s ease-in-out;
+                    z-index: 999;
 
-                &.active {
-                    left: 0;
-                    .tab-button {
-                        display: flex;
-                        gap: 10px;
+                    &.active {
+                        left: 0;
+                        .tab-button {
+                            display: flex;
+                            gap: 10px;
+                            color: white;
+                        }
                     }
                 }
             }
