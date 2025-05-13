@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("register-form");
+    const showError = document.getElementById('show_error')
 
     if (!form) {
         console.error("Forma topilmadi! HTML’da id='register-form' bo‘lgan element mavjudligini tekshiring.");
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const passwordInput = document.getElementById("password");
 
         if (!nameInput || !emailInput || !passwordInput) {
-            showError("Forma maydonlari topilmadi!");
+            console.log("Forma maydonlari topilmadi!");
             return;
         }
 
@@ -23,17 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const password = passwordInput.value.trim();
 
         if (!name || !email || !password) {
-            showError("Iltimos, barcha maydonlarni to‘ldiring!");
+            showError.innerHTML = ("<p>Iltimos, barcha maydonlarni to‘ldiring!</p>");
             return;
         }
 
         if (!/\S+@\S+\.\S+/.test(email)) {
-            showError("Iltimos, to‘g‘ri email manzilini kiriting!");
+            showError.innerHTML = ("<p>Iltimos, to‘g‘ri email manzilini kiriting!</p>");
             return;
         }
 
         if (name.length < 2) {
-            showError("Ism kamida 2 belgidan iborat bo‘lishi kerak!");
+            showError.innerHTML = ("<p>Ism kamida 2 belgidan iborat bo‘lishi kerak!</p>");
             return;
         }
 
@@ -49,13 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (response.ok) {
                 console.log("Siz muvaffaqiyatli ro‘yxatdan o‘tdingiz!");
-                window.location.href = "../user-page/index.html";
+                window.location.href = '../user-page/index.html';
             } else {
-                showError(data.detail || "Ro‘yxatdan o‘tishda xato yuz berdi!");
+                showError.innerHTML = (`<p>Ro‘yxatdan o‘tishda xato yuz berdi! Iltimos qayta urinib ko'ring.</p>`);
             }
         } catch (error) {
             console.error("Xato yuz berdi:", error.message, error.stack);
-            showError("Tarmoq xatosi yuz berdi. Iltimos, qayta urinib ko‘ring.");
+            showError.innerHTML = ("Tarmoq xatosi yuz berdi. Iltimos, qayta urinib ko‘ring.");
         }
     });
 

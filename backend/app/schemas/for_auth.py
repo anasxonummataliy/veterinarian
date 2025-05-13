@@ -12,3 +12,9 @@ class LoginRequest(BaseModel):
     password: str
 
 
+
+class UserResponse(BaseModel):
+    id:int
+    name:str
+    email: EmailStr
+

@@ -76,6 +76,10 @@
   color: #eaae00;
   font-weight: 900;
 }
+.auth-container .left-side form #show_error > p {
+  color: red;
+  text-align: center;
+}
 .auth-container .right-side {
   flex-basis: 40%;
   background: #eaae00;

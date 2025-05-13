@@ -19,18 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
             targetContent.classList.add('active');
 
             if (target === 'profile') {
+                profile.style.display = "flex"
+                murojaat.style.display = "none"
+                emlash.style.display = "none"
+                notification.style.display = "none"
+
+                const token = localStorage.getItem("token");
                 try {
-                    profile.style.display = "flex"
-                    murojaat.style.display = "none"
-                    emlash.style.display = "none"
-                    notification.style.display = "none"
-
                     targetContent.innerHTML = '<p>Loading...</p>';
-                    const response = await fetch('/api/user-profile');
+                    const res = await fetch(`http://127.0.0.1:8000/auth/me/${token}`);
                     if (!response.ok) throw new Error('Ma’lumot olishda xato yuz berdi');
-                    const data = await response.json();
-                    document.cookie = `session=${JSON.stringify(data)}; SameSite=strict; Secure=true`;
-
+                    const data = await res.json();
+                    // document.cookie = `session=${JSON.stringify(data)}; SameSite=strict; Secure=true`;
+                    console.log(data.id);
+                    
                     targetContent.innerHTML = `
                     <div class="user-icon">
                         <i class="fa-solid fa-user"></i>
@@ -46,13 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     targetContent.innerHTML = `<p>Xato: ${error.message}</p>`;
                 }
             }
-              
+
         });
     });
-
-
-
-
 
 
 })
