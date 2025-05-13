@@ -343,19 +343,47 @@
     flex-direction: column;
   }
   .center aside {
+    flex-direction: row;
     height: 50px;
     width: 100%;
-    justify-content: start;
-    align-items: start;
-    padding-left: 20px;
+    justify-content: space-between;
+    padding-left: 10px;
+  }
+  .center aside .exit {
+    height: 50px;
+    padding-right: 20px;
+    align-items: end;
+    justify-content: center;
+  }
+  .center aside .exit button {
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .center aside div {
+    display: flex;
+    flex-direction: row;
   }
   .center aside div .kabinet {
     display: flex;
     justify-content: start;
     gap: 20px;
   }
+  .center aside div .kabinet .way-to-home {
+    display: none;
+  }
   .center aside div .kabinet #menu-icon {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    gap: 10px;
+  }
+  .center aside div .kabinet #menu-icon h1 {
+    font-size: 20px;
+  }
+  .center aside div .kabinet #menu-icon i {
+    font-size: 23px;
   }
   .center aside div #nav-menu {
     position: fixed;
@@ -430,19 +458,47 @@
     flex-direction: column;
   }
   .center aside {
+    flex-direction: row;
     height: 50px;
     width: 100%;
-    justify-content: start;
-    align-items: start;
+    justify-content: space-between;
     padding-left: 20px;
+  }
+  .center aside .exit {
+    height: 50px;
+    padding-right: 20px;
+    align-items: end;
+    justify-content: center;
+  }
+  .center aside .exit button {
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .center aside div {
+    display: flex;
+    flex-direction: row;
   }
   .center aside div .kabinet {
     display: flex;
     justify-content: start;
     gap: 20px;
   }
+  .center aside div .kabinet .way-to-home {
+    display: none;
+  }
   .center aside div .kabinet #menu-icon {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    gap: 10px;
+  }
+  .center aside div .kabinet #menu-icon h1 {
+    font-size: 22px;
+  }
+  .center aside div .kabinet #menu-icon i {
+    font-size: 25PX;
   }
   .center aside div #nav-menu {
     position: fixed;

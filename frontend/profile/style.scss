@@ -37,7 +37,6 @@
             display: flex;
             flex-direction: column;
             width: 90%;
-
             button {
                 height: 50px;
                 background-color: #eaae00;
@@ -378,20 +377,49 @@
         flex-direction: column;
 
         aside {
-            height: 50px;
+            flex-direction: row;
+            height: 50px;   
             width: 100%;
-            justify-content: start;
-            align-items: start;
-            padding-left: 20px;
+            justify-content: space-between;
+            padding-left: 10px;
+
+            .exit{
+                height: 50px;
+                padding-right: 20px;
+                align-items: end;
+                justify-content: center;
+                button{
+                    height: 40px;
+                padding: 10px;
+                font-size: 20px;
+
+                }
+            }
 
             div {
+                display: flex;
+                flex-direction: row;
                 .kabinet {
                     display: flex;
                     justify-content: start;
                     gap: 20px;
 
+                    .way-to-home{
+                        display: none;
+                    }
+
                     #menu-icon {
-                        display: block;
+                        display: flex;
+                        flex-direction: row;
+                        height: 50px;
+                        align-items: center;
+                        gap: 10px    ;
+                        h1{
+                            font-size: 20px;
+                        }
+                        i{
+                            font-size: 23px;
+                        }
                     }
                 }
                 #nav-menu {
@@ -484,20 +512,49 @@
         flex-direction: column;
 
         aside {
-            height: 50px;
+            flex-direction: row;
+            height: 50px;   
             width: 100%;
-            justify-content: start;
-            align-items: start;
+            justify-content: space-between;
             padding-left: 20px;
 
+            .exit{
+                height: 50px;
+                padding-right: 20px;
+                align-items: end;
+                justify-content: center;
+                button{
+                    height: 40px;
+                padding: 10px;
+                font-size: 20px;
+
+                }
+            }
+
             div {
+                display: flex;
+                flex-direction: row;
                 .kabinet {
                     display: flex;
                     justify-content: start;
                     gap: 20px;
 
+                    .way-to-home{
+                        display: none;
+                    }
+
                     #menu-icon {
-                        display: block;
+                        display: flex;
+                        flex-direction: row;
+                        height: 50px;
+                        align-items: center;
+                        gap: 10px    ;
+                        h1{
+                            font-size: 22px;
+                        }
+                        i{
+                            font-size: 25PX;
+                        }
                     }
                 }
                 #nav-menu {
@@ -523,6 +580,7 @@
                     }
                 }
             }
+
 
             .tab-button {
                 display: none;
