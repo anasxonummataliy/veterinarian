@@ -46,13 +46,30 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             const data = await response.json();
-            if (response.ok) window.location.href = '../profile/index.html';
+            localStorage.setItem("token", data.token);
+            if (response.ok) window.location.href = "../profile/index.html";
             else showError.innerHTML = (`<p>${data.detail}</p>`)
         } catch (error) {
             console.error("Xato yuz berdi:", error.message, error.stack);
             showError.innerHTML = ("<p>Tarmoq xatosi yuz berdi. Iltimos, qayta urinib ko‘ring.</p>");
         }
     });
+    async function getUserMe() {
+        const token = localStorage.getItem("token");
+        if (!token) {
+            console.log("No token found");
+            return;
+        }
+        try {
+            const res = await fetch(`http://127.0.0.1:8000/auth/me/${token}`);
+            const data = await res.json();
+            console.log("User info:", data);
+            return data;
+        } catch (error) {
+            console.error("Xatolik:", error);
+        }
+    }
 
+    getUserMe();
 
 });
