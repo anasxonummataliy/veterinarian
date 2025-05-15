@@ -33,6 +33,9 @@
         align-items: center;
         gap: 20px;
         justify-content: space-between;
+        -webkit-box-shadow: -4px -1px 5px 0px rgb(63, 60, 60);
+            -moz-box-shadow: -4px -1px 5px 0px rgb(193, 193, 193);
+            box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
         .exit {
             display: flex;
             flex-direction: column;
@@ -175,6 +178,9 @@
             gap: 40px;
             background-color: #fff;
             height: 100%;
+            -webkit-box-shadow: -4px -1px 5px 0px rgb(63, 60, 60);
+            -moz-box-shadow: -4px -1px 5px 0px rgb(193, 193, 193);
+            box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
             header {
                 background-color: #fff;
                 display: flex;
@@ -203,6 +209,8 @@
                 width: 100%;
                 height: auto;
                 gap: 10px;
+                
+
 
                 .block_mur {
                     width: 300px;
@@ -310,6 +318,7 @@
             -webkit-box-shadow: -4px -1px 5px 0px rgb(63, 60, 60);
             -moz-box-shadow: -4px -1px 5px 0px rgb(193, 193, 193);
             box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
+      
 
             h2 {
                 border-bottom: 2px solid black;
