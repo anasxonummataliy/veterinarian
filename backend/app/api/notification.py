@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 
@@ -15,10 +15,13 @@ router = APIRouter(
 
 @router.post('/add')
 async def add_notification(data : CreateNotification, db : AsyncSession = Depends(get_db)):
-    new_notification = Notification(**data.model_dump())
-    db.add(new_notification)
-    db.commit
-    return new_notification
+    try:
+      new_notification = Notification(**data.model_dump())
+      db.add(new_notification)
+      db.commit
+      return new_notification
+    except Exception as e:
+       raise HTTPException(detail=f"Ma'lumot saqlashda xatolik : {e}", status_code=500)
 
 
 @router.get("/")
