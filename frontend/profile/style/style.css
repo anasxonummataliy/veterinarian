@@ -252,7 +252,7 @@
 }
 .center main #emlash h2 {
   border-bottom: 2px solid black;
-  padding-bottom: 10px;
+  padding: 15px;
 }
 .center main #emlash #posts {
   display: flex;
@@ -278,14 +278,41 @@
 .center main #notification {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 400px;
-  gap: 20px;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 40px;
   background-color: #fff;
+  height: 100%;
   box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
 }
 .center main #notification h2 {
-  font-size: 18px;
+  border-bottom: 2px solid black;
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+}
+.center main #notification .posts {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+}
+.center main #notification .posts .post {
+  width: 300px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.center main #notification .posts .post p {
+  width: 100%;
+  font-size: 15px;
 }
 .center main .tab-content {
   height: auto;

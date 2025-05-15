@@ -1,11 +1,13 @@
-from sqlalchemy import Integer, Column, String
+from datetime import datetime
+from sqlalchemy import ForeignKey, Integer, Column, String, DateTime
 from app.database.base import Base
+
 
 class Notification(Base):
     __tablename__ = 'notification'
 
     id = Column(Integer, primary_key=True)
-    user_id = Column()
+    user_id = Column(ForeignKey('users.id'))
     type = Column(String)
     message = Column(String)
-    sent_at = Column()
+    sent_at = Column(DateTime, default=datetime.utcnow)

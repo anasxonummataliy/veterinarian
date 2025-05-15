@@ -272,7 +272,7 @@
             height: 100%;
             h2 {
                 border-bottom: 2px solid black;
-                padding-bottom: 10px;
+                padding: 15px;
             }
             #posts {
                 display: flex;
@@ -292,7 +292,6 @@
                         rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
                         rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
-                  
                     p {
                         width: 100%;
                         font-size: 15px;
@@ -303,16 +302,45 @@
         #notification {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            width: 400px;
-            gap: 20px;
+            width: 100%;
+            height: fit-content;
+            gap: 40px;
             background-color: #fff;
+            height: 100%;
             -webkit-box-shadow: -4px -1px 5px 0px rgb(63, 60, 60);
             -moz-box-shadow: -4px -1px 5px 0px rgb(193, 193, 193);
             box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
 
             h2 {
-                font-size: 18px;
+                border-bottom: 2px solid black;
+                padding: 15px;
+                background-color: #fff;
+                display: flex;
+                width: 100%;
+            }
+            .posts {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: auto;
+                gap: 10px;
+                .post {
+                    width: 300px;
+                    gap: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: #fff;
+                    padding: 20px;
+                    box-shadow:
+                        rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+                        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+                    p {
+                        width: 100%;
+                        font-size: 15px;
+                    }
+                }
             }
         }
         .tab-content {
