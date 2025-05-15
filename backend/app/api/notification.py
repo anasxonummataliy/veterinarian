@@ -1,5 +1,11 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import select
 
+
+from app.database.session import get_db
+from app.database.models.notifications import Notification
+from app.schemas.notification import CreateNotification
 
 router = APIRouter(
     prefix="/notification",
@@ -7,8 +13,18 @@ router = APIRouter(
 )
 
 
+@router.post('/add')
+async def add_notification(data : CreateNotification, db : AsyncSession = Depends(get_db)):
+    new_notification = Notification(**data.model_dump())
+    db.add(new_notification)
+    db.commit
+    return new_notification
+
 
 @router.get("/")
-async def get_notification():
-  pass  
+async def get_notification(db: AsyncSession = Depends(get_db)):
+  smtm = select(Notification)
+  result = await db.execute(smtm)
+  notification = result.scalars().all()
+  return notification
 
