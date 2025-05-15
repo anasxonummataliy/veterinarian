@@ -26,3 +26,22 @@ async def add_doctor(
     except Exception as e:
         raise HTTPException(
             detail=f"Ma'lumot saqlashda xatolik {e}", status_code=500)
+
+
+@router.get("/{doctor_id}")
+async def get_doctor(
+    doctor_id : int,
+    db : AsyncSession = Depends(get_db)
+):
+    try:
+        stmt = select(Doctor).where(Doctor.id == doctor_id)
+        result = await db.execute(stmt)
+        doctor = result.scalar_one_or_none()
+
+        if doctor is None:
+            raise HTTPException(status_code=404, detail="Doktor topilmadi")
+        return {'name' : doctor.name}
+
+    except Exception as e:
+        raise HTTPException(
+            detail=f"Ma'lumot olishda xatolik {e}", status_code=500)

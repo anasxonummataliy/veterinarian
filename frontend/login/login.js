@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const data = await res.json();
                 console.log("Success", data);
                 localStorage.setItem("token", data.token);
-                window.location.href = "../profile/index.html";
+                window.location.href = "../profile/html/index.html";
             } else {
                 const errorData = await res.json();
                 errorMessage.innerHTML = errorData.message || "<p>Email yoki parol xato! Iltimos qayta kiriting.</p>";

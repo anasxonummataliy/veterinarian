@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const data = await response.json();
             localStorage.setItem("token", data.token);
-            if (response.ok) window.location.href = "../profile/index.html";
+            if (response.ok) window.location.href = "../profile/html/index.html";
             else showError.innerHTML = (`<p>${data.detail}</p>`)
         } catch (error) {
             console.error("Xato yuz berdi:", error.message, error.stack);

@@ -11,9 +11,9 @@
     <title>Veterinariya</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/png" href="../home/icons/title_icon.svg">
-
+    <link rel="icon" type="image/png" href="../../home/icons/title_icon.svg">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../home/index.html">
 </head>
 
 <body>
@@ -24,18 +24,18 @@
                     <div class="kabinet">
                         <div id="menu-icon">
                             <i class="fas fa-bars"></i>
-                            <h1 onclick="location.href='../home/index.html'">Sizning kabinetingiz</h1>
+                            <h1 onclick="location.href='../../home/index.html'">Sizning kabinetingiz</h1>
                         </div>
-                        <h1 class="way-to-home" onclick="location.href='../home/index.html'">Sizning kabinetingiz</h1>
+                        <h1 class="way-to-home" onclick="location.href='../../home/index.html'">Sizning kabinetingiz</h1>
                     </div>
                     <div id="nav-menu" class="buttons">
-                        <a href="./index.html" class="tab-button">
+                        <a href="./index.html" class="tab-button active">
                             <i class="fa-solid fa-user"></i>Profil
                         </a>
                         <a href="./application.html" class="tab-button">
                             <i class="fa-solid fa-stethoscope"></i>Murojaat
                         </a>
-                        <a href="./vaccation.html" class="tab-button active">
+                        <a href="./vaccation.html" class="tab-button">
                             <i class="fa-solid fa-syringe"></i>Emlash
                         </a>
                         <a href="./notification.html" class="tab-button">
@@ -50,17 +50,19 @@
                 </div>
             </aside>
             <main>
-                <div id="emlash" class="tab-content active">
-                    <h2>Emlash tarixi</h2>
-                    <p>Emlash sanasi: <span id="emlash-date"></span></p>
-                    <p>Turi: <span id="emlash-type"></span></p>
-                    <h3>Navbatdagi emlash</h3>
-                    <p>Sana: <span id="next-emlash-date"></span></p>
+                <div id="profile" class="tab-content active">
+                    <div class="user-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="datas">
+                       
+                    </div>
                 </div>
             </main>
         </div>
     </div>
-    <script src="./navbar.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>

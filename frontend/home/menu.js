@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>${data.name}</p>
             <p>${data.email}</p>
         </div>
-        <i onclick="location.href='../profile/index.html'" class="fa-solid fa-user"></i>
+        <i onclick="location.href='../profile/html/index.html'" class="fa-solid fa-user"></i>
         `
       profile.innerHTML = elem
     }

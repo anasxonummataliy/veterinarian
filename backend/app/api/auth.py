@@ -80,8 +80,3 @@ async def get_me(token: str, db: AsyncSession = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Foydalanuvchi topilmadi")
     return db_user
 
-
-# @router.get("/me")
-# async def get_user(
-#     db:AsyncSession = Depends(get_db)
-# ):

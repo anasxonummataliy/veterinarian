@@ -33,7 +33,7 @@ async def application(
     try: 
         stmt = select(Application)
         result = await db.execute(stmt)
-        return result.scalar_one_or_none()
+        return result.scalars().all()
     
     except Exception as e :
         raise HTTPException(detail=f"Ma'lumot olishda xatolik {e}", status_code=500)

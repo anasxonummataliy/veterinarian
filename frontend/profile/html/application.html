@@ -11,8 +11,8 @@
     <title>Veterinariya</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="../home/icons/title_icon.svg">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" type="image/png" href="../../home/icons/title_icon.svg">
 
 </head>
 
@@ -24,15 +24,15 @@
                     <div class="kabinet">
                         <div id="menu-icon">
                             <i class="fas fa-bars"></i>
-                            <h1 onclick="location.href='../home/index.html'">Sizning kabinetingiz</h1>
+                            <h1 onclick="location.href='../../home/index.html'">Sizning kabinetingiz</h1>
                         </div>
-                        <h1 class="way-to-home" onclick="location.href='../home/index.html'">Sizning kabinetingiz</h1>
+                        <h1 class="way-to-home" onclick="location.href='../../home/index.html'">Sizning kabinetingiz</h1>
                     </div>
                     <div id="nav-menu" class="buttons">
-                        <a href="./index.html" class="tab-button active">
+                        <a href="./index.html" class="tab-button">
                             <i class="fa-solid fa-user"></i>Profil
                         </a>
-                        <a href="./application.html" class="tab-button">
+                        <a href="./application.html" class="tab-button active">
                             <i class="fa-solid fa-stethoscope"></i>Murojaat
                         </a>
                         <a href="./vaccation.html" class="tab-button">
@@ -41,21 +41,48 @@
                         <a href="./notification.html" class="tab-button">
                             <i class="fa-solid fa-comments"></i>Bildirishnoma
                         </a>
-                
+
                     </div>
                 </div>
-                
+
                 <div class="exit" class="tab-button">
                     <button>Chiqish <i class="fas fa-sign-out-alt"></i></button>
                 </div>
             </aside>
             <main>
-                <div id="profile" class="tab-content active">
+                <div id="murojaatlar">
+                    <header>
+                        <h2>Barcha murojaatlar</h2>
+                        <button class="murojaat_button"><i class="fas fa-plus"></i></button>
+                    </header>
+                    <div class="post-murojat">
+                    </div>
+
                 </div>
             </main>
         </div>
+
+        <div class="modal-body">
+            <div class="add_murojaat">
+                <form id="murojaat-form">
+                    <h2>Murojaat qo‘shish</h2>
+                    <label for="doctor">Doktor:</label>
+                    <select name="doctor" id="doctor" required>
+                        <option value="doctor">Jennifer Mullen</option>
+                        <option value="doctor">Sheeren Collins</option>
+                        <option value="doctor">Dorothy Holmes</option>
+                    </select>
+                 
+                    <label for="disease">Kasallik:</label>
+                    <input type="text" id="disease" placeholder="Kasallik turi" required />
+                    <button type="submit">Yuborish</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <script src="./navbar.js"></script>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/application.js"></script>
 </body>
 
 </html>
