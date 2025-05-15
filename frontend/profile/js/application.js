@@ -19,19 +19,14 @@ window.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const doctor = document.getElementById("doctor");
+        const token = localStorage.getItem('token')
         const disease = document.getElementById('disease');
+        const doctorId = e.target.doctor.value
+
+        console.log(e.target.doctorId.value)
 
 
         try {
-            const owner_id = getUserId(token)
-            console.log(owner_id);
-            console.log(doctor.value);
-            console.log(disease.value);
-            
-            
-
-            
             const response = await fetch('http://localhost:8000/application/add', {
                 method: "POST",
                 headers: {
@@ -40,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 },
                 body: JSON.stringify({
                     illness: disease.value,
-                    doctor_id: Number(doctor.value)
+                    doctor_id: Number(doctorId)
                 })
             });
 
@@ -55,19 +50,6 @@ window.addEventListener('DOMContentLoaded', () => {
             console.log("Serverga ulanishda xatolik:", error);
         }
     });
-    async function getUserId(token) {
-        try{
-            const res = await fetch(`http://127.0.0.1:8000/auth/me/${token}`);
-            const data = await res.json();
-            console.log(data.id);
-            
-            return data.id
-        }catch(error){
-            console.log(error);
-        }
-        
-    } 
-
 
     async function getDoctor(doctor_id) {
         const token = localStorage.getItem('token')
@@ -76,7 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        try{
+        try {
             const response = await fetch(`http://127.0.0.1:8000/doctor/${doctor_id}`, {
                 method: 'GET',
                 headers: {
@@ -84,15 +66,15 @@ window.addEventListener('DOMContentLoaded', () => {
                     'Authorization': `Bearer ${token}`
                 }
             })
-            if(!response.ok){
+            if (!response.ok) {
                 throw new Error(`Server returned status: ${response.status}`);
             }
             const data = await response.json()
             return data.name
 
-        }catch(error){
-            console.log("Error",  error);
-            
+        } catch (error) {
+            console.log("Error", error);
+
         }
     }
 
@@ -122,7 +104,7 @@ window.addEventListener('DOMContentLoaded', () => {
             application.innerHTML = '';
 
             for (const item of data) {
-                const doctorName = await getDoctor(item.doctor_id); 
+                const doctorName = await getDoctor(item.doctor_id);
                 const formatted = new Date(item.created_at).toLocaleDateString('uz-UZ', {
                     year: 'numeric',
                     month: '2-digit',
@@ -154,23 +136,21 @@ window.addEventListener('DOMContentLoaded', () => {
             console.log('Token not found!');
             return;
         }
-        try{
+        try {
             const response = await fetch('http://127.0.0.1:8000/doctor')
             const data = await response.json()
-          
-            
+
+
             data.forEach(doctor => {
-                const addDoctor = document.createElement('option')
-                console.log(doctor.name);
-                addDoctor.innerHTML = `
-                <option value="${doctor.id}">${doctor.name}</option>`
-                doctors.appendChild(addDoctor)
+                const addDoctor = document.createElement('option');
+                addDoctor.value = doctor.id;        
+                addDoctor.textContent = doctor.name; 
+                doctors.appendChild(addDoctor);
             });
 
 
-        }catch(error){
+        } catch (error) {
             console.log(error);
-            
         }
     }
     getDoctors()

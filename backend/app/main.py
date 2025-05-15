@@ -1,6 +1,7 @@
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import HTTPBearer
 
 from app.database.base import create_db_and_tables
 from app.api.auth import router as auth_router
@@ -8,7 +9,9 @@ from app.api.notification import router as notification
 from app.api.vaccination import router as voccation
 from app.api.application import router as application
 from app.api.doctors import router as doctors
-from app.database import models
+
+auth_scheme = HTTPBearer(auto_error=False)
+
 
 
 @asynccontextmanager
@@ -21,12 +24,13 @@ app = FastAPI(
     title="Auth API",
     description="Auth API",
     version="1.0.0",
-    lifespan=lifespan
+    lifespan=lifespan,
+    dependencies=[Depends(auth_scheme)]
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

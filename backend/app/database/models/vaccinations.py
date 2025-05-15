@@ -5,7 +5,8 @@ class Vaccination(Base):
     __tablename__ = 'vaccination'
 
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey("user.id"))
+    user_id = Column(Integer, ForeignKey("users.id"))
     type = Column(String)
-    message = Column(String)
+    status = Column(String)
+
     

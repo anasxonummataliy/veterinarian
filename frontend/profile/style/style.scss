@@ -254,9 +254,7 @@
                             background-color: #d89b00;
                         }
                     }
-                    
                 }
-               
             }
             #active {
                 display: flex;
@@ -272,28 +270,34 @@
             box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
             background-color: #fff;
             height: 100%;
-            h2{
+            h2 {
                 border-bottom: 2px solid black;
                 padding-bottom: 10px;
             }
-            #posts{
-                width: 300px;
-                gap: 5px;
+            #posts {
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: #fff;
-                padding: 20px;
-                box-shadow:
-                    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-                    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                flex-wrap: wrap;
+                width: 100%;
+                height: auto;
+                gap: 10px;
+                .post {
+                    width: 300px;
+                    gap: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: #fff;
+                    padding: 20px;
+                    box-shadow:
+                        rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+                        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
-                h3{
-
-                }
-                p {
-                    width: 100%;
-                    font-size: 15px;
+                    h3 {
+                    }
+                    p {
+                        width: 100%;
+                        font-size: 15px;
+                    }
                 }
             }
         }
@@ -405,21 +409,20 @@
 
         aside {
             flex-direction: row;
-            height: 50px;   
+            height: 50px;
             width: 100%;
             justify-content: space-between;
             padding-left: 10px;
 
-            .exit{
+            .exit {
                 height: 50px;
                 padding-right: 20px;
                 align-items: end;
                 justify-content: center;
-                button{
+                button {
                     height: 40px;
-                padding: 10px;
-                font-size: 20px;
-
+                    padding: 10px;
+                    font-size: 20px;
                 }
             }
 
@@ -431,7 +434,7 @@
                     justify-content: start;
                     gap: 20px;
 
-                    .way-to-home{
+                    .way-to-home {
                         display: none;
                     }
 
@@ -440,11 +443,11 @@
                         flex-direction: row;
                         height: 50px;
                         align-items: center;
-                        gap: 10px    ;
-                        h1{
+                        gap: 10px;
+                        h1 {
                             font-size: 20px;
                         }
-                        i{
+                        i {
                             font-size: 23px;
                         }
                     }
@@ -488,7 +491,6 @@
                 &.active {
                     transform: translateY(0);
                     background-color: rgba(255, 255, 255, 0.1);
-                    
                 }
 
                 body.menu-open {
@@ -540,21 +542,20 @@
 
         aside {
             flex-direction: row;
-            height: 50px;   
+            height: 50px;
             width: 100%;
             justify-content: space-between;
             padding-left: 20px;
 
-            .exit{
+            .exit {
                 height: 50px;
                 padding-right: 20px;
                 align-items: end;
                 justify-content: center;
-                button{
+                button {
                     height: 40px;
-                padding: 10px;
-                font-size: 20px;
-
+                    padding: 10px;
+                    font-size: 20px;
                 }
             }
 
@@ -566,7 +567,7 @@
                     justify-content: start;
                     gap: 20px;
 
-                    .way-to-home{
+                    .way-to-home {
                         display: none;
                     }
 
@@ -575,12 +576,12 @@
                         flex-direction: row;
                         height: 50px;
                         align-items: center;
-                        gap: 10px    ;
-                        h1{
+                        gap: 10px;
+                        h1 {
                             font-size: 22px;
                         }
-                        i{
-                            font-size: 25PX;
+                        i {
+                            font-size: 25px;
                         }
                     }
                 }
@@ -607,7 +608,6 @@
                     }
                 }
             }
-
 
             .tab-button {
                 display: none;

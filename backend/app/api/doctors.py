@@ -1,8 +1,11 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from sqlalchemy import select
+from app.core.security.jwt import decode_jwt_token
 from app.schemas.doctor import CreateDoctor
-from app.database.models import Doctor 
+from app.schemas.vaccination import CreateVaccination
+from app.database.models.doctor import Doctor 
 from sqlalchemy.ext.asyncio import AsyncSession
+from app.database.models.vaccinations import Vaccination
 
 from app.database.session import get_db
 
@@ -35,7 +38,7 @@ async def get_all_doctor(db:AsyncSession=Depends(get_db)):
     return doctor
 
 @router.get("/{doctor_id}")
-async def get_doctor(
+async def get_doctor_id(
     doctor_id : int,
     db : AsyncSession = Depends(get_db)
 ):
@@ -53,5 +56,24 @@ async def get_doctor(
             detail=f"Ma'lumot olishda xatolik {e}", status_code=500)
 
 
-# @router.post('/add_vaccination')
-# async def add_vaccination():
+@router.post('/add_vaccination')
+async def add_vaccination(
+    request : Request,
+    data : CreateVaccination,
+    db : AsyncSession = Depends(get_db)
+):
+    try:
+        token = request.headers.get("Authorization").split(" ")
+        if len(token) != 2:
+            raise HTTPException(detail="")
+        user_id = decode_jwt_token(token[1])
+
+        new_vaccination = Vaccination(**data.model_dump(), user_id = user_id)
+        db.add(new_vaccination)
+        await db.commit()
+        return new_vaccination
+
+    except Exception as e :
+        raise HTTPException(
+            detail=f"Ma'lumot qo'shishda xatolik : {e}", status_code=500
+        )

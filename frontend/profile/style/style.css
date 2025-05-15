@@ -255,6 +255,13 @@
   padding-bottom: 10px;
 }
 .center main #emlash #posts {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+}
+.center main #emlash #posts .post {
   width: 300px;
   gap: 5px;
   display: flex;
@@ -264,7 +271,7 @@
   padding: 20px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
-.center main #emlash #posts p {
+.center main #emlash #posts .post p {
   width: 100%;
   font-size: 15px;
 }
@@ -517,7 +524,7 @@
     font-size: 22px;
   }
   .center aside div .kabinet #menu-icon i {
-    font-size: 25PX;
+    font-size: 25px;
   }
   .center aside div #nav-menu {
     position: fixed;

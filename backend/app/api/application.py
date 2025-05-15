@@ -18,19 +18,17 @@ async def add_application(
     data: CreateApplication,
     db: AsyncSession = Depends(get_db)
 ):
-    try:
-        token = request.headers.get("Authorization").split(" ")
-        if len(token) != 2:
-            raise HTTPException(detail="")
-        user_id = decode_jwt_token(token[1])
+    if not request.headers.get("Authorization"):
+        raise HTTPException(status_code=401, detail="Ro'yxatdan o'tmagansiz")
+    token = request.headers.get("Authorization").split(" ")
+    if len(token) != 2:
+        raise HTTPException(detail="")
+    user_id = decode_jwt_token(token[1])
 
-        new_application = Application(**data.model_dump(), owner_id=user_id)
-        db.add(new_application)
-        await db.commit()
-        return new_application
-    except Exception as e:
-        raise HTTPException(
-            detail=f"Ma'lumot qo'shishda xatolik {e}", status_code=500)
+    new_application = Application(**data.model_dump(), owner_id=user_id)
+    db.add(new_application)
+    await db.commit()
+    return new_application
 
 
 @router.get("/")
