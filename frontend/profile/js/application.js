@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const doctor = document.getElementById("doctor");
         const disease = document.getElementById('disease');
-        const token = localStorage.getItem('token');
+
 
         try {
             const owner_id = getUserId(token)
@@ -146,4 +146,32 @@ window.addEventListener('DOMContentLoaded', () => {
 
     get_application();
 
+    async function getDoctors() {
+        const doctors = document.getElementById('doctor')
+        const token = localStorage.getItem('token')
+
+        if (!token) {
+            console.log('Token not found!');
+            return;
+        }
+        try{
+            const response = await fetch('http://127.0.0.1:8000/doctor')
+            const data = await response.json()
+          
+            
+            data.forEach(doctor => {
+                const addDoctor = document.createElement('option')
+                console.log(doctor.name);
+                addDoctor.innerHTML = `
+                <option value="${doctor.id}">${doctor.name}</option>`
+                doctors.appendChild(addDoctor)
+            });
+
+
+        }catch(error){
+            console.log(error);
+            
+        }
+    }
+    getDoctors()
 })

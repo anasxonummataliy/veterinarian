@@ -246,8 +246,27 @@
 .center main #emlash {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   box-shadow: -4px -1px 5px 0px rgb(210, 210, 210);
+  background-color: #fff;
+  height: 100%;
+}
+.center main #emlash h2 {
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+}
+.center main #emlash #posts {
+  width: 300px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.center main #emlash #posts p {
+  width: 100%;
+  font-size: 15px;
 }
 .center main #notification {
   display: flex;

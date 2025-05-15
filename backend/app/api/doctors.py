@@ -27,6 +27,12 @@ async def add_doctor(
         raise HTTPException(
             detail=f"Ma'lumot saqlashda xatolik {e}", status_code=500)
 
+@router.get("/")
+async def get_all_doctor(db:AsyncSession=Depends(get_db)):
+    stmt = select(Doctor)
+    result = await db.execute(stmt)
+    doctor = result.scalars().all()
+    return doctor
 
 @router.get("/{doctor_id}")
 async def get_doctor(
@@ -45,3 +51,7 @@ async def get_doctor(
     except Exception as e:
         raise HTTPException(
             detail=f"Ma'lumot olishda xatolik {e}", status_code=500)
+
+
+# @router.post('/add_vaccination')
+# async def add_vaccination():
