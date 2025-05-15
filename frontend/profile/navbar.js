@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.clear()
         window.location.reload()
     })
+    const token = localStorage.getItem("token")
+    if (!token) {
+        window.location.href = "/frontend/home/index.html"
+    }
 
 })
 
