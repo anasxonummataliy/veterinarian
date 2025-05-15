@@ -17,25 +17,57 @@ window.addEventListener('DOMContentLoaded', () => {
     }, true);
 
     form.addEventListener('submit', async (e) => {
-        e.preventDefault()
-        const doctor = document.getElementById("doctor")
-        const disease = document.getElementById('disease')
+        e.preventDefault();
+
+        const doctor = document.getElementById("doctor");
+        const disease = document.getElementById('disease');
+        const token = localStorage.getItem('token');
 
         try {
+            const owner_id = getUserId(token)
+            console.log(owner_id);
+            console.log(doctor.value);
+            console.log(disease.value);
+            
+            
+
+            
             const response = await fetch('http://localhost:8000/application/add', {
                 method: "POST",
-                headers: { "Content-Type": 'application/json' },
-                body: JSON.stringify({ disease, doctor, })
-            })
-            const data = await response.json()
+                headers: {
+                    "Content-Type": 'application/json',
+                    "Authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    illness: disease.value,
+                    doctor_id: Number(doctor.value)
+                })
+            });
+
+            const data = await response.json();
+
             if (response.ok) {
-                console.log(data);
+                console.log("Murojaat muvaffaqiyatli yuborildi:", data);
+            } else {
+                console.error("Xatolik:", data);
             }
         } catch (error) {
-            console.log(error);
-
+            console.log("Serverga ulanishda xatolik:", error);
         }
-    })
+    });
+    async function getUserId(token) {
+        try{
+            const res = await fetch(`http://127.0.0.1:8000/auth/me/${token}`);
+            const data = await res.json();
+            console.log(data.id);
+            
+            return data.id
+        }catch(error){
+            console.log(error);
+        }
+        
+    } 
+
 
     async function getDoctor(doctor_id) {
         const token = localStorage.getItem('token')
