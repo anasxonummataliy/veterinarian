@@ -10,4 +10,4 @@ class Notification(Base):
     user_id = Column(ForeignKey('users.id'))
     type = Column(String)
     message = Column(String)
-    sent_at = Column(DateTime, default=datetime.utcnow)
+    date = Column(DateTime)

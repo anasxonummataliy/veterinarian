@@ -1,4 +1,5 @@
-from sqlalchemy import Integer, String, Column, ForeignKey
+
+from sqlalchemy import Integer, String, Column, ForeignKey, DateTime
 from app.database.base import Base
 
 class Vaccination(Base):
@@ -8,5 +9,6 @@ class Vaccination(Base):
     user_id = Column(Integer, ForeignKey("users.id"))
     type = Column(String)
     status = Column(String)
+    date = Column(DateTime)
 
     

@@ -556,12 +556,19 @@
             #murojaatlar > .post-murojat {
                 justify-content: center;
                 align-items: center;
+                .block_mur{
+                    width: 90%;
+                }
             }
             #emlash{
 
                 #posts{
                     align-items: center;
                     justify-content: center;
+
+                    .post{
+                        width: 90%;
+                    }
                 }
             }
             #notification{
@@ -569,6 +576,10 @@
                 .posts{
                     align-items: center;
                     justify-content: center;
+
+                    .post{
+                        width: 90%;
+                    }
                 }
             }
         }

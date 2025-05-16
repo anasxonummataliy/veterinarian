@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             for (const item of data) {
                 const doctorName = await getDoctor(item.doctor_id);
-                const formatted = new Date(item.created_at).toLocaleDateString('uz-UZ', {
+                const formatted = new Date(item.updated_at).toLocaleDateString('uz-UZ', {
                     year: 'numeric',
                     month: '2-digit',
                     day: '2-digit'

@@ -11,7 +11,7 @@ router = APIRouter(
     tags=['Vaccination']
 )
 
-@router.get("/")
+@router.get("")
 async def vaccination(
     db : AsyncSession = Depends(get_db)
 ):
