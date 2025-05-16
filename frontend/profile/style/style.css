@@ -506,6 +506,14 @@
     justify-content: center;
     align-items: center;
   }
+  .center main #emlash #posts {
+    align-items: center;
+    justify-content: center;
+  }
+  .center main #notification .posts {
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (min-width: 577px) and (max-width: 1200px) {
   .center {
