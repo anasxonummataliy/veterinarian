@@ -3,6 +3,14 @@
         {
             "source": "/",
             "destination": "/frontend/home/index.html"
+        },
+        {
+            "source": "/login",
+            "destination": "/frontend/login/login.html"
+        },
+        {
+            "source": "/registration",
+            "destination": "/frontend/registration/regis.html"
         }
     ]
 }
